@@ -19,6 +19,8 @@ References
 Powered by
 ----------
 
+|OSE| |space| |Nuvolos| |space| |TRA|
+
 .. image:: ../_static/images/fig-ose.svg
   :width: 22 %
   :target: https://open-econ.org
@@ -30,5 +32,11 @@ Powered by
 .. image:: ../_static/images/fig-tra.png
   :width: 10 %
   :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
+  
+.. |space| raw:: html
+
+     <embed>
+	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     </embed>
 
 We gratefully acknowledge funding by the Federal Ministry of Education and Research (BMBF) and the Ministry of Culture and Science of the State of North Rhine-Westphalia (MKW) as part of the Excellence Strategy of the federal and state governments.
