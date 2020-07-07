@@ -8,3 +8,8 @@ channels:
 dependencies:
 - numpy
 - pandas
+- nbsphinx
+- pip
+- pip:
+  - sphinx_rtd_theme
+  - sphinxcontrib-bibtex
