@@ -1,0 +1,10 @@
+name: ose-scientific-computing
+
+channels:
+- defaults
+- conda-forge
+- opensourceeconomics
+
+dependencies:
+- numpy
+- pandas
