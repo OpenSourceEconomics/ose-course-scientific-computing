@@ -1,2 +1,3 @@
-# ose-course-scientific-computing
-course on the basics of scientific computing
+# OSE scientific computing
+
+Please see our [course materials](https://ose-scientific-computing.readthedocs.io) for details.
