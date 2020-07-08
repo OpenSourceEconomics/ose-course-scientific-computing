@@ -10,6 +10,8 @@ The sound analysis of computational economic models requires expertise in econom
 
 Students learn how to use `Python <https://www.python.org>`_ for advanced scientific computing. They acquire a toolkit of numerical methods frequently needed for the analysis of computational economic models, obtain an overview of basic software engineering tools such as `GitHub <https://www.github.com>`_ and `pytest <https://docs.pytest.org>`_, and are exposed to high-performance computing using `multiprocessing <https://docs.python.org/3/library/multiprocessing.html>`_ and `mpi4py <https://mpi4py.readthedocs.io>`_.
 
+We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integrated research and teaching platform. The platform provides a simple, browser-based environment that allows for complete control over students’ computational environment and simplifies the dissemination of teaching material. It enables students to seamlessly scale up their course projects from a prototype to a high-performance computing environment.
+
 References
 ----------
 
@@ -32,7 +34,7 @@ Powered by
 .. image:: ../_static/images/fig-tra.png
   :width: 10 %
   :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
-  
+
 .. |space| raw:: html
 
      <embed>
