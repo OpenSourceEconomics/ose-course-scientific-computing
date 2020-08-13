@@ -3,8 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-OSE scientific computing
-=========================
+.. |logo| image:: https://raw.githubusercontent.com/OpenSourceEconomics/ose-corporate-design/master/logos/OSE_logo_no_type_RGB.svg
+  :width: 4 %
+
+|logo| OSE scientific computing
+================================
 
 The sound analysis of computational economic models requires expertise in economics, statistics, numerical methods, and software engineering. We first provide an overview of basic numerical methods for optimization, numerical integration, approximation methods, and uncertainty quantification.  We then deepen our understanding of each of these topics in the context of a dynamic model of human capital accumulation using `respy <https://respy.readthedocs.io>`_. We conclude by showcasing basic software engineering practices such as the design of a collaborative and reproducible development workflow, automated testing, and high-performance computing.
 
