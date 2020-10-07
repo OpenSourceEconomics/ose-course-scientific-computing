@@ -15,6 +15,11 @@ Students learn how to use `Python <https://www.python.org>`_ for advanced scient
 
 We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integrated research and teaching platform. The platform provides a simple, browser-based environment that allows for complete control over students’ computational environment and simplifies the dissemination of teaching material. It enables students to seamlessly scale up their course projects from a prototype to a high-performance computing environment.
 
+.. toctree::
+   :maxdepth: 1
+
+   ../lectures/index
+
 References
 ----------
 
