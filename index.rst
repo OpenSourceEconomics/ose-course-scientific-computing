@@ -17,9 +17,9 @@ We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integr
 
 .. toctree::
    :maxdepth: 1
-
-   ../lectures/index
-   ../iteration/lecture_plan_2020.rst
+   
+   lectures/index
+   iteration/lecture_plan_2020.rst
 
 References
 ----------
@@ -32,15 +32,15 @@ Powered by
 
 |OSE| |space| |Nuvolos| |space| |TRA|
 
-.. |OSE| image:: ../_static/images/fig-ose.svg
+.. |OSE| image:: _static/images/fig-ose.svg
   :width: 22 %
   :target: https://open-econ.org
 
-.. |Nuvolos| image:: ../_static/images/fig-novolos.svg
+.. |Nuvolos| image:: _static/images/fig-novolos.svg
   :width: 10 %
   :target: https://nuvolos.cloud
 
-.. |TRA| image:: ../_static/images/fig-tra.png
+.. |TRA| image:: _static/images/fig-tra.png
   :width: 10 %
   :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
 
