@@ -1,4 +1,4 @@
-name: ose-scientific-computing
+name: ose-course-scientific-computing
 
 channels:
 - defaults
@@ -13,7 +13,8 @@ dependencies:
 - pytest
 - pytest-black
 - pytest-flake8
-- nb_black
 - pip:
+  - black-nb
+  - flake8-nb
   - sphinx_rtd_theme
   - sphinxcontrib-bibtex

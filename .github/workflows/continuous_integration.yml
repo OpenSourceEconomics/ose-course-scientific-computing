@@ -21,3 +21,12 @@ jobs:
         export PATH="$PATH:/usr/share/miniconda/bin"
         source .envrc
         py.test
+        run-lecture
+        
+    - name: check notebook formatting
+      shell: bash -l {0}
+      run: |
+        export PATH="$PATH:/usr/share/miniconda/bin"
+        source .envrc
+        flake8-nb; [ $? -eq 0 ] || exit 1
+        black-nb --check .; [ $? -eq 0 ] || exit 1
