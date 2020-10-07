@@ -1,6 +1,6 @@
-########
-Ongoing
-########
+###############
+Organisation
+###############
 
 We start on October 27th, 2020 and meet on Tuesdays (2:15-3:45pm) and Wednesdays (8:30-10:00am).
 
