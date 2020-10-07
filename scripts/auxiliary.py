@@ -9,7 +9,9 @@ LECTURES_ROOT = os.environ["PROJECT_ROOT"] + "/lectures"
 
 
 def run_notebook(notebook):
-    cmd = " jupyter nbconvert --execute {} --to notebook --ExecutePreprocessor.timeout=-1".format(notebook)
+    cmd = ""
+    cmd += " jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=-1 "
+    cmd += "--execute {} ".format(notebook)
     sp.check_call(cmd, shell=True)
 
 
