@@ -44,7 +44,7 @@ def get_list_tasks(task_dir):
     cwd = os.getcwd()
 
     os.chdir(task_dir)
-    lectures = [name for name in glob.glob("*-*")]
+    lectures = [name for name in glob.glob("*_*")]
     os.chdir(cwd)
 
     return lectures
