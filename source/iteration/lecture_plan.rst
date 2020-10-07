@@ -10,8 +10,8 @@ We will conduct all course communications using the bonn-econ-teaching `Zulip <h
 chat, so please be sure to join us there. To join the Zulip organization, please click on the button
 below.
 
-.. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg :target:
-https://bonn-econ-teaching.zulipchat.com
+.. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg 
+	:target: https://bonn-econ-teaching.zulipchat.com
 
 By default, you will already be subscribed to Q&A and tech support streams (=chatrooms). You need to
 **manually subscribe to the scientifc computing course stream** to receive all the messages for this
@@ -49,7 +49,7 @@ Lecture Plan
 +------------+-------------------------------------------------------+
 | 01/12/2020 |                                                       |
 +------------+-------------------------------------------------------+
-| 02/12/2020 | *No lecture: Dies Academicus*                         |
+| 02/12/2020 | *No Lecture: Dies Academicus*                         |
 +------------+-------------------------------------------------------+
 | 08/12/2020 |                                                       |
 +------------+-------------------------------------------------------+
