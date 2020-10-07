@@ -10,6 +10,10 @@ dependencies:
 - pandas
 - nbsphinx
 - pip
+- pytest
+- pytest-black
+- pytest-flake8
+- nb_black
 - pip:
   - sphinx_rtd_theme
   - sphinxcontrib-bibtex
