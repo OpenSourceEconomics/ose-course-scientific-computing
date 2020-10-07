@@ -19,6 +19,7 @@ We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integr
    :maxdepth: 1
 
    ../lectures/index
+   ../iteration/lecture_plan_2020.rst
 
 References
 ----------
