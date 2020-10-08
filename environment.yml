@@ -6,27 +6,35 @@ channels:
 - opensourceeconomics
 
 dependencies:
+- black
+- chaospy
+- estimagic
+- flake8
 - ipython
 - ipykernel
 - jupyterlab
 - jupyter
 - jupyter_contrib_nbextensions
 - jupyter_nbextensions_configurator
-- black
-- chaospy
-- estimagic
-- flake8
 - matplotlib
 - nbsphinx
 - nb_black
 - numpy
 - pandas
 - pip
-- pytest
+- pytest==5.4.3
+- pytest-black
+- pytest-flake8
 - respy
 - scipy
+- simplegeneric
 - scikit-learn
 - seaborn
+- sphinx>=1.4
 - pip:
+    - black-nb
+    - flake8-nb
+    - linearmodels
     - sphinx_rtd_theme
+    - nbsphinx
     - sphinxcontrib-bibtex
