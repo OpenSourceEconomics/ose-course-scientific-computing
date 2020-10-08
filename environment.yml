@@ -13,6 +13,7 @@ dependencies:
 - matplotlib
 - nbsphinx
 - nb_black
+- jupyter
 - numpy
 - pandas
 - pip
@@ -21,7 +22,6 @@ dependencies:
 - scipy
 - scikit-learn
 - seaborn
-- sphinx>=1.4
 - pip:
     - sphinx_rtd_theme
     - sphinxcontrib-bibtex
