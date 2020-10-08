@@ -9,6 +9,21 @@
 |logo| OSE scientific computing
 ================================
 
+.. image:: https://github.com/OpenSourceEconomics/ose-course-data-science/workflows/Continuous%20Integration/badge.svg
+    :target: https://github.com/OpenSourceEconomics/ose-course-scientific-computing/actions
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+
+.. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+    :target: https://bonn-econ-teaching.zulipchat.com
+
+.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+    :target: https://github.com/OpenSourceEconomics/ose-course-scientific-computing/blob/master/LICENSE
+
+.. image:: https://readthedocs.org/projects/ose-scientific-computing/badge/?version=latest
+    :target: https://ose-scientific-computing.readthedocs.io
+
 The sound analysis of computational economic models requires expertise in economics, statistics, numerical methods, and software engineering. We first provide an overview of basic numerical methods for optimization, numerical integration, approximation methods, and uncertainty quantification.  We then deepen our understanding of each of these topics in the context of a dynamic model of human capital accumulation using `respy <https://respy.readthedocs.io>`_. We conclude by showcasing basic software engineering practices such as the design of a collaborative and reproducible development workflow, automated testing, and high-performance computing.
 
 Students learn how to use `Python <https://www.python.org>`_ for advanced scientific computing. They acquire a toolkit of numerical methods frequently needed for the analysis of computational economic models, obtain an overview of basic software engineering tools such as `GitHub <https://www.github.com>`_ and `pytest <https://docs.pytest.org>`_, and are exposed to high-performance computing using `multiprocessing <https://docs.python.org/3/library/multiprocessing.html>`_ and `mpi4py <https://mpi4py.readthedocs.io>`_.
