@@ -13,4 +13,4 @@ We briefly introduce numerical integration.
 .. toctree::
    :maxdepth: 1
 
-   numerical_integration/notebook.ipynb
+   numerical-integration/notebook.ipynb
