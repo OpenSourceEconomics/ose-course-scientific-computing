@@ -4,54 +4,37 @@ channels:
 - defaults
 - conda-forge
 - opensourceeconomics
-- r
 
 dependencies:
-- numpy
-- libgfortran
-- pandas
-- sphinx>=1.4
-- numba==0.48.0
-- linearmodels
-- respy
-- flake8
-- pytest==5.4.3
-- pytest-black
-- pytest-flake8
 - black
-- scipy
+- chaospy
+- estimagic
+- flake8
+- ipython
+- ipykernel
 - jupyterlab
-- matplotlib
-- seaborn
 - jupyter
 - jupyter_contrib_nbextensions
 - jupyter_nbextensions_configurator
-- ipython
-- ipykernel
-- pip
-- pygraphviz
-- rise
-- r-essentials
-- r-icc
-- libiconv
-- rpy2
-- xlrd
+- matplotlib
 - nbsphinx
-- simplegeneric
 - nb_black
-- nbdime
+- numpy
+- pandas
+- pip
+- pytest==5.4.3
+- pytest-black
+- pytest-flake8
+- respy
+- scipy
+- simplegeneric
 - scikit-learn
-- chaospy
-- estimagic
+- seaborn
+- sphinx>=1.4
 - pip:
     - black-nb
     - flake8-nb
     - linearmodels
-    - openpyxl
-    - scikit-learn
     - sphinx_rtd_theme
     - nbsphinx
-    - cairosvg
     - sphinxcontrib-bibtex
-    - sphinxcontrib-svg2pdfconverter[CairoSVG]
-    - grmpy
