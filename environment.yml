@@ -6,6 +6,12 @@ channels:
 - opensourceeconomics
 
 dependencies:
+- ipython
+- ipykernel
+- jupyterlab
+- jupyter
+- jupyter_contrib_nbextensions
+- jupyter_nbextensions_configurator
 - black
 - chaospy
 - estimagic
@@ -13,7 +19,6 @@ dependencies:
 - matplotlib
 - nbsphinx
 - nb_black
-- ipython
 - numpy
 - pandas
 - pip
