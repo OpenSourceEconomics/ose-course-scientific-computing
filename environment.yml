@@ -26,6 +26,7 @@ dependencies:
 - pytest
 - pytest-black
 - pytest-flake8
+- pytest-repeat
 - respy
 - restructuredtext_lint
 - scipy
