@@ -5,6 +5,17 @@ Lectures
 We provide a set of lectures that are all provided as Jupyter Notebooks.
 
 ======================
+Linear equations
+======================
+
+We explore different solution algorithms to solve linear equations.
+
+.. toctree::
+   :maxdepth: 1
+
+   linear-equations/notebook.ipynb
+
+======================
 Numerical integration
 ======================
 
