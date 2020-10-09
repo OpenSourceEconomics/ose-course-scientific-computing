@@ -1,6 +1,6 @@
+from scipy.linalg import lu
 import numpy as np
 
-from scipy.linalg import lu
 
 eps = np.sqrt(np.spacing(1.0))
 
@@ -73,7 +73,7 @@ def gauss_jacobi(A, b, x0=None, maxit=1000, tol=eps):
     else:
         x = x0
 
-    Q = np.diag(np.diag(A))  # diagonal of A matrix
+    Q = np.diag(np.diag(A))
     for i in range(maxit):
         dx = solve(Q, b - A @ x)
 
@@ -82,8 +82,8 @@ def gauss_jacobi(A, b, x0=None, maxit=1000, tol=eps):
 
         if np.linalg.norm(dx) < tol:
             return x, conv
-    print("problem")
-    return x, conv
+
+    raise StopIteration
 
 
 def gauss_seidel(A, b, x0=None, lambda_=1.0, maxit=1000, tol=eps):
@@ -105,7 +105,7 @@ def gauss_seidel(A, b, x0=None, lambda_=1.0, maxit=1000, tol=eps):
     else:
         x = x0
 
-    Q = np.tril(A)  # lower triangle part of A
+    Q = np.tril(A)
     for i in range(maxit):
         dx = solve(Q, b - A @ x)
         x += lambda_ * dx
@@ -114,5 +114,4 @@ def gauss_seidel(A, b, x0=None, lambda_=1.0, maxit=1000, tol=eps):
         if np.linalg.norm(dx) < tol:
             return x, conv
 
-    print("problem")
-    return x, conv
+    raise StopIteration
