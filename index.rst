@@ -56,8 +56,8 @@ References
 ----------
 
 * **Ken Judd**. Numerical methods in economics. MIT University Press, Cambridge, MA, 2013.
-* **Hans Petter Langtangen**. A primer on scientific programming with Python. Springer, Heidelberg,
-    Germany, 2016.
+* | **Hans Petter Langtangen**. A primer on scientific programming with Python. Springer,
+  | Heidelberg, Germany, 2016.
 
 Powered by
 ----------
