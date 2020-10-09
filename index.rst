@@ -43,8 +43,8 @@ and `mpi4py <https://mpi4py.readthedocs.io>`_.
 We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integrated research and
 teaching platform. The platform provides a simple, browser-based environment that allows for
 complete control over students’ computational environment and simplifies the dissemination of
-teaching material. It enables students to seamlessly scale up their course projects from a prototype
-to a high-performance computing environment.
+teaching material. It enables students to seamlessly scale up their course projects from a
+prototype to a high-performance computing environment.
 
 .. toctree::
    :maxdepth: 1
