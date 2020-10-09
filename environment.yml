@@ -1,4 +1,4 @@
-name: ose-scientific-computing
+name: ose-course-scientific-computing
 
 channels:
 - defaults
@@ -6,10 +6,34 @@ channels:
 - opensourceeconomics
 
 dependencies:
+- black
+- chaospy
+- estimagic
+- flake8
+- ipython
+- ipykernel
+- jupyterlab
+- jupyter
+- jupyter_contrib_nbextensions
+- jupyter_nbextensions_configurator
+- matplotlib
+- nbsphinx
+- nb_black
 - numpy
 - pandas
-- nbsphinx
 - pip
+- pre-commit
+- pytest
+- pytest-black
+- pytest-flake8
+- pytest-repeat
+- respy
+- restructuredtext_lint
+- scipy
+- scikit-learn
+- seaborn
 - pip:
-  - sphinx_rtd_theme
-  - sphinxcontrib-bibtex
+    - black-nb
+    - flake8-nb
+    - sphinx_rtd_theme
+    - sphinxcontrib-bibtex

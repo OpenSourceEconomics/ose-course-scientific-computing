@@ -1,0 +1,18 @@
+figure.figsize: 12, 8
+font.size: 20
+lines.linewidth: 3
+image.cmap: jet
+
+axes.labelsize      : 12
+
+backend: Agg
+axes.spines.right: False
+axes.spines.left: True
+axes.spines.top: False
+axes.spines.bottom: True
+
+legend.fancybox: True
+legend.frameon: False
+legend.shadow: False
+
+savefig.dpi: 300
