@@ -56,3 +56,19 @@ html_theme = "sphinx_rtd_theme"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+
+#-- Options for download buttons on notebooks. ----------------------------------
+
+nbsphinx_prolog = r"""
+{% set docname = env.doc2path(env.docname, base=None) %}
+.. |binder| image:: https://mybinder.org/badge_logo.svg
+    :target: https://mybinder.org/v2/gh/OpenSourceEconomics/ose-course-scientific-computing/master?filepath={{ docname|e }}
+
+.. only:: html
+
+    .. nbinfo::
+        Download the notebook :download:`here <https://nbviewer.jupyter.org/github/OpenSourceEconomics/ose-course-scientific-computing/blob/master/{{ docname }}>`!
+        Interactive online version: |binder|
+
+"""

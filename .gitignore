@@ -1,0 +1,6 @@
+build/
+__pycache__/
+**/lecture_canvas.ipynb
+**/lecture_notes.md
+**.ipynb_checkpoints*
+.DS_Store
