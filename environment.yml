@@ -25,6 +25,7 @@ dependencies:
 - pytest
 - pytest-black
 - pytest-flake8
+- pytest-repeat
 - respy
 - scipy
 - scikit-learn
