@@ -1,10 +1,9 @@
-import scipy as sp
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
 def plot_iterative_convergence(conv_gs, conv_gj):
-    
+
     fig, ax = plt.subplots()
 
     ax.plot(conv_gs, label="Gauss-Seidel")
@@ -21,17 +20,15 @@ def plot_ill_problem_2(cond, err, grid):
 
     ax1.legend()
     ax2.legend()
-    
 
 
 def plot_operation_count():
     df = pd.DataFrame(columns=["LU", "Inverse", "Dimension"])
 
-
     df["Dimension"] = range(10)
     df["LU"] = df["Dimension"] / 3 + df["Dimension"] ** 2
     df["Inverse"] = df["Dimension"] ** 3 + df["Dimension"] ** 2
-    
+
     fig, ax = plt.subplots()
 
     ax.plot(df["Dimension"], df["LU"], label="LU")

@@ -1,7 +1,4 @@
-import scipy as sp
 import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
 
 
 def get_random_problem(n=2, is_diag=True):
@@ -31,10 +28,10 @@ def get_ill_problem_1(n):
             b[k] = n
 
     x = np.ones(n)
-            
+
     return v, b, x
-            
-    
+
+
 def get_ill_problem_2(p):
 
     # from numerical python
@@ -48,11 +45,11 @@ def get_ill_problem_2(p):
 
 
 def get_inverse_demand_problem():
-    
+
     # This is from Judd Figure 3.2
     A = np.array([[1.0, 1.0], [1.0, -2]])
-    b = np.array([10, -2.])
-    
+    b = np.array([10, -2.0])
+
     x = np.array([6.0, 4.0])
-    
+
     return A, b, x
