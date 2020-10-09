@@ -22,10 +22,12 @@ dependencies:
 - numpy
 - pandas
 - pip
+- pre-commit
 - pytest
 - pytest-black
 - pytest-flake8
 - respy
+- restructuredtext_lint
 - scipy
 - scikit-learn
 - seaborn

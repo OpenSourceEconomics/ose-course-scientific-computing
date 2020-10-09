@@ -24,15 +24,31 @@
 .. image:: https://readthedocs.org/projects/ose-scientific-computing/badge/?version=latest
     :target: https://ose-scientific-computing.readthedocs.io
 
-The sound analysis of computational economic models requires expertise in economics, statistics, numerical methods, and software engineering. We first provide an overview of basic numerical methods for optimization, numerical integration, approximation methods, and uncertainty quantification.  We then deepen our understanding of each of these topics in the context of a dynamic model of human capital accumulation using `respy <https://respy.readthedocs.io>`_. We conclude by showcasing basic software engineering practices such as the design of a collaborative and reproducible development workflow, automated testing, and high-performance computing.
+The sound analysis of computational economic models requires expertise in economics, statistics,
+numerical methods, and software engineering. We first provide an overview of basic numerical methods
+for optimization, numerical integration, approximation methods, and uncertainty quantification.
+We then deepen our understanding of each of these topics in the context of a dynamic model of human
+capital accumulation using `respy <https://respy.readthedocs.io>`_. We conclude by showcasing basic
+software engineering practices such as the design of a collaborative and reproducible development
+workflow, automated testing, and high-performance computing.
 
-Students learn how to use `Python <https://www.python.org>`_ for advanced scientific computing. They acquire a toolkit of numerical methods frequently needed for the analysis of computational economic models, obtain an overview of basic software engineering tools such as `GitHub <https://www.github.com>`_ and `pytest <https://docs.pytest.org>`_, and are exposed to high-performance computing using `multiprocessing <https://docs.python.org/3/library/multiprocessing.html>`_ and `mpi4py <https://mpi4py.readthedocs.io>`_.
+Students learn how to use `Python <https://www.python.org>`_ for advanced scientific computing.
+They acquire a toolkit of numerical methods frequently needed for the analysis of computational
+economic models, obtain an overview of basic software engineering tools such as
+`GitHub <https://www.github.com>`_ and `pytest <https://docs.pytest.org>`_, and are exposed to
+high-performance computing using
+`multiprocessing <https://docs.python.org/3/library/multiprocessing.html>`_
+and `mpi4py <https://mpi4py.readthedocs.io>`_.
 
-We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integrated research and teaching platform. The platform provides a simple, browser-based environment that allows for complete control over students’ computational environment and simplifies the dissemination of teaching material. It enables students to seamlessly scale up their course projects from a prototype to a high-performance computing environment.
+We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integrated research and
+teaching platform. The platform provides a simple, browser-based environment that allows for
+complete control over students’ computational environment and simplifies the dissemination of
+teaching material. It enables students to seamlessly scale up their course projects from a prototype
+to a high-performance computing environment.
 
 .. toctree::
    :maxdepth: 1
-   
+
    lectures/index
    iteration/lecture_plan_2020.rst
 
@@ -40,7 +56,8 @@ References
 ----------
 
 * **Ken Judd**. Numerical methods in economics. MIT University Press, Cambridge, MA, 2013.
-* **Hans Petter Langtangen**. A primer on scientific programming with Python. Springer, Heidelberg, Germany, 2016.
+* **Hans Petter Langtangen**. A primer on scientific programming with Python. Springer, Heidelberg,
+    Germany, 2016.
 
 Powered by
 ----------
@@ -62,7 +79,9 @@ Powered by
 .. |space| raw:: html
 
      <embed>
-	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
      </embed>
 
-We gratefully acknowledge funding by the Federal Ministry of Education and Research (BMBF) and the Ministry of Culture and Science of the State of North Rhine-Westphalia (MKW) as part of the Excellence Strategy of the federal and state governments.
+We gratefully acknowledge funding by the Federal Ministry of Education and Research (BMBF) and the
+Ministry of Culture and Science of the State of North Rhine-Westphalia (MKW) as part of the
+Excellence Strategy of the federal and state governments.

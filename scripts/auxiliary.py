@@ -1,22 +1,23 @@
 """This module contains some auxiliary functions shared across the utility scripts."""
-import subprocess as sp
 import argparse
 import difflib
 import glob
 import os
+import subprocess as sp
 
 LECTURES_ROOT = os.environ["PROJECT_ROOT"] + "/lectures"
 
 
 def run_notebook(notebook):
+    """Execute a notebook."""
     cmd = ""
     cmd += " jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=-1 "
-    cmd += "--execute {} ".format(notebook)
+    cmd += f"--execute {notebook} "
     sp.check_call(cmd, shell=True)
 
 
 def parse_arguments(description):
-    """This function parses the arguments for the scripts."""
+    """Parse the arguments for the scripts."""
     parser = argparse.ArgumentParser(description=description)
     task, task_dir = "lecture", LECTURES_ROOT
 
@@ -41,10 +42,10 @@ def parse_arguments(description):
 
 
 def get_list_tasks(task_dir):
+    """Get a list of tasks."""
     cwd = os.getcwd()
-
     os.chdir(task_dir)
-    lectures = [name for name in glob.glob("*-*")]
+    lectures = glob.glob("*-*")
     os.chdir(cwd)
 
     return lectures

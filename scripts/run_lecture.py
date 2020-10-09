@@ -6,7 +6,6 @@ single lecture. It is enough to provide a substring for the name.
 
 Examples
 --------
-
 >> run-lecture             Run all lectures.
 
 >> run-lecture -n intr     Run lecture 01-introduction.
@@ -14,8 +13,8 @@ Examples
 import glob
 import os
 
-from auxiliary import parse_arguments
 from auxiliary import LECTURES_ROOT
+from auxiliary import parse_arguments
 from auxiliary import run_notebook
 
 
@@ -28,6 +27,6 @@ if __name__ == "__main__":
 
         os.chdir(dirname)
         for fname in glob.glob("*.ipynb"):
-            print(f"\n {os.getcwd().split('/')[-1]}\n")
+            print(f"\n {os.getcwd().split('/')[-1]}\n")  # noqa
             run_notebook(fname)
         os.chdir("../")
