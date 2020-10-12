@@ -27,3 +27,18 @@ def fixpoint(f, x0, tol=10e-5):
         e = norm(x0 - x)  # error at the current step
         x0 = x
     return x
+
+
+def newton_method(f, df, x0, tol=1.5e-8):
+
+    """inspired by https://www.math.ubc.ca/~pwalls/math-python/roots-optimization/newton/"""
+
+    xn = x0.copy()
+
+    while True:
+        fxn = f(xn)
+        if np.abs(fxn) < tol:
+            return xn
+        else:
+            dfxn = df(xn)
+            xn = xn - fxn / dfxn
