@@ -1,12 +1,15 @@
 """This module contains some tests for our functions.
 """
+from functools import partial
+
 import numpy as np
 from scipy.optimize import bisect as sp_bisect
-from scipy.optimize import newton as sp_newton
 
 from algorithms import bisect
 from algorithms import fixpoint
 from algorithms import newton_method
+
+from problems import get_cournot_problem
 
 
 def test_1():
@@ -36,15 +39,8 @@ def test_2():
 def test_3():
     """ This test that Newton method is working.
     """
+    c, e = np.array([0.6, 0.8]), 1.6
+    cournot_p = partial(get_cournot_problem, c, e)
 
-    def example(x):
-        return x ** 3 - 2
-
-    def dexample(x):
-        return 3 * x ** 2
-
-    x0 = np.array(1)
-    y = newton_method(example, dexample, x0)
-
-    np.testing.assert_almost_equal(y, 1.259921)
-    np.testing.assert_almost_equal(sp_newton(example, x0, fprime=dexample), y)
+    y = newton_method(cournot_p, np.array([0.2, 0.2]))
+    np.testing.assert_almost_equal(y, [0.8395676, 0.68879643])
