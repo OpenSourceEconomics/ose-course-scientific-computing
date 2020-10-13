@@ -30,6 +30,7 @@ def fixpoint(f, x0, tol=10e-5):
 
 
 def newton_method(f, x0, tol=1.5e-8):
+    x0 = np.atleast_2d(x0)
 
     # https://github.com/randall-romero/CompEcon/blob/master/textbook/chapter03.py
     xn = x0.copy()
@@ -37,6 +38,28 @@ def newton_method(f, x0, tol=1.5e-8):
     while True:
         fxn, gxn = f(xn)
         if np.linalg.norm(fxn) < tol:
-            return xn
+            return xn[0]
         else:
             xn = xn - np.linalg.solve(gxn, fxn)
+
+
+def mcp(f, x0, a, b, tol=1.5e-8):
+
+    n = x0.shape[0]
+    x = x0.copy()
+
+    while True:
+        fval, fjac = f(x)
+
+        # probably need to define an axis for aggregation
+        fhatval = np.minimum(np.maximum(fval, a - x), b - x)
+        fhatjac = -np.identity(n)
+
+        i = (fval > a - x) & (fval < b - x)
+        if np.any(i):
+            fhatjac[i] = fjac[i]
+
+        if norm(fhatval) < tol:
+            return x
+        else:
+            x = x - np.linalg.solve(fhatjac, fhatval)

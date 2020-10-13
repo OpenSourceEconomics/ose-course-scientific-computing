@@ -8,8 +8,10 @@ from scipy.optimize import bisect as sp_bisect
 from algorithms import bisect
 from algorithms import fixpoint
 from algorithms import newton_method
+from algorithms import mcp
 
 from problems import get_cournot_problem
+from problems import get_mcp_problem
 
 
 def test_1():
@@ -44,3 +46,11 @@ def test_3():
 
     y = newton_method(cournot_p, np.array([0.2, 0.2]))
     np.testing.assert_almost_equal(y, [0.8395676, 0.68879643])
+
+
+def test_4():
+    """ This test ensures that the MCP routine is working.
+    """
+    x0 = np.array([0.5, 0.5])
+    a, b = np.array([[0.0, 0.0], [1.0, 1.0]])
+    mcp(get_mcp_problem, x0, a, b)
