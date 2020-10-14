@@ -145,7 +145,8 @@ def solve(a, b):
     -------
     >>> b = np.array([10, 8, -3])
     >>> a = np.array([[-3,2, 3], [-3,2,1], [3,0,0]])
-    [-1, 2, 1]
+    >>> solve(a, b)
+    array([-1, 3, 1])
 
     """
     # Step 1: Factorization using scipy function lu.
