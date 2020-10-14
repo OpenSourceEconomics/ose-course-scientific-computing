@@ -48,9 +48,34 @@ def newton_method(f, x0, tol=1.5e-8):
 def mcp_minmax(f, x0, a, b):
     def wrapper(f, a, b, x):
         fval = f(x)[0]
-        return np.minimum(np.maximum(fval, a - x), b - x)
+        return np.fmin(np.fmax(fval, a - x), b - x)
+
+    options = dict()
+    options["maxiter"] = 500
 
     wrapper_p = partial(wrapper, f, a, b)
-    rslt = root(wrapper_p, x0, method="broyden1")
+    rslt = root(wrapper_p, x0, method="broyden1", options=options)
+
+    return rslt
+
+
+def fisher(u, v, sign):
+    return u + v + sign * np.sqrt(u ** 2 + v ** 2)
+
+
+def mcp_fisher(f, x0, a, b):
+    def wrapper(f, a, b, x):
+        b[b == np.inf] = 1000  # fisher solution quite sensitiv, maybe good exercise to run in
+        # class.
+
+        u_inner, v_inner, sign_inner = f(x)[0], a - x, +1.0
+        u_outer, v_outer, sign_outer = fisher(u_inner, v_inner, sign_inner), b - x, -1.0
+        return fisher(u_outer, v_outer, sign_outer)
+
+    options = dict()
+    options["maxiter"] = 500
+
+    wrapper_p = partial(wrapper, f, a, b)
+    rslt = root(wrapper_p, x0, method="broyden1", options=options)
 
     return rslt

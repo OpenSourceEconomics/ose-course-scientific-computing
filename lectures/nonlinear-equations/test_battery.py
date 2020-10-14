@@ -9,7 +9,9 @@ from algorithms import bisect
 from algorithms import fixpoint
 from algorithms import newton_method
 from algorithms import mcp_minmax
+from algorithms import mcp_fisher
 
+from problems import get_fischer_problem
 from problems import get_cournot_problem
 from problems import get_mcp_problem
 
@@ -55,3 +57,16 @@ def test_4():
     a, b = np.array([[0.0, 0.0], [1.0, 1.0]])
     y = mcp_minmax(get_mcp_problem, x0, a, b)["x"]
     np.testing.assert_almost_equal(y, [0.7937005, 1.0])
+
+
+def test_5():
+    """ This test ensures that the smoothing example iw working properly."""
+    a = np.zeros(1)
+    b = np.full(1, np.inf)
+    x0 = np.zeros(1)
+
+    x_sol = mcp_minmax(get_fischer_problem, x0, a, b)["x"]
+    np.testing.assert_almost_equal(x_sol, 0.0035564)
+
+    x_sol = mcp_fisher(get_fischer_problem, x0, a, b)["x"]
+    np.testing.assert_almost_equal(x_sol, 2.0049876)
