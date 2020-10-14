@@ -20,7 +20,7 @@ def get_cournot_problem(c, eta, q, jac=True):
     return ret
 
 
-def get_mcp_problem(z):
+def get_mcp_problem(z, jac=True):
     x, y = z
     f = [1 + x * y - 2 * x ** 3 - x, 2 * x ** 2 - y]
     J = [[y - 6 * x ** 2 - 1, x], [4 * x, -1]]

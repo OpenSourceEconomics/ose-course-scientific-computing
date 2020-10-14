@@ -8,7 +8,7 @@ from scipy.optimize import bisect as sp_bisect
 from algorithms import bisect
 from algorithms import fixpoint
 from algorithms import newton_method
-from algorithms import mcp
+from algorithms import mcp_minmax
 
 from problems import get_cournot_problem
 from problems import get_mcp_problem
@@ -53,4 +53,5 @@ def test_4():
     """
     x0 = np.array([0.5, 0.5])
     a, b = np.array([[0.0, 0.0], [1.0, 1.0]])
-    mcp(get_mcp_problem, x0, a, b)
+    y = mcp_minmax(get_mcp_problem, x0, a, b)["x"]
+    np.testing.assert_almost_equal(y, [0.7937005, 1.0])

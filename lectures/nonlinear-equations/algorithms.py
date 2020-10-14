@@ -1,5 +1,7 @@
 import numpy as np
 from numpy.linalg import norm
+from functools import partial
+from scipy.optimize import root
 
 
 def bisect(f, a, b, tol=1.5e-8):
@@ -43,23 +45,12 @@ def newton_method(f, x0, tol=1.5e-8):
             xn = xn - np.linalg.solve(gxn, fxn)
 
 
-def mcp(f, x0, a, b, tol=1.5e-8):
+def mcp_minmax(f, x0, a, b):
+    def wrapper(f, a, b, x):
+        fval = f(x)[0]
+        return np.minimum(np.maximum(fval, a - x), b - x)
 
-    n = x0.shape[0]
-    x = x0.copy()
+    wrapper_p = partial(wrapper, f, a, b)
+    rslt = root(wrapper_p, x0, method="broyden1")
 
-    while True:
-        fval, fjac = f(x)
-
-        # probably need to define an axis for aggregation
-        fhatval = np.minimum(np.maximum(fval, a - x), b - x)
-        fhatjac = -np.identity(n)
-
-        i = (fval > a - x) & (fval < b - x)
-        if np.any(i):
-            fhatjac[i] = fjac[i]
-
-        if norm(fhatval) < tol:
-            return x
-        else:
-            x = x - np.linalg.solve(fhatjac, fhatval)
+    return rslt
