@@ -55,7 +55,7 @@ def solve(A, b):
 
 def gauss_jacobi(A, b, x0=None, maxit=1000, tol=eps):
     """
-
+    https://github.com/randall-romero/CompEcon/tree/master/notebooks/slv
     from the COmpecon repo
 
     Solves AX=b using Gauss-Jacobi iterations
@@ -88,6 +88,8 @@ def gauss_jacobi(A, b, x0=None, maxit=1000, tol=eps):
 
 def gauss_seidel(A, b, x0=None, lambda_=1.0, maxit=1000, tol=eps):
     """
+
+    https://github.com/randall-romero/CompEcon/tree/master/notebooks/slv
     Solves AX=b using Gauss-Seidel iterations
     :param A: n.n numpy array
     :param b: n numpy array
