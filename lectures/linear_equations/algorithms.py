@@ -1,17 +1,9 @@
 """This module contains the algorithms for the lecture in linear equations.
 
-The materials follow [M2004]_ (Chapter 2). The python code heavily draws on [R2020]_ and [F2019]_.
+The materials follow Miranda and Fackler (2004, :cite:`miranda2004applied`) (Chapter 2).
+The python code heavily draws on Romero-Aguilar (2020, :cite:`CompEcon`) and
+Foster (2019, :cite:`foster2019`).
 
-References
-----------
-.. [F2019] Foster, J. T. (2019). Numerical Methods and Computer Programming. e-book. URL:
-           https://johnfoster.pge.utexas.edu/numerical-methods-book
-
-.. [M2004] Miranda, M. J., & Fackler, P. L. (2004). Applied Computational Economics
-           and Finance. MIT Press.
-
-.. [R2020] Romero-Aguilar, R. (2020). CompEcon: A Python version of Miranda and Fackler's CompEcon
-           toolbox. Available at https://github.com/randall-romero/CompEconR.
 """
 import numpy as np
 from scipy.linalg import lu

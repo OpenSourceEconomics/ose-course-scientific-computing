@@ -50,7 +50,9 @@ prototype to a high-performance computing environment.
    :maxdepth: 1
 
    lectures/index
-   iteration/lecture_plan_2020.rst
+   reading
+   iteration/lecture_plan_2020
+   references/references
 
 References
 ----------
