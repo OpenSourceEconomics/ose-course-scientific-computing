@@ -5,15 +5,15 @@ from functools import partial
 import numpy as np
 from scipy.optimize import bisect as sp_bisect
 
-from algorithms import bisect
-from algorithms import fixpoint
-from algorithms import newton_method
-from algorithms import mcp_minmax
-from algorithms import mcp_fisher
+from nonlinear_algorithms import bisect
+from nonlinear_algorithms import fixpoint
+from nonlinear_algorithms import newton_method
+from nonlinear_algorithms import mcp_minmax
+from nonlinear_algorithms import mcp_fisher
 
-from problems import get_fischer_problem
-from problems import get_cournot_problem
-from problems import get_mcp_problem
+from nonlinear_problems import get_fischer_problem
+from nonlinear_problems import get_cournot_problem
+from nonlinear_problems import get_mcp_problem
 
 
 def test_1():
