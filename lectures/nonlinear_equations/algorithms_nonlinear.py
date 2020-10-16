@@ -1,11 +1,13 @@
+"""Algorithms for lecture on nonlinear equations."""
+from functools import partial
+
 import numpy as np
 from numpy.linalg import norm
-from functools import partial
 from scipy.optimize import root
 
 
 def bisect(f, a, b, tol=1.5e-8):
-
+    """Apply bisect method."""
     s = np.sign(f(a))
 
     x = (a + b) / 2
@@ -22,7 +24,7 @@ def bisect(f, a, b, tol=1.5e-8):
 
 
 def fixpoint(f, x0, tol=10e-5):
-    """ Fixed point algorithm """
+    """Apply fixed point method."""
     e = 1
     while e > tol:
         x = f(x0)  # fixed point equation
@@ -32,6 +34,7 @@ def fixpoint(f, x0, tol=10e-5):
 
 
 def newton_method(f, x0, tol=1.5e-8):
+    """Apply newton method."""
     x0 = np.atleast_2d(x0)
 
     # https://github.com/randall-romero/CompEcon/blob/master/textbook/chapter03.py
@@ -46,11 +49,13 @@ def newton_method(f, x0, tol=1.5e-8):
 
 
 def mcp_minmax(f, x0, a, b):
+    """Apply minmax to mixed complementarity Problem."""
+
     def wrapper(f, a, b, x):
         fval = f(x)[0]
         return np.fmin(np.fmax(fval, a - x), b - x)
 
-    options = dict()
+    options = {}
     options["maxiter"] = 500
 
     wrapper_p = partial(wrapper, f, a, b)
@@ -60,19 +65,22 @@ def mcp_minmax(f, x0, a, b):
 
 
 def fisher(u, v, sign):
+    """Define Fischer's function."""
     return u + v + sign * np.sqrt(u ** 2 + v ** 2)
 
 
 def mcp_fisher(f, x0, a, b):
+    """Apply Fischer's method to mixed complementarity Problem."""
+
     def wrapper(f, a, b, x):
-        b[b == np.inf] = 1000  # fisher solution quite sensitiv, maybe good exercise to run in
+        b[b == np.inf] = 1000  # fisher solution quite sensitive, maybe good exercise to run in
         # class.
 
         u_inner, v_inner, sign_inner = f(x)[0], a - x, +1.0
         u_outer, v_outer, sign_outer = fisher(u_inner, v_inner, sign_inner), b - x, -1.0
         return fisher(u_outer, v_outer, sign_outer)
 
-    options = dict()
+    options = {}
     options["maxiter"] = 500
 
     wrapper_p = partial(wrapper, f, a, b)

@@ -1,12 +1,12 @@
 """This module contains some tests for our functions."""
 import numpy as np
 import pytest
-from algorithms import backward_substitution
-from algorithms import forward_substitution
-from algorithms import gauss_jacobi
-from algorithms import gauss_seidel
-from algorithms import solve
-from problems import get_random_problem
+from algorithms_linear import backward_substitution
+from algorithms_linear import forward_substitution
+from algorithms_linear import gauss_jacobi
+from algorithms_linear import gauss_seidel
+from algorithms_linear import solve
+from problems_linear import get_random_problem
 
 
 @pytest.mark.repeat(5)

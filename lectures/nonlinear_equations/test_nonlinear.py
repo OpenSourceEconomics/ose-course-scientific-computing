@@ -1,24 +1,20 @@
-"""This module contains some tests for our functions.
-"""
+"""Tests for nonlinear equations lecture."""
 from functools import partial
 
 import numpy as np
+from algorithms_nonlinear import bisect
+from algorithms_nonlinear import fixpoint
+from algorithms_nonlinear import mcp_fisher
+from algorithms_nonlinear import mcp_minmax
+from algorithms_nonlinear import newton_method
+from problems_nonlinear import get_cournot_problem
+from problems_nonlinear import get_fischer_problem
+from problems_nonlinear import get_mcp_problem
 from scipy.optimize import bisect as sp_bisect
-
-from algorithms import bisect
-from algorithms import fixpoint
-from algorithms import newton_method
-from algorithms import mcp_minmax
-from algorithms import mcp_fisher
-
-from problems import get_fischer_problem
-from problems import get_cournot_problem
-from problems import get_mcp_problem
 
 
 def test_1():
-    """ This test that the bisection method is working.
-    """
+    """Bisection method is working."""
 
     def example(x):
         return x ** 3 - 2
@@ -30,8 +26,7 @@ def test_1():
 
 
 def test_2():
-    """ This test that the fixpoint method is working.
-    """
+    """Fixpoint method is working."""
 
     def example(x):
         return np.sqrt(x)
@@ -41,8 +36,7 @@ def test_2():
 
 
 def test_3():
-    """ This test that Newton method is working.
-    """
+    """Newton method is working."""
     c, e = np.array([0.6, 0.8]), 1.6
     cournot_p = partial(get_cournot_problem, c, e)
 
@@ -51,8 +45,7 @@ def test_3():
 
 
 def test_4():
-    """ This test ensures that the MCP routine is working.
-    """
+    """MCP routine is working."""
     x0 = np.array([0.5, 0.5])
     a, b = np.array([[0.0, 0.0], [1.0, 1.0]])
     y = mcp_minmax(get_mcp_problem, x0, a, b)["x"]
@@ -60,7 +53,7 @@ def test_4():
 
 
 def test_5():
-    """ This test ensures that the smoothing example iw working properly."""
+    """Smoothing example is working properly."""
     a = np.zeros(1)
     b = np.full(1, np.inf)
     x0 = np.zeros(1)
