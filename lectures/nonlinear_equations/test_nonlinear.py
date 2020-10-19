@@ -4,7 +4,7 @@ from functools import partial
 import numpy as np
 from algorithms_nonlinear import bisect
 from algorithms_nonlinear import fixpoint
-from algorithms_nonlinear import mcp_fisher
+from algorithms_nonlinear import mcp_fischer
 from algorithms_nonlinear import mcp_minmax
 from algorithms_nonlinear import newton_method
 from problems_nonlinear import get_cournot_problem
@@ -61,5 +61,5 @@ def test_5():
     x_sol = mcp_minmax(get_fischer_problem, x0, a, b)["x"]
     np.testing.assert_almost_equal(x_sol, 0.0035564)
 
-    x_sol = mcp_fisher(get_fischer_problem, x0, a, b)["x"]
+    x_sol = mcp_fischer(get_fischer_problem, x0, a, b)["x"]
     np.testing.assert_almost_equal(x_sol, 2.0049876)
