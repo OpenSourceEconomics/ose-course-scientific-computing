@@ -82,8 +82,10 @@ def fixpoint(f, x0, tolerance=10e-5):
 
     Examples
     --------
-    >>> fixpoint(f=lambda x : x**0.5, x0=0.4, tolerance=1e-30)
-    1.0
+    >>> import numpy as np
+    >>> x = fixpoint(f=lambda x : x**0.5, x0=0.4, tolerance=1e-10)
+    >>> np.allclose(x, 1)
+    True
 
     """
     e = 1
