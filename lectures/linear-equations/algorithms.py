@@ -134,7 +134,7 @@ def solve(a, b):
 
     """
     # Step 1: Factorization using scipy function lu.
-    _, l, u = lu(a)
+    l, u = naive_LU(a)
 
     # Step 2: Solution using forward and backward substitution.
     y = forward_substitution(l, b)
@@ -269,3 +269,20 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
             return x, conv
 
     raise StopIteration
+
+
+def naive_LU(a):
+
+    N = a.shape[0]
+    u = a.copy()
+    L = np.eye(N)
+    for j in range(N - 1):
+        lam = np.eye(N)
+        gamma = u[j + 1 :, j] / u[j, j]
+        lam[j + 1 :, j] = -gamma
+        u = lam @ u
+
+        lam[j + 1 :, j] = gamma
+        L = L @ lam
+
+    return L, u

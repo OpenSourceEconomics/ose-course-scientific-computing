@@ -22,4 +22,5 @@ def plot_operation_count():
     fig, ax = plt.subplots()
     ax.plot(dim, dim / 3 + dim ** 2, label="LU")
     ax.plot(dim, dim ** 3 + dim ** 2, label="Inverse")
+    ax.set_xlabel("Dimension")
     ax.legend()
