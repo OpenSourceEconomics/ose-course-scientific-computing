@@ -7,76 +7,78 @@ from problems_linear import get_random_problem
 from algorithms_linear import backward_substitution, eps
 
 
-for _ in range(10):
-    A, b, x_true = get_random_problem()
-    x_solve = backward_substitution(A, b)
-    np.testing.assert_almost_equal(x_solve, x_true)
+def exercise_1():
+    for _ in range(10):
+        A, b, x_true = get_random_problem()
+        x_solve = backward_substitution(A, b)
+        np.testing.assert_almost_equal(x_solve, x_true)
 
 
-def benchmarking_alterantives():
-    def tic():
-        return time.time()
+def exercise_2():
+    def benchmarking_alterantives():
+        def tic():
+            return time.time()
 
-    def toc(t):
-        return time.time() - t
+        def toc(t):
+            return time.time() - t
 
-    print(
-        "{:^5} {:^5}   {:^11} {:^11} \n{}".format(
-            "m", "n", "np.solve(A,b)", "dot(inv(A), b)", "-" * 40
+        print(
+            "{:^5} {:^5}   {:^11} {:^11} \n{}".format(
+                "m", "n", "np.solve(A,b)", "dot(inv(A), b)", "-" * 40
+            )
         )
-    )
 
-    for m in [1, 100]:
-        for n in [50, 500]:
-            A = np.random.rand(n, n)
-            b = np.random.rand(n, 1)
+        for m in [1, 100]:
+            for n in [50, 500]:
+                A = np.random.rand(n, n)
+                b = np.random.rand(n, 1)
 
-            tt = tic()
-            for j in range(m):
-                np.linalg.solve(A, b)
+                tt = tic()
+                for j in range(m):
+                    np.linalg.solve(A, b)
 
-            f1 = 100 * toc(tt)
+                f1 = 100 * toc(tt)
 
-            tt = tic()
-            Ainv = np.linalg.inv(A)
-            for j in range(m):
-                np.dot(Ainv, b)
+                tt = tic()
+                Ainv = np.linalg.inv(A)
+                for j in range(m):
+                    np.dot(Ainv, b)
 
-            f2 = 100 * toc(tt)
-            print(" {:3}   {:3} {:11.2f} {:11.2f}".format(m, n, f1, f2))
+                f2 = 100 * toc(tt)
+                print(" {:3}   {:3} {:11.2f} {:11.2f}".format(m, n, f1, f2))
 
-
-benchmarking_alterantives()
+    benchmarking_alterantives()
 
 
-def get_ill_problem_2(p):
-    """Create ill problem (2)."""
-    # from numerical python
+def exercise_3():
+    def plot_ill_problem_2(cond, err, grid):
+        """Plot ill problem."""
+        fig, (ax1, ax2) = plt.subplots(2)
+        ax1.plot(grid, cond, label="Condition")
+        ax2.plot(grid, err, label="Error")
+        ax1.legend()
+        ax2.legend()
 
-    a = np.array([[1, np.sqrt(p)], [1, 1 / np.sqrt(p)]])
-    b = np.array([1.0, 2.0])
-    x = np.array([(2 * p - 1) / (p - 1), -np.sqrt(p) / (p - 1)])
+    def get_ill_problem_2(p):
+        """Create ill problem (2)."""
+        # from numerical python
 
-    return a, b, x
+        a = np.array([[1, np.sqrt(p)], [1, 1 / np.sqrt(p)]])
+        b = np.array([1.0, 2.0])
+        x = np.array([(2 * p - 1) / (p - 1), -np.sqrt(p) / (p - 1)])
 
+        return a, b, x
 
-grid = np.linspace(0.9, 1.1)
-cond, err = list(), list()
-for p in grid:
-    A, b, x_true = get_ill_problem_2(p)
-    x_solve = np.linalg.solve(A, b)
+    grid = np.linspace(0.9, 1.1)
+    cond, err = list(), list()
+    for p in grid:
+        A, b, x_true = get_ill_problem_2(p)
+        x_solve = np.linalg.solve(A, b)
 
-    cond.append(np.linalg.cond(A))
-    err.append(np.linalg.norm(x_solve - x_true, 1))
+        cond.append(np.linalg.cond(A))
+        err.append(np.linalg.norm(x_solve - x_true, 1))
 
-
-def plot_ill_problem_2(cond, err, grid):
-    """Plot ill problem."""
-    fig, (ax1, ax2) = plt.subplots(2)
-    ax1.plot(grid, cond, label="Condition")
-    ax2.plot(grid, err, label="Error")
-    ax1.legend()
-    ax2.legend()
+    plot_ill_problem_2(cond, err, grid)
 
 
 def gauss_jacobi(a, b, x0=None, max_iterations=1000, tolerance=eps):
