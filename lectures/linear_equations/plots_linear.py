@@ -11,15 +11,6 @@ def plot_iterative_convergence(conv_gs, conv_gj):
     ax.legend()
 
 
-def plot_ill_problem_2(cond, err, grid):
-    """Plot ill problem."""
-    fig, (ax1, ax2) = plt.subplots(2)
-    ax1.plot(grid, cond, label="Condition")
-    ax2.plot(grid, err, label="Error")
-    ax1.legend()
-    ax2.legend()
-
-
 def plot_operation_count():
     """Plot operation count."""
     dim = np.arange(10) + 1

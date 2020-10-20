@@ -3,7 +3,7 @@ import numpy as np
 import pytest
 from algorithms_linear import backward_substitution
 from algorithms_linear import forward_substitution
-from algorithms_linear import gauss_jacobi
+from exercises_solutions import gauss_jacobi
 from algorithms_linear import gauss_seidel
 from algorithms_linear import solve
 from problems_linear import get_random_problem
