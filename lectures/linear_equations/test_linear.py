@@ -35,5 +35,5 @@ def test_3():
     a, b, x_true = get_random_problem(is_diag=True)
 
     for method in [gauss_seidel, gauss_jacobi]:
-        x_solve, _ = method(a, b)
+        x_solve = method(a, b)
         np.testing.assert_almost_equal(x_solve, x_true)
