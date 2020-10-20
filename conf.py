@@ -8,9 +8,11 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath("."))
+
 # -- Project information -----------------------------------------------------
 
 project = "OSE Scientific Computing"
@@ -24,12 +26,16 @@ author = "Open Source Economics"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx.ext.mathjax",
+    # "sphinx.ext.mathjax",
     "nbsphinx",
     "sphinx.ext.extlinks",
     "sphinx_rtd_theme",
     "sphinx.ext.doctest",
     "sphinxcontrib.bibtex",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.imgmath",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
