@@ -6,7 +6,6 @@ Foster (2019, :cite:`foster2019`).
 
 """
 import numpy as np
-from scipy.linalg import lu
 
 eps = np.sqrt(np.spacing(1.0))
 
@@ -134,7 +133,7 @@ def solve(a, b):
 
     """
     # Step 1: Factorization using scipy function lu.
-    l, u = naive_LU(a)
+    l, u = naive_lu(a)
 
     # Step 2: Solution using forward and backward substitution.
     y = forward_substitution(l, b)
@@ -271,18 +270,18 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
     raise StopIteration
 
 
-def naive_LU(a):
-
-    N = a.shape[0]
+def naive_lu(a):
+    """Naive LU."""
+    n = a.shape[0]
     u = a.copy()
-    L = np.eye(N)
-    for j in range(N - 1):
-        lam = np.eye(N)
+    l = np.eye(n)
+    for j in range(n - 1):
+        lam = np.eye(n)
         gamma = u[j + 1 :, j] / u[j, j]
         lam[j + 1 :, j] = -gamma
         u = lam @ u
 
         lam[j + 1 :, j] = gamma
-        L = L @ lam
+        l = l @ lam
 
-    return L, u
+    return l, u

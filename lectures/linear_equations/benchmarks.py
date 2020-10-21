@@ -1,9 +1,12 @@
+"""Benchmark functions."""
 import time
 
 import numpy as np
 
 
 def benchmarking_alterantives():
+    """Benchmark alternative."""
+
     def tic():
         return time.time()
 
@@ -33,4 +36,4 @@ def benchmarking_alterantives():
                 np.dot(Ainv, b)
 
             f2 = 100 * toc(tt)
-            print(" {:3}   {:3} {:11.2f} {:11.2f}".format(m, n, f1, f2))
+            print(f" {m:3}   {n:3} {f1:11.2f} {f2:11.2f}")
