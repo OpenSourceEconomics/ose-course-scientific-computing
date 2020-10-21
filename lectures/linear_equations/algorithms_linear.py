@@ -133,7 +133,7 @@ def solve(a, b):
 
     """
     # Step 1: Factorization using scipy function lu.
-    l, u = naive_LU(a)
+    l, u = naive_lu(a)
 
     # Step 2: Solution using forward and backward substitution.
     y = forward_substitution(l, b)
@@ -143,8 +143,7 @@ def solve(a, b):
 
 
 def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps):
-    """
-    Solves linear equation of type :math:`Ax = b` using Gauss-Seidel iterations.
+    """Solves linear equation of type :math:`Ax = b` using Gauss-Seidel iterations.
 
     The algorithm follows the same solution method as the Gauss-Jacobi method outlines in
     :func:`gauss_jacobi` with a differing definition of the splitting matrix :math:`Q`. For
@@ -178,7 +177,6 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
     StopIteration
         If maximum number of iterations specified by `max_iterations` is reached.
     """
-
     if x0 is None:
         x = b.copy()
     else:
@@ -195,18 +193,18 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
     raise StopIteration
 
 
-def naive_LU(a):
-
-    N = a.shape[0]
+def naive_lu(a):
+    """Naive LU."""
+    n = a.shape[0]
     u = a.copy()
-    L = np.eye(N)
-    for j in range(N - 1):
-        lam = np.eye(N)
+    l = np.eye(n)
+    for j in range(n - 1):
+        lam = np.eye(n)
         gamma = u[j + 1 :, j] / u[j, j]
         lam[j + 1 :, j] = -gamma
         u = lam @ u
 
         lam[j + 1 :, j] = gamma
-        L = L @ lam
+        l = l @ lam
 
-    return L, u
+    return l, u

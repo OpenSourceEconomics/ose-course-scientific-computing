@@ -90,3 +90,19 @@ Lecture Plan
 +------------+-------------------------------------------------------+
 | x          | Project deadline                                      |
 +------------+-------------------------------------------------------+
+
+
+Projects
+""""""""
+
+Your grade for this class will be based on a scientific computing project due at the end of the
+semester. The project should be coded in Python and uploaded to Nuvolos for grading.
+
+You are free to select a topic of your choice related to the contents of the class. For instance,
+you could replicate the core results of a computational publication, run a benchmarking exercise
+for an algorithm, or create a notebook similar to the ones presented in the lectures on a
+computational topic that interests you.
+
+Please discuss your project idea with Professor Eisenhauer. We suggest settling on a topic by
+the end of January 2020 so you have enough time to work on your project. The project deadline is
+March 31st, 2020.
