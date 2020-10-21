@@ -28,17 +28,6 @@ def get_ill_problem_1(n):
     return a, b, x
 
 
-def get_ill_problem_2(p):
-    """Create ill problem (2)."""
-    # from numerical python
-
-    a = np.array([[1, np.sqrt(p)], [1, 1 / np.sqrt(p)]])
-    b = np.array([1.0, 2.0])
-    x = np.array([(2 * p - 1) / (p - 1), -np.sqrt(p) / (p - 1)])
-
-    return a, b, x
-
-
 def get_inverse_demand_problem():
     """Create inverse demand problem."""
     # This is from Judd Figure 3.2
