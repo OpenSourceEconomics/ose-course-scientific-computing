@@ -142,81 +142,8 @@ def solve(a, b):
     return x
 
 
-def gauss_jacobi(a, b, x0=None, max_iterations=1000, tolerance=eps):
-    """
-    Solves linear equation of type :math:`Ax = b` using Gauss-Jacobi iterations.
-
-    In the linear equation, :math:`A` denotes a matrix of dimension
-    :math:`n \\times n` and :math:`b` denotes a vector of length :math:`n` The solution
-    method performs especially well for larger linear equations if matrix :math`A`is
-    sparse. The method achieves fairly precise approximations to the solution but
-    generally does not produce *exact* solutions.
-
-    Following the notation in Miranda and Fackler (2004, :cite:`miranda2004applied`), the linear
-    equations problem can be written as
-
-    .. math::
-
-       Qx = b + (Q -A)x \\Rightarrow x = Q^{-1}b + (I - Q^{-1}A)x
-
-    which suggest the iteration rule
-
-    .. math::
-
-       x^{(k+1)} \\leftarrow Q^{-1}b + (I - Q^{-1}A)x^{(k)}
-
-    which, if convergent, must converge to a solution of the linear equation. For the
-    **Gauss-Jacobi** method, the splitting matrix :math:`Q` is set equal to the diagonal matrix
-    formed from the diagonal entries of matrix :math:`A`.
-
-    Parameters
-    ----------
-    a : numpy.ndarray
-        Matrix of dimension :math:`n \\times n`
-    b : numpy.ndrray
-        Vector of length :math:`n`.
-    x0 : numpy.ndarray, default None
-        Array of starting values. Set to :math:`b` if None.
-    max_iterations : int
-        Maximum number of iterations.
-    tol : float
-        Convergence tolerance.
-
-    Returns
-    --------
-    x : numpy.ndarray
-        Solution of the linear equations. Vector of length :math:`n`.
-    conv : list
-            Convergence of solution.
-
-    Raises
-    ------
-    StopIteration
-        If maximum number of iterations specified by `max_iterations` is reached.
-    """
-    conv = []
-
-    if x0 is None:
-        x = b.copy()
-    else:
-        x = x0
-
-    q = np.diag(np.diag(a))
-    for _ in range(max_iterations):
-        dx = solve(q, b - a @ x)
-
-        x += dx
-        conv.append(np.linalg.norm(dx))
-
-        if np.linalg.norm(dx) < tolerance:
-            return x, conv
-
-    raise StopIteration
-
-
 def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps):
-    """
-    Solves linear equation of type :math:`Ax = b` using Gauss-Seidel iterations.
+    """Solves linear equation of type :math:`Ax = b` using Gauss-Seidel iterations.
 
     The algorithm follows the same solution method as the Gauss-Jacobi method outlines in
     :func:`gauss_jacobi` with a differing definition of the splitting matrix :math:`Q`. For
@@ -243,16 +170,13 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
     -------
     x : numpy.ndarray
         Solution of the linear equations. Vector of length :math:`n`.
-    conv : list
-        Convergence of solution.
+
 
     Raises
     ------
     StopIteration
         If maximum number of iterations specified by `max_iterations` is reached.
     """
-    conv = []
-
     if x0 is None:
         x = b.copy()
     else:
@@ -260,12 +184,11 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
 
     q = np.tril(a)
     for _ in range(max_iterations):
-        dx = solve(q, b - a @ x)
+        dx = np.linalg.solve(q, b - a @ x)
         x += lambda_ * dx
-        conv.append(np.linalg.norm(dx))
 
         if np.linalg.norm(dx) < tolerance:
-            return x, conv
+            return x
 
     raise StopIteration
 
