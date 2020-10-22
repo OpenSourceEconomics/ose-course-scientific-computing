@@ -1,8 +1,8 @@
 # The basic idea is to NOT have any regular package imports here.
 # This just confuses students.
+import numpy as np
 from IPython import get_ipython
 from IPython.core.display import HTML
-import numpy as np
 
 ipython = get_ipython()
 

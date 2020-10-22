@@ -1,10 +1,10 @@
-import matplotlib.pyplot as plt
-
 import time
 
+import matplotlib.pyplot as plt
 import numpy as np
+from algorithms_linear import backward_substitution
+from algorithms_linear import eps
 from problems_linear import get_random_problem
-from algorithms_linear import backward_substitution, eps
 
 
 def exercise_1():
@@ -45,7 +45,7 @@ def exercise_2():
                     np.dot(Ainv, b)
 
                 f2 = 100 * toc(tt)
-                print(" {:3}   {:3} {:11.2f} {:11.2f}".format(m, n, f1, f2))
+                print(f" {m:3}   {n:3} {f1:11.2f} {f2:11.2f}")
 
     benchmarking_alterantives()
 
