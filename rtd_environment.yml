@@ -1,5 +1,8 @@
+name: ose-course-scientific-computing
+
 channels:
   - conda-forge
+  
 dependencies:
   - python
   - ipython
