@@ -2,16 +2,15 @@ name: ose-course-scientific-computing
 
 channels:
   - conda-forge
-  
+
 dependencies:
   - python
   - ipython
   - pip
   - nbsphinx
   - numpydoc
-  - nbsphinx
   - sphinx
   - sphinx-autoapi
+  - sphinxcontrib-bibtex
   - pip:
-      - sphinxcontrib-bibtex
       - sphinx_rtd_theme
