@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - ipython
+  - nbsphinx
+  - numpydoc
+  - sphinx
+  - sphinx-autoapi
+  - sphinxcontrib-bibtex
+  - sphinx_rtd_theme
