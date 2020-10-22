@@ -6,9 +6,12 @@ build:
 
 python:
   version: 3.7
+  install:
+      - method: pip
+
 
 conda:
-  environment: environment.yml
+  environment: rtd_environment.yml
   
 formats:
   - pdf
