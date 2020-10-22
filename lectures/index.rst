@@ -13,17 +13,5 @@ We explore different solution algorithms to solve linear equations. We look at d
 .. toctree::
    :maxdepth: 1
 
-   nonlinear_equations/notebook.ipynb
+   linear_equations/notebook.ipynb
    linear_equations/algorithms.rst
-
-===================
-Nonlinear equations
-===================
-
-We explore different solution algorithms to solve nonlinear equations.
-
-.. toctree::
-   :maxdepth: 1
-
-  nonlinear_equations/notebook.ipynb
-  nonlinear_equations/algorithms.rst
