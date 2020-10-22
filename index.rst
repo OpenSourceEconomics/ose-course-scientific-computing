@@ -56,7 +56,7 @@ prototype to a high-performance computing environment.
 References
 ----------
 
-|mirandafackler|  |juddnumeriacal|
+|space| |space| |mirandafackler| |space| |juddnumeriacal| |space| |space|
 
 .. bibliography:: references/references.bib
    :list: bullet
@@ -75,7 +75,7 @@ References
 Powered by
 ----------
 
-|OSE| |space| |Nuvolos| |space| |TRA|
+|space| |OSE| |space| |Nuvolos| |space| |TRA| |space|
 
 .. |OSE| image:: _static/images/fig-ose.svg
   :width: 22 %
