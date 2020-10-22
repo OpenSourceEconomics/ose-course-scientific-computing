@@ -5,7 +5,7 @@ import numpy as np
 
 
 def benchmarking_alterantives():
-    """Benchmark alternative."""
+    """Benchmark alternatives."""
 
     def tic():
         return time.time()
