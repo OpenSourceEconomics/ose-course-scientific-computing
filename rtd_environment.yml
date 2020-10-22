@@ -1,16 +1,39 @@
 name: ose-course-scientific-computing
 
 channels:
-  - conda-forge
+- defaults
+- conda-forge
+- opensourceeconomics
 
 dependencies:
-  - python
-  - ipython
-  - numpy
-  - pip
-  - nbsphinx
-  - numpydoc
-  - sphinx-autoapi
-  - sphinxcontrib-bibtex
-  - pip:
-      - sphinx_rtd_theme
+- black==19.10b0
+- chaospy
+- estimagic
+- flake8
+- ipython
+- ipykernel
+- jupyterlab
+- jupyter
+- jupyter_contrib_nbextensions
+- jupyter_nbextensions_configurator
+- matplotlib
+- nbsphinx
+- nb_black
+- numpy
+- pandas
+- pip
+- pre-commit
+- pytest
+- pytest-black
+- pytest-flake8
+- pytest-repeat
+- respy
+- restructuredtext_lint
+- scipy
+- scikit-learn
+- seaborn
+- pip:
+    - black-nb
+    - flake8-nb
+    - sphinx_rtd_theme
+    - sphinxcontrib-bibtex
