@@ -1,3 +1,4 @@
+"""Solutions to exercises from linear equations lecture."""
 import time
 
 import matplotlib.pyplot as plt
@@ -8,6 +9,7 @@ from problems_linear import get_random_problem
 
 
 def exercise_1():
+    """Solution to exercise 1."""
     for _ in range(10):
         A, b, x_true = get_random_problem()
         x_solve = backward_substitution(A, b)
@@ -15,6 +17,8 @@ def exercise_1():
 
 
 def exercise_2():
+    """Solution to exercise 2."""
+
     def benchmarking_alterantives():
         def tic():
             return time.time()
@@ -51,6 +55,8 @@ def exercise_2():
 
 
 def exercise_3():
+    """Solution to exercise 3."""
+
     def plot_ill_problem_2(cond, err, grid):
         """Plot ill problem."""
         fig, (ax1, ax2) = plt.subplots(2)
@@ -70,7 +76,7 @@ def exercise_3():
         return a, b, x
 
     grid = np.linspace(0.9, 1.1)
-    cond, err = list(), list()
+    cond, err = [], []
     for p in grid:
         A, b, x_true = get_ill_problem_2(p)
         x_solve = np.linalg.solve(A, b)
@@ -82,8 +88,7 @@ def exercise_3():
 
 
 def gauss_jacobi(a, b, x0=None, max_iterations=1000, tolerance=eps):
-    """
-    Solves linear equation of type :math:`Ax = b` using Gauss-Jacobi iterations.
+    """Solves linear equation of type :math:`Ax = b` using Gauss-Jacobi iterations.
 
     In the linear equation, :math:`A` denotes a matrix of dimension
     :math:`n \\times n` and :math:`b` denotes a vector of length :math:`n` The solution
@@ -131,7 +136,6 @@ def gauss_jacobi(a, b, x0=None, max_iterations=1000, tolerance=eps):
     StopIteration
         If maximum number of iterations specified by `max_iterations` is reached.
     """
-
     if x0 is None:
         x = b.copy()
     else:
