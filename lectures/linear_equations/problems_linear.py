@@ -29,8 +29,7 @@ def get_ill_problem_1(n):
 
 
 def get_inverse_demand_problem():
-    """Create inverse demand problem."""
-    # This is from Judd Figure 3.2
+    """Create inverse demand problem (Judd, 1998, Figure 3.2., :cite:`judd1998numerical`)."""
     a = np.array([[1.0, 1.0], [1.0, -2]])
     b = np.array([10, -2.0])
     x = np.array([6.0, 4.0])

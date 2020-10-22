@@ -50,16 +50,27 @@ prototype to a high-performance computing environment.
    :maxdepth: 1
 
    lectures/index
-   reading
    iteration/lecture_plan_2020
    references/references
 
 References
 ----------
 
-* **Ken Judd**. Numerical methods in economics. MIT University Press, Cambridge, MA, 2013.
-* | **Hans Petter Langtangen**. A primer on scientific programming with Python. Springer,
-  | Heidelberg, Germany, 2016.
+|mirandafackler|  |juddnumeriacal|
+
+.. bibliography:: references/references.bib
+   :list: bullet
+   :filter: (key == "miranda2004applied") or (key == "compecon") or (key == "judd1998numerical")
+
+.. |mirandafackler| image:: _static/images/fig-miranda-fackler-2004.png
+  :width: 20 %
+  :target: https://mitpress.mit.edu/books/applied-computational-economics-and-finance
+
+.. |juddnumeriacal| image:: _static/images/fig-judd-1998.png
+  :width: 19 %
+  :target: https://mitpress.mit.edu/books/numerical-methods-economics
+
+
 
 Powered by
 ----------
