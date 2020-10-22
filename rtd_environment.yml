@@ -6,6 +6,7 @@ dependencies:
   - pip
   - nbsphinx
   - numpydoc
+  - nbsphinx
   - sphinx
   - sphinx-autoapi
   - pip:
