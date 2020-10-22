@@ -53,8 +53,8 @@ prototype to a high-performance computing environment.
    iteration/lecture_plan_2020
    references/references
 
-References
-----------
+Textbooks
+---------
 
 |space| |space| |mirandafackler| |space| |juddnumeriacal| |space| |space|
 
@@ -71,6 +71,7 @@ References
   :target: https://mitpress.mit.edu/books/numerical-methods-economics
 
 
+We use the book `Applied computational economics and finance <https://mitpress.mit.edu/books/applied-computational-economics-and-finance>`_ by `Mario Miranda <https://aede.osu.edu/our-people/mario-javier-miranda>`_ and `Paul Fackler <https://pfackler.wordpress.ncsu.edu>`_ throughout the course. A special thanks to `Randall Romero <https://github.com/randall-romero>`_ who also build a course around this book and maintains a Python implementation of the `CompEcon <https://github.com/randall-romero/CompEcon>`_ toolbox. Many of our code examples are building on his implementation there. In addition, we will also consult `Numerical methods in economics <https://mitpress.mit.edu/books/numerical-methods-economics>`_ by `Ken Judd <https://kenjudd.org/>`_ for some of the more advanced material.
 
 Powered by
 ----------
