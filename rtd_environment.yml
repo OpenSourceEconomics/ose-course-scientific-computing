@@ -6,10 +6,10 @@ channels:
 dependencies:
   - python
   - ipython
+  - numpy
   - pip
   - nbsphinx
   - numpydoc
-  - sphinx
   - sphinx-autoapi
   - sphinxcontrib-bibtex
   - pip:
