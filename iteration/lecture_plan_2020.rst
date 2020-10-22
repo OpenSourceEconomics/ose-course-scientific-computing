@@ -93,6 +93,7 @@ Lecture Plan
 +------------+-----------------------------------------------------------------------------------------------------------+
 
 
+
 Projects
 """"""""
 
@@ -103,7 +104,6 @@ You are free to select a topic of your choice related to the contents of the cla
 you could replicate the core results of a computational publication, run a benchmarking exercise
 for an algorithm, or create a notebook similar to the ones presented in the lectures on a
 computational topic that interests you.
-
 
 Please discuss your project idea with Professor Eisenhauer. We suggest settling on a topic by
 the end of January 2021 so you have enough time to work on your project.
