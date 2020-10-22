@@ -32,7 +32,6 @@ extensions = [
     "sphinx_rtd_theme",
     "sphinx.ext.doctest",
     "sphinxcontrib.bibtex",
-    "sphinxcontrib-bibtex",
     "sphinx.ext.autodoc",
     "sphinx.ext.imgmath",
     "sphinx.ext.napoleon",
