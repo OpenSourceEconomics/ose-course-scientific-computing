@@ -38,6 +38,21 @@ extensions = [
     "sphinx.ext.viewcode",
 ]
 
+autodoc_mock_imports = [
+    "chaospy",
+    "estimagic",
+    "seaborn",
+    "numpy",
+    "pytest-black",
+    "pytest-flake8",
+    "pytest-repeat",
+    "pandas",
+    "pytest",
+    "scipy",
+    "scitkit-learn",
+    "respy",
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
