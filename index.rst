@@ -58,10 +58,6 @@ Textbooks
 
 |space| |space| |mirandafackler| |space| |juddnumeriacal| |space| |space|
 
-.. bibliography:: references/references.bib
-   :list: bullet
-   :filter: (key == "miranda2004applied") or (key == "compecon") or (key == "judd1998numerical")
-
 .. |mirandafackler| image:: _static/images/fig-miranda-fackler-2004.png
   :width: 20 %
   :target: https://mitpress.mit.edu/books/applied-computational-economics-and-finance
