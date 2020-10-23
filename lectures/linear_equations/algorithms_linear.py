@@ -75,16 +75,16 @@ def backward_substitution(a, b):
     # Get number of rows.
     n = a.shape[0]
 
-    xcomp = np.zeros(n)
+    x = np.zeros(n)
 
     for i in range(n - 1, -1, -1):
         tmp = b[i]
         for j in range(n - 1, i, -1):
-            tmp -= xcomp[j] * a[i, j]
+            tmp -= x[j] * a[i, j]
 
-        xcomp[i] = tmp / a[i, i]
+        x[i] = tmp / a[i, i]
 
-    return xcomp
+    return x
 
 
 def solve(a, b):
@@ -145,16 +145,34 @@ def solve(a, b):
 def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps):
     """Solves linear equation of type :math:`Ax = b` using Gauss-Seidel iterations.
 
-    The algorithm follows the same solution method as the Gauss-Jacobi method outlines in
-    :func:`gauss_jacobi` with a differing definition of the splitting matrix :math:`Q`. For
-    the Gauss-Seidel method, :math:`Q` is the upper triangular matrix formed from the upper
-    triangular elements of :math:`A`.
+    In the linear equation, :math:`A` denotes a matrix of dimension
+    :math:`n \\times n` and :math:`b` denotes a vector of length :math:`n` The solution
+    method performs especially well for larger linear equations if matrix :math`A`is
+    sparse. The method achieves fairly precise approximations to the solution but
+    generally does not produce *exact* solutions.
+
+    Following the notation in Miranda and Fackler (2004, :cite:`miranda2004applied`),
+    the linear equations problem can be written as
+
+    .. math::
+
+       Qx = b + (Q -A)x \\Rightarrow x = Q^{-1}b + (I - Q^{-1}A)x
+
+    which suggest the iteration rule
+
+    .. math::
+
+       x^{(k+1)} \\leftarrow Q^{-1}b + (I - Q^{-1}A)x^{(k)}
+
+    which, if convergent, must converge to a solution of the linear equation. For the Gauss-Seidel
+    method, :math:`Q` is the upper triangular matrix formed from the upper triangular elements of
+    :math:`A`.
 
     Parameters
     ----------
     a : numpy.ndarray
         Matrix of dimension :math:`n \\times n`
-    b : numpy.ndrray
+    b : numpy.ndarray
         Vector of length :math:`n`.
     x0 : numpy.ndarray, default None
         Array of starting values. Set to be if None.
@@ -163,7 +181,7 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
         for :math:`1 < \\lambda < 2`.
     max_iterations : int
         Maximum number of iterations.
-    tol : float
+    tolerance : float
         Convergence tolerance.
 
     Returns
@@ -176,6 +194,7 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
     ------
     StopIteration
         If maximum number of iterations specified by `max_iterations` is reached.
+
     """
     if x0 is None:
         x = b.copy()
@@ -194,7 +213,23 @@ def gauss_seidel(a, b, x0=None, lambda_=1.0, max_iterations=1000, tolerance=eps)
 
 
 def naive_lu(a):
-    """Naive LU."""
+    """Apply a naive LU factorization.
+
+    LU factorization decomposes a matrix :math:`A` into a lower triangular matrix :math:`L`
+    and upper triangular matrix `U`. The naive LU factorization does not apply permutations to
+    the resulting matrices and thus only works for diagonal matrices :math:`A`:
+
+    Parameters
+    ----------
+    a : numpy.ndarray
+        Diagonal square matrix.
+
+    Returns
+    -------
+    l : numpy.ndarray
+    u : numpy.ndarray
+
+    """
     n = a.shape[0]
     u = a.copy()
     l = np.eye(n)

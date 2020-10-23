@@ -1,0 +1,28 @@
+name: ose-course-scientific-computing
+
+channels:
+- defaults
+- conda-forge
+
+dependencies:
+- black==19.10b0
+- flake8
+- ipython
+- ipykernel
+- jupyterlab
+- jupyter
+- jupyter_contrib_nbextensions
+- jupyter_nbextensions_configurator
+- matplotlib
+- nbsphinx
+- nb_black
+- pandas
+- scipy
+- numpy
+- pip
+- restructuredtext_lint
+- pip:
+    - black-nb
+    - flake8-nb
+    - sphinx_rtd_theme
+    - sphinxcontrib-bibtex

@@ -66,7 +66,7 @@ def exercise_3():
         ax2.legend()
 
     def get_ill_problem_2(p):
-        """Create ill problem (2)."""
+        """Create ill problem 2."""
         # from numerical python
 
         a = np.array([[1, np.sqrt(p)], [1, 1 / np.sqrt(p)]])
@@ -90,26 +90,8 @@ def exercise_3():
 def gauss_jacobi(a, b, x0=None, max_iterations=1000, tolerance=eps):
     """Solves linear equation of type :math:`Ax = b` using Gauss-Jacobi iterations.
 
-    In the linear equation, :math:`A` denotes a matrix of dimension
-    :math:`n \\times n` and :math:`b` denotes a vector of length :math:`n` The solution
-    method performs especially well for larger linear equations if matrix :math`A`is
-    sparse. The method achieves fairly precise approximations to the solution but
-    generally does not produce *exact* solutions.
-
-    Following the notation in Miranda and Fackler (2004, :cite:`miranda2004applied`), the linear
-    equations problem can be written as
-
-    .. math::
-
-       Qx = b + (Q -A)x \\Rightarrow x = Q^{-1}b + (I - Q^{-1}A)x
-
-    which suggest the iteration rule
-
-    .. math::
-
-       x^{(k+1)} \\leftarrow Q^{-1}b + (I - Q^{-1}A)x^{(k)}
-
-    which, if convergent, must converge to a solution of the linear equation. For the
+    The algorithm follows the same solution method as the Gauss-Seidel method outlined in
+    :func:`gauss_seidel` with a differing definition of the splitting matrix :math:`Q`.For the
     **Gauss-Jacobi** method, the splitting matrix :math:`Q` is set equal to the diagonal matrix
     formed from the diagonal entries of matrix :math:`A`.
 
@@ -123,7 +105,7 @@ def gauss_jacobi(a, b, x0=None, max_iterations=1000, tolerance=eps):
         Array of starting values. Set to :math:`b` if None.
     max_iterations : int
         Maximum number of iterations.
-    tol : float
+    tolerance : float
         Convergence tolerance.
 
     Returns
