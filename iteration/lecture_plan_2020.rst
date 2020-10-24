@@ -54,7 +54,7 @@ We then acquire the basic numerical skills that are needed in any implementation
 | 08/12/2020 | Function approximation                                                                                    |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
-We are now read ready to study a dynamic model of human capital accumulation where all elements of our numerical toolbox are put together to study the mechanisms that determine individual investment decisions and to assess the impact of alternative human capital policies.
+We are now read to study a dynamic model of human capital accumulation where all elements of our numerical toolbox are put together to study the mechanisms that determine individual investment decisions and to assess the impact of alternative human capital policies.
 
 +------------+-----------------------------------------------------------------------------------------------------------+
 | **Date**   | **Topic**                                                                                                 |
