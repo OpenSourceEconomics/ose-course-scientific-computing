@@ -2,7 +2,7 @@
 Lectures
 ########
 
-We provide a set of lectures that are all provided as Jupyter Notebooks.
+We provide a set of lectures that are all provided as `Jupyter Notebooks <https://jupyter.org>`_.
 
 ================
 Linear equations

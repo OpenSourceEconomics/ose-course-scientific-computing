@@ -1,9 +1,8 @@
 ###############
-Organisation
+Organization
 ###############
 
-We start on October 27th, 2020 and meet on Tuesdays (2:15-3:45pm) and
-Wednesdays (8:30-10:00am).
+We start on October 27th, 2020, and meet on Tuesdays (2:15-3:45 pm) and Wednesdays (8:30-10:00 am).
 
 **Lecturer** `Philipp Eisenhauer <https://peisenha.github.io>`_
 
@@ -12,15 +11,12 @@ We will conduct all course communications using the bonn-econ-teaching `Zulip <h
 .. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
     :target: https://bonn-econ-teaching.zulipchat.com
 
-By default, you will already be subscribed to Q&A and tech support streams (=chatrooms). You need
-to **manually subscribe to the scientific computing course stream**
-to receive all the messages for this course. There I also post the link to the online lectures
-using `ZOOM <https://zoom.us>`_. Find out how to subscribe to a stream on Zulip
-`here <https://zulipchat.com/help/browse-and-subscribe-to-streams>`__.
-
+By default, you will already be subscribed to Q&A and tech support streams (=chatrooms). You need to **subscribe manually to the scientific computing course stream** to receive all the messages for this course. There I also post the link to the online lectures using `ZOOM <https://zoom.us>`_. Find out how to subscribe to a stream on Zulip `here <https://zulipchat.com/help/browse-and-subscribe-to-streams>`__.
 
 Lecture Plan
 """""""""""""
+
+We first meet to discuss the `Open Source Economics initiative <https://open-econ.org>`_, the basic ideas behind the course and introduce participants to the basic tools used throughout.
 
 +------------+-----------------------------------------------------------------------------------------------------------+
 | **Date**   | **Topic**                                                                                                 |
@@ -29,6 +25,12 @@ Lecture Plan
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 28/10/2020 | Tooling                                                                                                   |
 +------------+-----------------------------------------------------------------------------------------------------------+
+
+We then acquire the basic numerical skills that are needed in any implementation of computational economic models.
+
++------------+-----------------------------------------------------------------------------------------------------------+
+| **Date**   | **Topic**                                                                                                 |
++============+===========================================================================================================+
 | 03/11/2020 | Linear equations                                                                                          |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 04/11/2020 | Linear equations                                                                                          |
@@ -51,6 +53,12 @@ Lecture Plan
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 08/12/2020 | Function approximation                                                                                    |
 +------------+-----------------------------------------------------------------------------------------------------------+
+
+We are now read ready to study a dynamic model of human capital accumulation where all elements of our numerical toolbox are put together to study the mechanisms that determine individual investment decisions and to assess the impact of alternative human capital policies.
+
++------------+-----------------------------------------------------------------------------------------------------------+
+| **Date**   | **Topic**                                                                                                 |
++============+===========================================================================================================+
 | 09/12/2020 | `Eckstein-Keane-Wolpin models <https://bit.ly/35hYZuV>`__                                                 |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 15/12/2020 | `Keane & Wolpin (1997) <https://www.jstor.org/stable/10.1086/262080>`__                                   |
@@ -61,15 +69,13 @@ Lecture Plan
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 23/12/2020 |  ... to be determined                                                                                     |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 29/12/2020 | *No Lecture: Christmas Break*                                                                             |
+
+We then reconvene at the beginning of the new year to discuss some selected issues in more details. We are fortunate to have guest lectures from then the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ and the `Institute of Numerical Simulation <https://ins.uni-bonn.de/>`__.  The goal of these lecture is to emhasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
+
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 30/12/2020 | *No Lecture: Christmas Break*                                                                             |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 05/01/2021 | *No Lecture: Christmas Break*                                                                             |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 06/01/2021 | *No Lecture: Christmas Break*                                                                             |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 12/01/2021 | Guest lecture by  `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__               |
+| **Date**   | **Topic**                                                                                                 |
++============+===========================================================================================================+
+| 12/01/2021 | Guest lecture by `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__                |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 13/01/2021 | Guest lecture by `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__                |
 +------------+-----------------------------------------------------------------------------------------------------------+
