@@ -2,7 +2,7 @@
 Organization
 ###############
 
-We start on October 27th, 2020, and meet on Tuesdays (2:00-3:30 PM) and Wednesdays (8:30-10:00 am).
+We start on October 27th, 2020, and meet on Tuesdays (2:00-3:30 PM) and Wednesdays (8:30-10:00 AM).
 
 **Lecturer** `Philipp Eisenhauer <https://peisenha.github.io>`_
 
