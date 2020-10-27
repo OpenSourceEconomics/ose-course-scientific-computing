@@ -12,6 +12,7 @@
 
    lectures/index
    iteration/lecture_plan_2020
+   resources/index
    references/references
 
 .. include:: README.rst

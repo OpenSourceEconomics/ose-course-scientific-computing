@@ -2,7 +2,14 @@
 Lectures
 ########
 
-We provide a set of lectures that are all provided as `Jupyter Notebooks <https://jupyter.org>`_.
+We provide a set of lectures as `Jupyter Notebooks <https://jupyter.org>`_.
+
+
+=======
+Tooling
+=======
+
+We showcase the basics of Python programming and point students to useful resources to study further. There are numerous excellent introductory lectures on Python programming in economics available online. Among them is `Python programming for economics and finance <https://python-programming.quantecon.org/intro.html>`_ and we will sample some of their material for our lecture.
 
 ================
 Linear equations
