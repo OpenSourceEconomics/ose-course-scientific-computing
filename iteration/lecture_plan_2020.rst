@@ -4,7 +4,9 @@ Organization
 
 We start on October 27th, 2020, and meet on Tuesdays (2:00-3:30 PM) and Wednesdays (8:30-10:00 AM).
 
-**Lecturer** `Philipp Eisenhauer <https://peisenha.github.io>`_
+**Lecturer:** `Philipp Eisenhauer <https://peisenha.github.io>`_
+
+**Teaching Assistant:** `Annica Gehlen <https://www.iame.uni-bonn.de/people/annica-gehlen>`_
 
 We will conduct all course communications using the bonn-econ-teaching `Zulip <https://zulip.com>`_ chat, so please be sure to join us there. To join the Zulip organization, please click on the button below.
 
