@@ -9,7 +9,7 @@ def plot_bisect_example(f, a, b):
     grid = np.linspace(a, b)
     vf = np.vectorize(f)
     ax.plot(grid, vf(grid))
-    ax.axes.axhline(0)
+    ax.axes.axhline(0, color="grey")
 
 
 def plot_fixpoint_example(f):
@@ -18,4 +18,4 @@ def plot_fixpoint_example(f):
     grid = np.linspace(0, 2)
     vf = np.vectorize(f)
     ax.plot(grid, vf(grid))
-    ax.axes.axhline(1)
+    ax.axline([0, 0], [1, 1])
