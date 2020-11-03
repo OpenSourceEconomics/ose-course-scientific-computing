@@ -2,14 +2,14 @@
 from functools import partial
 
 import numpy as np
-from algorithms_nonlinear import bisect
-from algorithms_nonlinear import fixpoint
-from algorithms_nonlinear import mcp_fischer
-from algorithms_nonlinear import mcp_minmax
-from algorithms_nonlinear import newton_method
-from problems_nonlinear import get_cournot_problem
-from problems_nonlinear import get_fischer_problem
-from problems_nonlinear import get_mcp_problem
+from nonlinear_algorithms import bisect
+from nonlinear_algorithms import fixpoint
+from nonlinear_algorithms import mcp_fischer
+from nonlinear_algorithms import mcp_minmax
+from nonlinear_algorithms import newton_method
+from nonlinear_problems import get_cournot_problem
+from nonlinear_problems import get_fischer_problem
+from nonlinear_problems import get_mcp_problem
 from scipy.optimize import bisect as sp_bisect
 
 

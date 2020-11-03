@@ -25,3 +25,15 @@ and benchmarking numerical routines.
 
    linear_equations/notebook.ipynb
    linear_equations/algorithms.rst
+
+===================
+Nonlinear equations
+===================
+
+.... to be written
+
+.. toctree::
+   :maxdepth: 1
+
+   nonlinear_equations/notebook.ipynb
+   nonlinear_equations/algorithms.rst

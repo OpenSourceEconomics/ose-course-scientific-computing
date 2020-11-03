@@ -2,5 +2,5 @@
 Functions
 ==========
 
-.. automodule:: lectures.nonlinear_equations.algorithms_nonlinear
+.. automodule:: lectures.nonlinear_equations.nonlinear_algorithms
    :members:
