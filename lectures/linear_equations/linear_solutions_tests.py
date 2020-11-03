@@ -1,14 +1,15 @@
 """Solutions to exercises from linear equations lecture."""
 import time
+from itertools import product
 
 import matplotlib.pyplot as plt
 import numpy as np
-from algorithms_linear import backward_substitution
-from algorithms_linear import eps
-from problems_linear import get_random_problem
+from linear_algorithms import backward_substitution
+from linear_algorithms import eps
+from linear_problems import get_random_problem
 
 
-def exercise_1():
+def test_1():
     """Solution to exercise 1."""
     for _ in range(10):
         A, b, x_true = get_random_problem()
@@ -16,10 +17,10 @@ def exercise_1():
         np.testing.assert_almost_equal(x_solve, x_true)
 
 
-def exercise_2():
+def test_2():
     """Solution to exercise 2."""
 
-    def benchmarking_alterantives():
+    def benchmarking_alternatives():
         def tic():
             return time.time()
 
@@ -32,29 +33,25 @@ def exercise_2():
             )
         )
 
-        for m in [1, 100]:
-            for n in [50, 500]:
-                A = np.random.rand(n, n)
-                b = np.random.rand(n, 1)
+        for m, n in product([1, 100], [50, 500]):
+            a = np.random.rand(n, n)
+            b = np.random.rand(n, 1)
 
-                tt = tic()
-                for j in range(m):
-                    np.linalg.solve(A, b)
+            tt = tic()
+            [np.linalg.solve(a, b) for _ in range(m)]
+            f1 = 100 * toc(tt)
 
-                f1 = 100 * toc(tt)
+            tt = tic()
+            a_inv = np.linalg.inv(a)
+            [np.dot(a_inv, b) for _ in range(m)]
+            f2 = 100 * toc(tt)
 
-                tt = tic()
-                Ainv = np.linalg.inv(A)
-                for j in range(m):
-                    np.dot(Ainv, b)
+            print(f" {m:3}   {n:3} {f1:11.2f} {f2:11.2f}")
 
-                f2 = 100 * toc(tt)
-                print(f" {m:3}   {n:3} {f1:11.2f} {f2:11.2f}")
-
-    benchmarking_alterantives()
+    benchmarking_alternatives()
 
 
-def exercise_3():
+def test_3():
     """Solution to exercise 3."""
 
     def plot_ill_problem_2(cond, err, grid):

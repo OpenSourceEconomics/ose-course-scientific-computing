@@ -16,14 +16,8 @@ def get_random_problem(n=2, is_diag=True):
 def get_ill_problem_1(n):
     """Create ill problem (1)."""
     a = np.vander(1 + np.arange(n))
-    b = np.tile(np.nan, n)
-    for k in range(n):
-        i = k + 1
-        try:
-            b[k] = (i ** n - 1) / (i - 1)
-        except ZeroDivisionError:
-            b[k] = n
     x = np.ones(n)
+    b = a @ x
 
     return a, b, x
 
