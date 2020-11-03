@@ -19,7 +19,7 @@ def forward_substitution(a, b):
 
     .. math::
 
-       x_i = \\left ( b_i - \\sum_{j=1}^{i-1} a_{ij}x_j \\right )/a_{ij}
+       x_i = \\left ( b_i - \\sum_{j=1}^{i-1} a_{ij}x_j \\right )/a_{ii}
 
 
     Parameters
@@ -45,8 +45,7 @@ def forward_substitution(a, b):
     # Initializing  with the first row.
     x[0] = b[0] / a[0, 0]
 
-    # Looping over rows in reverse (from the bottom  up), starting with the second to last row,
-    # because  the last row solve was completed in the last step.
+    # Looping over remaining rows.
     for i in range(1, n):
         x[i] = (b[i] - np.dot(a[i, :i], x[:i])) / a[i, i]
 
@@ -132,7 +131,7 @@ def solve(a, b):
     array([0.25, 1.  , 1.5 ])
 
     """
-    # Step 1: Factorization using scipy function lu.
+    # Step 1: Factorization using a naive implementation of the LU decomposition.
     l, u = naive_lu(a)
 
     # Step 2: Solution using forward and backward substitution.
@@ -217,7 +216,7 @@ def naive_lu(a):
 
     LU factorization decomposes a matrix :math:`A` into a lower triangular matrix :math:`L`
     and upper triangular matrix `U`. The naive LU factorization does not apply permutations to
-    the resulting matrices and thus only works for diagonal matrices :math:`A`:
+    the resulting matrices and thus only works reliably for diagonal matrices :math:`A`:
 
     Parameters
     ----------
