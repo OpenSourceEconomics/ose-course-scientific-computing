@@ -72,24 +72,24 @@ We are now ready to study a dynamic model of human capital accumulation where al
 | 23/12/2020 |  ... to be determined                                                                                     |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
-We then reconvene at the beginning of the new year to discuss some selected issues in more details. We are fortunate to have guest lectures from then the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ and the `Institute of Numerical Simulation <https://ins.uni-bonn.de/>`__.  The goal of these lecture is to emhasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
+We then reconvene at the beginning of the new year to discuss some selected issues in more details. We are fortunate to have guest lectures from then the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ presents their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__ visits as well. The goal of these lecture is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
 
 +------------+-----------------------------------------------------------------------------------------------------------+
 | **Date**   | **Topic**                                                                                                 |
 +============+===========================================================================================================+
-| 12/01/2021 | Guest lecture by `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__                |
+| 12/01/2021 | Guest lecture by Hasenauer Lab                                                                            |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 13/01/2021 | Guest lecture by `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__                |
+| 13/01/2021 | Guest lecture by Hasenauer Lab                                                                            |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 19/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__                                      |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 20/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__                                      |
+| 20/01/2021 | Guest lecture by Daimler AG                                                                               |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 26/01/2021 | Guest lecture by  `Institute of Numerical Simulation <https://ins.uni-bonn.de>`__                         |
+| 26/01/2021 | Guest lecture by  Fraunhofer SCAI                                                                         |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 27/01/2021 | Uncertainty quantification using `econsa <https://estimagic.readthedocs.io/>`__                           |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 02/02/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__                                          |
+| 02/02/2021 | Guest lecture by  Fraunhofer FIT                                                                          |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 03/02/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__                                          |
 +------------+-----------------------------------------------------------------------------------------------------------+
