@@ -93,13 +93,16 @@ def fixpoint(f, x0, tolerance=10e-5):
 
     """
     e = 1
+    xvals = [x0]
+
     while e > tolerance:
         # Fixed point equation.
         x = f(x0)
         # Error at the current step.
         e = np.linalg.norm(x0 - x)
         x0 = x
-    return x
+        xvals.append(x0)
+    return x, np.array(xvals)
 
 
 def newton_method(f, x0, tolerance=1.5e-8):

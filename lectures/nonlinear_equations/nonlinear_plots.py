@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def plot_bisection_test_function(f, a, b):
+def plot_bisection_test_function(f):
     """Plot bisect example."""
     fig, ax = plt.subplots()
-    grid = np.linspace(a, b)
+    grid = np.linspace(1, 2)
 
     # ... simple refactoring called for
     values = list()

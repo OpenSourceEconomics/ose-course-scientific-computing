@@ -2,6 +2,10 @@
 import numpy as np
 
 
+def function_iteration_test_function(x):
+    return np.sqrt(x)
+
+
 def bisection_test_function(x):
     return x ** 3 - 2
 
