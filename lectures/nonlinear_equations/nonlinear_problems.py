@@ -2,6 +2,10 @@
 import numpy as np
 
 
+def bisection_test_function(x):
+    return x ** 3 - 2
+
+
 def get_cournot_problem(c, eta, q, jac=True):
     """Create Cournot problem."""
     e = -1 / eta

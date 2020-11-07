@@ -3,13 +3,20 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def plot_bisect_example(f, a, b):
+def plot_bisection_test_function(f, a, b):
     """Plot bisect example."""
     fig, ax = plt.subplots()
     grid = np.linspace(a, b)
-    vf = np.vectorize(f)
-    ax.plot(grid, vf(grid))
+
+    # ... simple refactoring called for
+    values = list()
+    for value in grid:
+        values.append(f(value))
+    ax.plot(grid, values)
+
     ax.axes.axhline(0, color="grey")
+    ax.set_ylabel("f(x)")
+    ax.set_xlabel("x")
 
 
 def plot_fixpoint_example(f):

@@ -53,6 +53,8 @@ def bisect(f, a, b, tolerance=1.5e-8):
 
     # Continue operation as long as d is above the convergence tolerance threshold.
     # Update x by adding or subtracting value of d depending on sign of f.
+    xvals = [x]
+
     while d > tolerance:
         d = d / 2
         if s == np.sign(f(x)):
@@ -60,7 +62,9 @@ def bisect(f, a, b, tolerance=1.5e-8):
         else:
             x -= d
 
-    return x
+        xvals.append(x)
+
+    return x, np.array(xvals)
 
 
 def fixpoint(f, x0, tolerance=10e-5):
