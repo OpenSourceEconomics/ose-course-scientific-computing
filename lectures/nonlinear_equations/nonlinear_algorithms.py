@@ -39,7 +39,7 @@ def bisect(f, a, b, tolerance=1.5e-8):
 
     Examples
     --------
-    >>> x = bisect(f=lambda x : x ** 3 - 2, a=1, b=2)
+    >>> x = bisect(f=lambda x : x ** 3 - 2, a=1, b=2)[0]
     >>> round(x, 4)
     1.2599
 
@@ -87,7 +87,7 @@ def fixpoint(f, x0, tolerance=10e-5):
     Examples
     --------
     >>> import numpy as np
-    >>> x = fixpoint(f=lambda x : x**0.5, x0=0.4, tolerance=1e-10)
+    >>> x = fixpoint(f=lambda x : x**0.5, x0=0.4, tolerance=1e-10)[0]
     >>> np.allclose(x, 1)
     True
 

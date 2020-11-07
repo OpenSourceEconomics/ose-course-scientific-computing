@@ -19,7 +19,7 @@ def test_1():
     def example(x):
         return x ** 3 - 2
 
-    y = bisect(example, 1, 2)
+    y = bisect(example, 1, 2)[0]
 
     np.testing.assert_almost_equal(y, 1.259921)
     np.testing.assert_almost_equal(sp_bisect(example, 1, 2), y)
@@ -31,7 +31,7 @@ def test_2():
     def example(x):
         return np.sqrt(x)
 
-    y = fixpoint(example, 2)
+    y = fixpoint(example, 2)[0]
     np.testing.assert_almost_equal(y, 1.0, decimal=3)
 
 
