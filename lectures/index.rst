@@ -30,7 +30,7 @@ and benchmarking numerical routines.
 Nonlinear equations
 ===================
 
-.... to be written
+We explore different solution algorithms to solve nonlinear equations. We start with the bisection method. We then turn to function iteration before exploring Newton's method for nonlinear equations. Finally, we look at Quasi-Newton methods and benchmark their performance in solving a standard Cournot problem. We briefly discuss some criterio to choose the right algorithm for the problem at hand.
 
 .. toctree::
    :maxdepth: 1
