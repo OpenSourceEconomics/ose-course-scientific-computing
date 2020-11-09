@@ -37,3 +37,15 @@ We explore different solution algorithms to solve nonlinear equations. We start 
 
    nonlinear_equations/notebook.ipynb
    nonlinear_equations/algorithms.rst
+
+============
+Optimization
+============
+
+... to be determined
+
+.. toctree::
+   :maxdepth: 1
+
+   optimization/notebook.ipynb
+   optimization/algorithms.rst
