@@ -1,8 +1,12 @@
+from functools import partial
+
 import matplotlib.pyplot as plt
 import numpy as np
 from nonlinear_algorithms import bisect
 from nonlinear_algorithms import fixpoint
 from nonlinear_problems import bisection_test_function
+from nonlinear_problems import get_cournot_problem
+from scipy import optimize
 
 
 def test_exercise_1():
@@ -46,3 +50,11 @@ def test_exercise_3():
         if abs(step) < 1e-10:
             break
     print(x, it)
+
+
+def test_excerise_4():
+    alpha, beta = 0.6, np.array([0.6, 0.8])
+    cournot_p = partial(get_cournot_problem, alpha, beta)
+
+    x0 = [0.8, 0.2]
+    optimize.root(cournot_p, x0, method="broyden1")

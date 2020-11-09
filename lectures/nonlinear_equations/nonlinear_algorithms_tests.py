@@ -1,13 +1,10 @@
 """Tests for nonlinear equations lecture."""
-from functools import partial
-
 import numpy as np
 from nonlinear_algorithms import bisect
 from nonlinear_algorithms import fixpoint
 from nonlinear_algorithms import mcp_fischer
 from nonlinear_algorithms import mcp_minmax
 from nonlinear_algorithms import newton_method
-from nonlinear_problems import get_cournot_problem
 from nonlinear_problems import get_fischer_problem
 from nonlinear_problems import get_mcp_problem
 from scipy.optimize import bisect as sp_bisect
@@ -37,11 +34,18 @@ def test_2():
 
 def test_3():
     """Newton method is working."""
-    c, e = np.array([0.6, 0.8]), 1.6
-    cournot_p = partial(get_cournot_problem, c, e)
 
-    y = newton_method(cournot_p, np.array([0.2, 0.2]))
-    np.testing.assert_almost_equal(y, [0.8395676, 0.68879643])
+    def _jacobian(x):
+        return 3 * x ** 2
+
+    def _value(x):
+        return x ** 3 - 2
+
+    def f(x):
+        return _value(x), _jacobian(x)
+
+    x = newton_method(f, 0.4)
+    np.testing.assert_almost_equal(f(x)[0], 0)
 
 
 def test_4():
