@@ -2,7 +2,7 @@ import numpy as np
 import scipy as sp
 
 
-def get_golden_problem(x):
+def golden_search_problem(x):
     return x * np.cos(x ** 2)
 
 
