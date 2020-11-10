@@ -1,5 +1,6 @@
 """Problems for nonlinear equations lecture."""
 import numpy as np
+from scipy import optimize
 
 
 def function_iteration_test_function(x):
@@ -8,6 +9,20 @@ def function_iteration_test_function(x):
 
 def bisection_test_function(x):
     return x ** 3 - 2
+
+
+def newton_pathological_example_fjac(x, f):
+    return [optimize.approx_fprime(x[0], f, 1e-6)]
+
+
+def newton_pathological_example_fval(x):
+    return np.cbrt(x) * np.exp(-(x ** 2))
+
+
+def newton_pathological_example(x):
+    fval = newton_pathological_example_fval(x)
+    fjac = newton_pathological_example_fjac(x, newton_pathological_example_fval)
+    return fval, fjac
 
 
 def get_cournot_problem(alpha, beta, q):

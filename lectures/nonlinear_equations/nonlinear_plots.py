@@ -26,3 +26,13 @@ def plot_fixpoint_example(f):
     vf = np.vectorize(f)
     ax.plot(grid, vf(grid))
     ax.axline([0, 0], [1, 1])
+
+
+def plot_newton_pathological_example(f):
+    """Plot fixpoint example."""
+    fig, ax = plt.subplots()
+    grid = np.linspace(-2, 2)
+    values = list()
+    for value in grid:
+        values.append(f(np.array([value]))[0])
+    ax.plot(grid, values)
