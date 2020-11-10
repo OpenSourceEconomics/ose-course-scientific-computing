@@ -39,7 +39,7 @@ def bisect(f, a, b, tolerance=1.5e-8):
 
     Examples
     --------
-    >>> x = bisect(f=lambda x : x ** 3 - 2, a=1, b=2)
+    >>> x = bisect(f=lambda x : x ** 3 - 2, a=1, b=2)[0]
     >>> round(x, 4)
     1.2599
 
@@ -53,6 +53,8 @@ def bisect(f, a, b, tolerance=1.5e-8):
 
     # Continue operation as long as d is above the convergence tolerance threshold.
     # Update x by adding or subtracting value of d depending on sign of f.
+    xvals = [x]
+
     while d > tolerance:
         d = d / 2
         if s == np.sign(f(x)):
@@ -60,7 +62,9 @@ def bisect(f, a, b, tolerance=1.5e-8):
         else:
             x -= d
 
-    return x
+        xvals.append(x)
+
+    return x, np.array(xvals)
 
 
 def fixpoint(f, x0, tolerance=10e-5):
@@ -83,19 +87,22 @@ def fixpoint(f, x0, tolerance=10e-5):
     Examples
     --------
     >>> import numpy as np
-    >>> x = fixpoint(f=lambda x : x**0.5, x0=0.4, tolerance=1e-10)
+    >>> x = fixpoint(f=lambda x : x**0.5, x0=0.4, tolerance=1e-10)[0]
     >>> np.allclose(x, 1)
     True
 
     """
     e = 1
+    xvals = [x0]
+
     while e > tolerance:
         # Fixed point equation.
         x = f(x0)
         # Error at the current step.
         e = np.linalg.norm(x0 - x)
         x0 = x
-    return x
+        xvals.append(x0)
+    return x, np.array(xvals)
 
 
 def newton_method(f, x0, tolerance=1.5e-8):

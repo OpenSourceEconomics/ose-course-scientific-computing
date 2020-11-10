@@ -1,25 +1,35 @@
 """Problems for nonlinear equations lecture."""
 import numpy as np
+from scipy import optimize
 
 
-def get_cournot_problem(c, eta, q, jac=True):
-    """Create Cournot problem."""
-    e = -1 / eta
-    s = q.sum()
-    fval = s ** e + e * s ** (e - 1) * q - c * q
-    fjac = (
-        e * s ** (e - 1) * np.ones([2, 2])
-        + e * s ** (e - 1) * np.identity(2)
-        + (e - 1) * e * s ** (e - 2) * np.outer(q, [1, 1])
-        - np.diag(c)
-    )
+def function_iteration_test_function(x):
+    return np.sqrt(x)
 
-    if jac:
-        ret = fval[0], fjac
-    else:
-        ret = fval
 
-    return ret
+def bisection_test_function(x):
+    return x ** 3 - 2
+
+
+def newton_pathological_example_fjac(x, f):
+    return [optimize.approx_fprime(x[0], f, 1e-6)]
+
+
+def newton_pathological_example_fval(x):
+    return np.cbrt(x) * np.exp(-(x ** 2))
+
+
+def newton_pathological_example(x):
+    fval = newton_pathological_example_fval(x)
+    fjac = newton_pathological_example_fjac(x, newton_pathological_example_fval)
+    return fval, fjac
+
+
+def get_cournot_problem(alpha, beta, q):
+    qsum = q.sum()
+    P = qsum ** (-alpha)
+    P1 = -alpha * qsum ** (-alpha - 1)
+    return P + (P1 - beta) * q
 
 
 def get_mcp_problem(z):

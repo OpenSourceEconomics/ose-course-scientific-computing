@@ -25,3 +25,15 @@ and benchmarking numerical routines.
 
    linear_equations/notebook.ipynb
    linear_equations/algorithms.rst
+
+===================
+Nonlinear equations
+===================
+
+We explore different solution algorithms to solve nonlinear equations. We start with the bisection method. We then turn to function iteration before exploring Newton's method for nonlinear equations. Finally, we look at Quasi-Newton methods and benchmark their performance in solving a standard Cournot problem. We briefly discuss some criterio to choose the right algorithm for the problem at hand.
+
+.. toctree::
+   :maxdepth: 1
+
+   nonlinear_equations/notebook.ipynb
+   nonlinear_equations/algorithms.rst

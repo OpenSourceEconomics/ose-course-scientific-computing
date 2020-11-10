@@ -32,6 +32,8 @@ dependencies:
 - scipy
 - scikit-learn
 - seaborn
+- temfpy
+- numdifftools  
 - pip:
     - black-nb
     - flake8-nb
