@@ -127,17 +127,19 @@ def newton_method(f, x0, tolerance=1.5e-8):
         Solution of function iteration.
 
     """
-    x0 = np.atleast_2d(x0)
+    x0 = np.atleast_1d(x0)
 
-    # https://github.com/randall-romero/CompEcon/blob/master/textbook/chapter03.py
+    # This is tailored to the univariate case.
+    assert x0.shape[0] == 1
+
     xn = x0.copy()
 
     while True:
         fxn, gxn = f(xn)
         if np.linalg.norm(fxn) < tolerance:
-            return xn[0]
+            return xn
         else:
-            xn = xn - np.linalg.solve(gxn, fxn)
+            xn = xn - fxn / gxn
 
 
 def mcp_minmax(f, x0, a, b):

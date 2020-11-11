@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from nonlinear_algorithms import bisect
 from nonlinear_algorithms import fixpoint
+from nonlinear_algorithms import newton_method
 from nonlinear_problems import bisection_test_function
 from nonlinear_problems import get_cournot_problem
+from nonlinear_problems import newton_pathological_example
 from scipy import optimize
 
 
@@ -50,6 +52,12 @@ def test_exercise_3():
         if abs(step) < 1e-10:
             break
     print(x, it)
+
+
+def test_exercise_4():
+    for x0 in [-0.01, 0.01]:
+        x = newton_method(newton_pathological_example, 0.45)
+        print(f"candidate for root {x[0]:+5.3f}")
 
 
 def test_excerise_4():

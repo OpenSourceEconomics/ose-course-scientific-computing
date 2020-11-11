@@ -41,6 +41,8 @@ We then acquire the basic numerical skills that are needed in any implementation
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 11/11/2020 | Nonlinear equations                                                                                       |
 +------------+-----------------------------------------------------------------------------------------------------------+
+| 16/11/2020 | Deadline for registration with the examination office on BASIS                                            |
++------------+-----------------------------------------------------------------------------------------------------------+
 | 17/11/2020 | Finite-dimensional optimization                                                                           |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 18/11/2020 | Finite-dimensional optimization                                                                           |
@@ -93,9 +95,7 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 03/02/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__                                          |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| x          | Deadline for registration with the examination office                                                     |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| x          | Project deadline                                                                                          |
+| 31/03/2021 | Project deadline                                                                                          |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
 
@@ -105,6 +105,6 @@ Projects
 
 Your grade for this class will be based on a scientific computing project due at the end of the semester. The project needs to be coded in Python and available on the `Nuvolos.cloud <https://nuvolos.cloud>`_  for grading.
 
-You are free to select a topic of your choice related to the contents of the class. For instance, you could replicate the core results of a computational publication, run a benchmarking exercise for an algorithm, contribute to one of our group's software packages of your choice, or create a notebook similar to the ones presented in the lectures on a computational topic that interests you. Reproducibility is a cornerstone of sound computational work, so please ensure that we can run your project notebook from beginning to end without any error.
+You are free to select a topic of your choice related to the contents of the class. For instance, you could replicate the core results of a computational publication, run a benchmarking exercise for an algorithm, contribute to one of our group's software packages of your choice, or create a notebook similar to the ones presented in the lectures on a computational topic that interests you. Note that several textbooks explore the implementation of involved computational economic models, porting their implementation to Python can serve as a valuable starting point for your project.
 
-Please discuss your project idea with Professor Eisenhauer. We suggest settling on a topic by the end of January 2021 so you have enough time to work on your project.
+Reproducibility is a cornerstone of sound computational work, so please ensure that we can run your project notebook from beginning to end without any error. Please discuss your project idea with Professor Eisenhauer. We suggest settling on a topic by the end of January 2021 so you have enough time to work on your project.
