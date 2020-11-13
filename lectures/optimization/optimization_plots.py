@@ -11,12 +11,10 @@ def plot_golden_search_problem(f):
 
 
 def plot_contour(f, allvecs, legend_path):
+    allvecs = np.atleast_2d(allvecs)
 
     X, Y, Z = _get_grid(f, 2)
 
-    fig = plt.figure()
-    # contour_levels=np.logspace(-0.5,3.5,5,base=10)
-    # CS = plt.contour(X,Y,Z,levels=contour_levels)
     CS = plt.contour(X, Y, Z)
     plt.clabel(CS, inline=1, fontsize=10)
     plt.title("objective function")

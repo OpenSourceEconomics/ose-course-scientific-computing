@@ -6,51 +6,58 @@ def golden_search_problem(x):
     return x * np.cos(x ** 2)
 
 
+def get_parameterization(dimension, add_noise, add_illco):
+    # TODO: I think a scaling factor is missing.
+
+    if add_noise:
+        b = 1
+    else:
+        b = 0
+
+    if add_illco:
+        conditioning_factor = float(add_illco) * 20
+        quadratic_coeff = np.array(np.exp(np.random.random(dimension) * conditioning_factor))
+        quadratic_coeff = quadratic_coeff / np.max(quadratic_coeff)
+        a = quadratic_coeff
+    else:
+        a = np.ones(dimension)
+
+    return a, b
+
+
 def get_nelder_mead_problem(x):
     # TODO: in progress of integrated in temfpy
     return sp.optimize.rosen(x)
 
 
-def _get_test_function_gradient(x, ill_conditioned, add_noise):
-    dimension = x.shape[0]
-    quadratic_coeff, noise_coeff = _get_tuning_parameters(ill_conditioned, add_noise, dimension)
-
+def _get_test_function_gradient(x, a, b):
     return np.array(
-        np.multiply(quadratic_coeff, np.array(x) - np.ones(np.array(x).size))
-    ) + noise_coeff * 2 * np.pi * np.array(
-        np.sin(2 * np.pi * (np.array(x) - np.ones(np.array(x).size)))
-    )
+        np.multiply(a, np.array(x) - np.ones(np.array(x).size))
+    ) + b * 2 * np.pi * np.array(np.sin(2 * np.pi * (np.array(x) - np.ones(np.array(x).size))))
 
 
-def _get_tuning_parameters(ill_conditioned, add_noise, dimension):
-    np.random.seed(123)
-    conditioning_factor = float(ill_conditioned) * 20
-    noise_coeff = 0.5 * float(add_noise)
-    quadratic_coeff = np.array(np.exp(np.random.random(dimension) * conditioning_factor))
-    quadratic_coeff = quadratic_coeff / np.max(quadratic_coeff)
+def get_test_function(x, a, b):
+    x, a = np.atleast_1d(x), np.atleast_1d(a)
+    dimension = len(x)
 
-    return quadratic_coeff, noise_coeff
+    fval = 0
+    for n in range(dimension):
+        fval += a[n] * (x[n] - 1) ** 2
+
+    fval += b * dimension
+
+    for n in range(dimension):
+        fval -= b * np.cos(2 * np.pi * (x[n] - 1))
+
+    return fval
 
 
-def get_test_function(x, ill_conditioned=True, add_noise=True):
-    def _fval(x):
-        return (
-            0.5
-            * np.sum(
-                np.multiply(quadratic_coeff, np.square(np.array(x) - np.ones(np.array(x).size)))
-            )
-            + dimension * noise_coeff
-            - noise_coeff * np.sum(np.cos(2 * np.pi * (np.array(x) - np.ones(np.array(x).size))))
-        )
-
-    def _fhess(x, quadratic_coeff, noise_coeff):
-        return np.diag(quadratic_coeff) + noise_coeff * 4 * np.square(np.pi) * np.diag(
-            np.cos(2 * np.pi * (np.array(x) - np.ones(np.array(x).size)))
-        )
-
-    x = np.atleast_1d(x)
-
+def fun_fast(x, a, b):
+    x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = x.shape[0]
-    quadratic_coeff, noise_coeff = _get_tuning_parameters(ill_conditioned, add_noise, dimension)
-    return _fval(x)  # , _get_test_function_gradient(x, ill_conditioned, add_noise), _fhess(x,
-    # quadratic_coeff, noise_coeff)
+
+    return (
+        np.sum(np.multiply(a, np.square(np.array(x) - np.ones(np.array(x).size))))
+        + dimension * b
+        - b * np.sum(np.cos(2 * np.pi * (np.array(x) - np.ones(np.array(x).size))))
+    )
