@@ -6,8 +6,6 @@ def golden_search_problem(x):
 
 
 def get_parameterization(dimension, add_noise, add_illco):
-    # TODO: I think a scaling factor is missing.
-
     if add_noise:
         b = 1
     else:
@@ -38,6 +36,7 @@ def get_test_function(x, a, b):
     for n in range(dimension):
         fval += a[n] * (x[n] - 1) ** 2
 
+    fval = 0.5 * fval
     fval += b * dimension
 
     for n in range(dimension):
@@ -46,12 +45,13 @@ def get_test_function(x, a, b):
     return fval
 
 
-def fun_fast(x, a, b):
+def get_test_function_fast(x, a, b):
     x, a = np.atleast_1d(x), np.atleast_1d(a)
-    dimension = x.shape[0]
+    dimension = len(x)
 
-    return (
-        np.sum(np.multiply(a, np.square(np.array(x) - np.ones(np.array(x).size))))
-        + dimension * b
-        - b * np.sum(np.cos(2 * np.pi * (np.array(x) - np.ones(np.array(x).size))))
-    )
+    fval = 0
+    fval += 0.5 * np.sum(a * (x - np.ones(dimension)) ** 2)
+    fval += b * dimension
+    fval -= b * np.sum(np.cos(2 * np.pi * (x - np.ones(dimension))))
+
+    return fval
