@@ -1,5 +1,4 @@
 import numpy as np
-import scipy as sp
 
 
 def golden_search_problem(x):
@@ -23,11 +22,6 @@ def get_parameterization(dimension, add_noise, add_illco):
         a = np.ones(dimension)
 
     return a, b
-
-
-def get_nelder_mead_problem(x):
-    # TODO: in progress of integrated in temfpy
-    return sp.optimize.rosen(x)
 
 
 def _get_test_function_gradient(x, a, b):
