@@ -18,6 +18,23 @@ def test_exercise_1():
     plt.plot(grid, fvals)
 
 
+def test_exercise_2():
+    dirname = os.path.dirname(os.path.realpath(__file__))
+    df = pd.read_pickle(f"{dirname}/material/data-consumption-function.pkl")
+
+    def construct_predicted_values(income, alpha, beta, gamma):
+        return alpha + beta * income ** gamma
+
+    mock_rslt = [-91.1933, 0.5691, 1.0204]
+    income = df["realgdp"].values
+    df["realcons_pred"] = construct_predicted_values(income, *mock_rslt)
+
+    x = df.index.get_level_values("Year")
+    fig, ax = plt.subplots()
+    ax.plot(x, df["realcons_pred"], label="Predicted")
+    ax.plot(x, df["realcons"], label="Observed")
+
+
 def test_exercise_99():
     def binary_model(y, x, beta, distribution):
         F = distribution.cdf(x @ beta)
