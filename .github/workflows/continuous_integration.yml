@@ -5,11 +5,11 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
 
     steps:
     - uses: actions/checkout@v2
-    - uses: goanpeca/setup-miniconda@v2
+    - uses: conda-incubator/setup-miniconda@v2
       with:
            auto-update-conda: true
            activate-environment: ose-course-scientific-computing
