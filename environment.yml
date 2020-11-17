@@ -20,7 +20,7 @@ dependencies:
 - nbsphinx
 - nb_black
 - numpy
-- pandas
+- pandas>= 1.1.0
 - pip
 - pre-commit
 - pytest
