@@ -4,14 +4,17 @@ from scipy import optimize
 
 
 def function_iteration_test_function(x):
+    """Test function for function iteration."""
     return np.sqrt(x)
 
 
 def bisection_test_function(x):
+    """Test function for bisection."""
     return x ** 3 - 2
 
 
 def newton_pathological_example_fjac(x, f):
+    """Example for Newton Pathological example."""
     return [optimize.approx_fprime(x[0], f, 1e-6)]
 
 

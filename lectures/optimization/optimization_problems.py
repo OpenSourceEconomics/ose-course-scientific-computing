@@ -1,11 +1,14 @@
+"""Optimization problems for optimization lecture."""
 import numpy as np
 
 
 def golden_search_problem(x):
+    """Get golden search problem."""
     return x * np.cos(x ** 2)
 
 
 def get_parameterization(dimension, add_noise, add_illco):
+    """Get parametrization."""
     if add_noise:
         b = 1
     else:
@@ -23,12 +26,14 @@ def get_parameterization(dimension, add_noise, add_illco):
 
 
 def _get_test_function_gradient(x, a, b):
+    """Get test function gradient."""
     return np.array(
         np.multiply(a, np.array(x) - np.ones(np.array(x).size))
     ) + b * 2 * np.pi * np.array(np.sin(2 * np.pi * (np.array(x) - np.ones(np.array(x).size))))
 
 
 def get_test_function(x, a, b):
+    """Get test function."""
     x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = len(x)
 
@@ -46,6 +51,7 @@ def get_test_function(x, a, b):
 
 
 def get_test_function_fast(x, a, b):
+    """Get fast test function."""
     x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = len(x)
 

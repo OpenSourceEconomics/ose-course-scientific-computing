@@ -1,9 +1,11 @@
+"""Plots for optimization lecture."""
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import cm
 
 
 def plot_contour(f, allvecs, legend_path):
+    """Plot contour."""
     allvecs = np.atleast_2d(allvecs)
 
     X, Y, Z = _get_grid(f, 2)
@@ -25,7 +27,7 @@ def plot_contour(f, allvecs, legend_path):
 
 
 def _get_grid(f, dimension):
-
+    """Create grid."""
     if dimension == 2:
 
         # create data to visualize objective function
@@ -50,7 +52,7 @@ def _get_grid(f, dimension):
 
 
 def plot_surf(f, dimension=2):
-
+    """Plot surf."""
     if dimension == 2:
         X, Y, Z = _get_grid(f, dimension)
 

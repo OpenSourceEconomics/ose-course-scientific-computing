@@ -12,7 +12,7 @@ from scipy import optimize
 
 
 def test_exercise_1():
-
+    """Test for exercise 1."""
     lower, upper = 1, 2
     x, xvals = bisect(bisection_test_function, lower, upper)
 
@@ -27,6 +27,8 @@ def test_exercise_1():
 
 
 def test_exercise_2():
+    """Test for exercise 2."""
+
     def func(x):
         return np.sqrt(x + 0.2)
 
@@ -36,6 +38,8 @@ def test_exercise_2():
 
 
 def test_exercise_3():
+    """Test for exercise 3."""
+
     def func(x):
         return x ** 4 - 2
 
@@ -55,12 +59,14 @@ def test_exercise_3():
 
 
 def test_exercise_4():
+    """Test for exercise 4."""
     for x0 in [-0.01, 0.01]:
         x = newton_method(newton_pathological_example, 0.45)
         print(f"candidate for root {x[0][0]:+5.3f}")
 
 
 def test_excerise_5():
+    """Test for exercise 5."""
     alpha, beta = 0.6, np.array([0.6, 0.8])
     cournot_p = partial(get_cournot_problem, alpha, beta)
 

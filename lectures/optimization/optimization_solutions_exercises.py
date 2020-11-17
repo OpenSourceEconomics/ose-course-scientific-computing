@@ -1,3 +1,4 @@
+"""Solutions to exercises in optimization lecture."""
 import os
 
 import matplotlib.pyplot as plt
@@ -10,6 +11,7 @@ from scipy.stats import norm
 
 
 def test_exercise_1():
+    """Test exercise 1."""
     a, b = 5, 0
     fvals = list()
     grid = np.linspace(-3, 4)
@@ -19,6 +21,7 @@ def test_exercise_1():
 
 
 def test_exercise_2():
+    """Test exercise 2."""
     dirname = os.path.dirname(os.path.realpath(__file__))
     df = pd.read_pickle(f"{dirname}/material/data-consumption-function.pkl")
 
@@ -36,15 +39,20 @@ def test_exercise_2():
 
 
 def test_exercise_99():
+    """Test exercise 99."""
+
     def binary_model(y, x, beta, distribution):
+        """Get binary model."""
         F = distribution.cdf(x @ beta)
         fval = (y * np.log(F) + (1 - y) * np.log(1 - F)).sum()
         return -fval
 
     def logl_logit(y, x, beta):
+        """Get logit model."""
         return binary_model(y, x, beta, logistic)
 
     def logl_probit(y, x, beta):
+        """Get probit model."""
         return binary_model(y, x, beta, norm)
 
     dirname = os.path.dirname(os.path.realpath(__file__))

@@ -1,11 +1,10 @@
-"""This module transfers the files from Green's textbook to data frames.
-"""
+"""This module transfers the files from Green's textbook to data frames."""
 import numpy as np
 import pandas as pd
 
 
 def transfer_data():
-
+    """Transfer data from .txt-file to pickled pandas.DataFrame."""
     df = pd.read_csv(
         "TableF5-2.txt",
         sep=r"\s+",
