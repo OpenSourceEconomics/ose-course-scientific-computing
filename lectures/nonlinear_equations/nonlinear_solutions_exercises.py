@@ -57,10 +57,10 @@ def test_exercise_3():
 def test_exercise_4():
     for x0 in [-0.01, 0.01]:
         x = newton_method(newton_pathological_example, 0.45)
-        print(f"candidate for root {x[0]:+5.3f}")
+        print(f"candidate for root {x[0][0]:+5.3f}")
 
 
-def test_excerise_4():
+def test_excerise_5():
     alpha, beta = 0.6, np.array([0.6, 0.8])
     cournot_p = partial(get_cournot_problem, alpha, beta)
 

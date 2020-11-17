@@ -37,3 +37,16 @@ We explore different solution algorithms to solve nonlinear equations. We start 
 
    nonlinear_equations/notebook.ipynb
    nonlinear_equations/algorithms.rst
+
+============
+Optimization
+============
+
+We discuss the key attributes of optimization algorithms that determine the choice of a suitable optimization algorithm. We explore the role of noise in the criterion function and ill-conditioning for different groups of optimizers: local vs. global, derivative-based vs. derivative-free. We conclude with some programming exercises for nonlinear least squares problems and implement a simple maximum likelihood estimation.
+
+
+.. toctree::
+   :maxdepth: 1
+
+   optimization/notebook.ipynb
+   optimization/algorithms.rst
