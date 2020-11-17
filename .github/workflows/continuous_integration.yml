@@ -13,7 +13,7 @@ jobs:
       with:
            activate-environment: ose-course-scientific-computing
            environment-file: environment.yml
-           python-version: 3.7
+           python-version: 3.8
            auto-activate-base: false
     - name: run project
       shell: bash -l {0}
