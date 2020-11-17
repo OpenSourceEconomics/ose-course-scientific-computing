@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: goanpeca/setup-miniconda@v1.0.2
+    - uses: goanpeca/setup-miniconda@v1.2.6
       with:
            activate-environment: ose-course-scientific-computing
            environment-file: environment.yml
