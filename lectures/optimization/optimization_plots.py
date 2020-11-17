@@ -3,13 +3,6 @@ import numpy as np
 from matplotlib import cm
 
 
-def plot_golden_search_problem(f):
-    fig, ax = plt.subplots()
-    grid = np.linspace(0, 3)
-    vf = np.vectorize(f)
-    ax.plot(grid, vf(grid))
-
-
 def plot_contour(f, allvecs, legend_path):
     allvecs = np.atleast_2d(allvecs)
 
