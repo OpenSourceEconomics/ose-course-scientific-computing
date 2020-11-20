@@ -3,7 +3,7 @@ import numpy as np
 
 
 def get_parameterization(dimension, add_noise, add_illco):
-    """Get parametrization."""
+    """Get parametrization for $a_1$ and $b$ from lecture exercise."""
     if add_noise:
         b = 1
     else:
@@ -29,7 +29,7 @@ def get_test_function_gradient(x, a, b):
 
 
 def get_test_function(x, a, b):
-    """Get test function."""
+    """Test function from lecture exercise."""
     x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = len(x)
 
@@ -47,7 +47,7 @@ def get_test_function(x, a, b):
 
 
 def get_test_function_fast(x, a, b):
-    """Get fast test function."""
+    """Fast version of test function from lecture exercise."""
     x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = len(x)
 
