@@ -8,7 +8,7 @@ def plot_contour(f, allvecs, legend_path):
     """Plot contour."""
     allvecs = np.atleast_2d(allvecs)
 
-    X, Y, Z = _get_grid(f, 2)
+    X, Y, Z = _get_grid(f)
 
     CS = plt.contour(X, Y, Z)
     plt.clabel(CS, inline=1, fontsize=10)
@@ -26,43 +26,39 @@ def plot_contour(f, allvecs, legend_path):
     return plt
 
 
-def _get_grid(f, dimension):
-    """Create grid."""
-    if dimension == 2:
+def _get_grid(f):
+    # create data to visualize objective function
+    n = 50  # number of discretization points along the x-axis
+    m = 50  # number of discretization points along the x-axis
+    a = -2.0
+    b = 5.0  # extreme points in the x-axis
+    c = -2
+    d = 5.0  # extreme points in the y-axis
 
-        # create data to visualize objective function
-        n = 50  # number of discretization points along the x-axis
-        m = 50  # number of discretization points along the x-axis
-        a = -2.0
-        b = 5.0  # extreme points in the x-axis
-        c = -2
-        d = 5.0  # extreme points in the y-axis
+    X, Y = np.meshgrid(np.linspace(a, b, n), np.linspace(c, d, m))
+    Z = np.zeros(X.shape)
 
-        X, Y = np.meshgrid(np.linspace(a, b, n), np.linspace(c, d, m))
-        Z = np.zeros(X.shape)
+    argument = np.zeros(2)
+    for i in range(X.shape[0]):
+        for j in range(X.shape[1]):
+            argument[0] = X[i, j]
+            argument[1] = Y[i, j]
+            Z[i][j] = f(argument)
 
-        argument = np.zeros(2)
-        for i in range(X.shape[0]):
-            for j in range(X.shape[1]):
-                argument[0] = X[i, j]
-                argument[1] = Y[i, j]
-                Z[i][j] = f(argument)
-
-        return X, Y, Z
+    return X, Y, Z
 
 
-def plot_surf(f, dimension=2):
-    """Plot surf."""
-    if dimension == 2:
-        X, Y, Z = _get_grid(f, dimension)
+def plot_surf(f):
 
-        fig = plt.figure()
-        ax = fig.gca(projection="3d")
+    X, Y, Z = _get_grid(f)
 
-        # Plot the surface.
-        surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm)
+    fig = plt.figure()
+    ax = fig.gca(projection="3d")
 
-        plt.xlabel("variable $x_1$")
-        plt.ylabel("variable $x_2$")
-        fig.colorbar(surf)
-        plt.title("objective function")
+    # Plot the surface.
+    surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm)
+
+    plt.xlabel("variable $x_1$")
+    plt.ylabel("variable $x_2$")
+    fig.colorbar(surf)
+    plt.title("objective function")
