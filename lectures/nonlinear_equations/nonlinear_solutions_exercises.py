@@ -1,3 +1,4 @@
+"""Solutions for exercises from nonlinear equations lecture."""
 from functools import partial
 
 import matplotlib.pyplot as plt

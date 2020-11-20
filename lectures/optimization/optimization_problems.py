@@ -19,6 +19,7 @@ def get_parameterization(dimension, add_noise, add_illco):
 
 
 def get_test_function_gradient(x, a, b):
+    """Test function gradient."""
     x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = len(x)
 

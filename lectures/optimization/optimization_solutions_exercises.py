@@ -1,5 +1,6 @@
 """Solutions to exercises in optimization lecture."""
 import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -12,7 +13,7 @@ from scipy.stats import norm
 def test_exercise_1():
     """Solution for exercise 1."""
     a, b = 5, 0
-    fvals = list()
+    fvals = []
     grid = np.linspace(-3, 4)
     for value in grid:
         fvals.append(get_test_function(value, a, b))
