@@ -5,15 +5,16 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
 
     steps:
     - uses: actions/checkout@v2
-    - uses: goanpeca/setup-miniconda@v1.0.2
+    - uses: conda-incubator/setup-miniconda@v2
       with:
+           auto-update-conda: true
            activate-environment: ose-course-scientific-computing
            environment-file: environment.yml
-           python-version: 3.7
+           python-version: 3.8
            auto-activate-base: false
     - name: run project
       shell: bash -l {0}

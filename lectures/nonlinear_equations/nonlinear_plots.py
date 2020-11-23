@@ -8,8 +8,7 @@ def plot_bisection_test_function(f):
     fig, ax = plt.subplots()
     grid = np.linspace(1, 2)
 
-    # ... simple refactoring called for
-    values = list()
+    values = []
     for value in grid:
         values.append(f(value))
     ax.plot(grid, values)
@@ -32,7 +31,7 @@ def plot_newton_pathological_example(f):
     """Plot fixpoint example."""
     fig, ax = plt.subplots()
     grid = np.linspace(-2, 2)
-    values = list()
+    values = []
     for value in grid:
         values.append(f(np.array([value]))[0])
     ax.plot(grid, values)
