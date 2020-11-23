@@ -49,34 +49,14 @@ def quadrature_gauss_legendre(f, a, b, n):
     return np.sum(weights * fvals)
 
 
-def simps(f, a, b, N=50):
-    # https: // www.math.ubc.ca / ~pwalls / math - python / integration / simpsons - rule /
-    """Approximate the integral of f(x) from a to b by Simpson's rule.
+def monte_carlo_naive_unidimensional(f, a=0, b=1, n=10, seed=123):
+    np.random.seed(seed)
+    xvals = np.random.uniform(size=n)
+    fvals = np.tile(np.nan, n)
+    weights = np.tile(1 / n, n)
 
-    Parameters
-    ----------
-    f : function
-        Vectorized function of a single variable
-    a , b : numbers
-        Interval of integration [a,b]
-    N : (even) integer
-        Number of subintervals of [a,b]
+    scale = b - a
+    for i, xval in enumerate(xvals):
+        fvals[i] = f(a + xval * (b - a))
 
-    Returns
-    -------
-    float
-        Approximation of the integral of f(x) from a to b using
-        Simpson's rule with N subintervals of equal length.
-
-    Examples
-    --------
-    >>> simps(lambda x : 3*x**2,0,1,10)
-    1.0
-    """
-    if N % 2 == 1:
-        raise ValueError("N must be an even integer.")
-    dx = (b - a) / N
-    x = np.linspace(a, b, N + 1)
-    y = f(x)
-    S = dx / 3 * np.sum(y[0:-1:2] + 4 * y[1::2] + y[2::2])
-    return S
+    return scale * np.sum(weights * fvals)

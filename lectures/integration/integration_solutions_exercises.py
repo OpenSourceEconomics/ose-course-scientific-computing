@@ -3,11 +3,11 @@ from itertools import product
 
 import numpy as np
 import pandas as pd
-from integration_differentiation_algorithms import quadrature_gauss_legendre
-from integration_differentiation_algorithms import quadrature_simpson
-from integration_differentiation_algorithms import quadrature_trapezoid
-from integration_differentiation_problems import problem_kinked
-from integration_differentiation_problems import problem_smooth
+from integration_algorithms import quadrature_gauss_legendre
+from integration_algorithms import quadrature_simpson
+from integration_algorithms import quadrature_trapezoid
+from integration_problems import problem_kinked
+from integration_problems import problem_smooth
 
 
 def test_exercise_1():
