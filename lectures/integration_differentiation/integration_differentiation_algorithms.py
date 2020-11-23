@@ -1,6 +1,54 @@
 import numpy as np
 
 
+def quadrature_trapezoid(f, a, b, n):
+
+    xvals = np.linspace(a, b, n + 1)
+    fvals = np.tile(np.nan, n + 1)
+    h = xvals[1] - xvals[0]
+
+    weights = np.tile(h, n + 1)
+    weights[0] = weights[-1] = 0.5 * h
+
+    for i, xval in enumerate(xvals):
+        fvals[i] = f(xval)
+
+    return np.sum(weights * fvals)
+
+
+def quadrature_simpson(f, a, b, n):
+
+    if n % 2 == 0:
+        raise Warning("n must be an odd integer. Increasing by 1")
+        n += 1
+
+    xvals = np.linspace(a, b, n)
+    fvals = np.tile(np.nan, n)
+
+    h = xvals[1] - xvals[0]
+
+    weights = np.tile(np.nan, n)
+    weights[0::2] = 2 * h / 3
+    weights[1::2] = 4 * h / 3
+    weights[0] = weights[-1] = h / 3
+
+    for i, xval in enumerate(xvals):
+        fvals[i] = f(xval)
+
+    return np.sum(weights * fvals)
+
+
+def quadrature_gauss_legendre(f, a, b, n):
+    xvals, weights = np.polynomial.legendre.leggauss(n)
+
+    fvals = np.tile(np.nan, n)
+    for i, xval in enumerate(xvals):
+        xval_trans = (b - a) * (xval + 1.0) / 2.0 + a
+        fvals[i] = ((b - a) / 2.0) * f(xval_trans)
+
+    return np.sum(weights * fvals)
+
+
 def simps(f, a, b, N=50):
     # https: // www.math.ubc.ca / ~pwalls / math - python / integration / simpsons - rule /
     """Approximate the integral of f(x) from a to b by Simpson's rule.
@@ -32,36 +80,3 @@ def simps(f, a, b, N=50):
     y = f(x)
     S = dx / 3 * np.sum(y[0:-1:2] + 4 * y[1::2] + y[2::2])
     return S
-
-
-def trapz(f, a, b, N=50):
-    # SOURCE: https://www.math.ubc.ca/~pwalls/math-python/integration/trapezoid-rule/
-    """Approximate the integral of f(x) from a to b by the trapezoid rule.
-
-    Parameters
-    ----------
-    f : function
-        Vectorized function of a single variable
-    a , b : numbers
-        Interval of integration [a,b]
-    N : integer
-        Number of subintervals of [a,b]
-
-    Returns
-    -------
-    float
-        Approximation of the integral of f(x) from a to b using the
-        trapezoid rule with N subintervals of equal length.
-
-    Examples
-    --------
-    >>> trapz(np.sin,0,np.pi/2,1000)
-    0.9999997943832332
-    """
-    x = np.linspace(a, b, N + 1)  # N+1 points make N subintervals
-    y = f(x)
-    y_right = y[1:]  # right endpoints
-    y_left = y[:-1]  # left endpoints
-    dx = (b - a) / N
-    T = (dx / 2) * np.sum(y_right + y_left)
-    return T
