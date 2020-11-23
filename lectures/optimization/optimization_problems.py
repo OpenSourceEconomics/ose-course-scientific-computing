@@ -45,16 +45,3 @@ def get_test_function(x, a, b):
         fval -= b * np.cos(2 * np.pi * (x[n] - 1))
 
     return fval
-
-
-def get_test_function_fast(x, a, b):
-    """Fast version of test function from lecture exercise."""
-    x, a = np.atleast_1d(x), np.atleast_1d(a)
-    dimension = len(x)
-
-    fval = 0
-    fval += 0.5 * np.sum(a * (x - np.ones(dimension)) ** 2)
-    fval += b * dimension
-    fval -= b * np.sum(np.cos(2 * np.pi * (x - np.ones(dimension))))
-
-    return fval
