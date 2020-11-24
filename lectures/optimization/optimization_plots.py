@@ -1,9 +1,12 @@
+"""Plots for optimization lecture."""
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import cm
 
 
 def plot_contour(f, allvecs, legend_path):
+    """Plot contour graph for function f."""
+    # Create array from values with at least two dimensions.
     allvecs = np.atleast_2d(allvecs)
 
     X, Y, Z = _get_grid(f)
@@ -25,6 +28,7 @@ def plot_contour(f, allvecs, legend_path):
 
 
 def _get_grid(f):
+    """Create a grid for function f."""
     # create data to visualize objective function
     n = 50  # number of discretization points along the x-axis
     m = 50  # number of discretization points along the x-axis
@@ -47,7 +51,7 @@ def _get_grid(f):
 
 
 def plot_surf(f):
-
+    """Plot surface graph of function f."""
     X, Y, Z = _get_grid(f)
 
     fig = plt.figure()

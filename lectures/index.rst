@@ -9,7 +9,11 @@ We provide a set of lectures as `Jupyter Notebooks <https://jupyter.org>`_.
 Tooling
 =======
 
-We showcase the basics of Python programming and point students to useful resources to study further. There are numerous excellent introductory lectures on Python programming in economics available online. Among them is `Python programming for economics and finance <https://python-programming.quantecon.org/intro.html>`_ and we will sample some of their material for our lecture.
+We showcase the basics of Python programming and point students to useful resources to study
+further. There are numerous excellent introductory lectures on Python programming in economics
+available online. Among them is `Python programming for economics and finance
+<https://python-programming.quantecon.org/intro.html>`_ and we will sample some of their material
+for our lecture.
 
 ================
 Linear equations
@@ -30,7 +34,11 @@ and benchmarking numerical routines.
 Nonlinear equations
 ===================
 
-We explore different solution algorithms to solve nonlinear equations. We start with the bisection method. We then turn to function iteration before exploring Newton's method for nonlinear equations. Finally, we look at Quasi-Newton methods and benchmark their performance in solving a standard Cournot problem. We briefly discuss some criterio to choose the right algorithm for the problem at hand.
+We explore different solution algorithms to solve nonlinear equations. We start with the bisection
+method. We then turn to function iteration before exploring Newton's method for nonlinear equations.
+Finally, we look at Quasi-Newton methods and benchmark their performance in solving a standard
+Cournot problem. We briefly discuss some criterion to choose the right algorithm for the problem at
+hand.
 
 .. toctree::
    :maxdepth: 1
@@ -42,7 +50,11 @@ We explore different solution algorithms to solve nonlinear equations. We start 
 Optimization
 ============
 
-We discuss the key attributes of optimization algorithms that determine the choice of a suitable optimization algorithm. We explore the role of noise in the criterion function and ill-conditioning for different groups of optimizers: local vs. global, derivative-based vs. derivative-free. We conclude with some programming exercises for nonlinear least squares problems and implement a simple maximum likelihood estimation.
+We discuss the key attributes of optimization algorithms that determine the choice of a suitable
+optimization algorithm. We explore the role of noise in the criterion function and ill-conditioning
+for different groups of optimizers: local vs. global, derivative-based vs. derivative-free. We
+conclude with some programming exercises for nonlinear least squares problems and implement a simple
+maximum likelihood estimation.
 
 
 .. toctree::

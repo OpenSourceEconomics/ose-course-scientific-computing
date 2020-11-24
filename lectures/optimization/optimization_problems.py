@@ -1,7 +1,9 @@
+"""Optimization problems for optimization lecture."""
 import numpy as np
 
 
 def get_parameterization(dimension, add_noise, add_illco):
+    """Get parametrization for $a_1$ and $b$ from lecture exercise."""
     if add_noise:
         b = 1
     else:
@@ -17,6 +19,7 @@ def get_parameterization(dimension, add_noise, add_illco):
 
 
 def get_test_function_gradient(x, a, b):
+    """Test function gradient."""
     x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = len(x)
 
@@ -27,6 +30,7 @@ def get_test_function_gradient(x, a, b):
 
 
 def get_test_function(x, a, b):
+    """Test function from lecture exercise."""
     x, a = np.atleast_1d(x), np.atleast_1d(a)
     dimension = len(x)
 
@@ -39,17 +43,5 @@ def get_test_function(x, a, b):
 
     for n in range(dimension):
         fval -= b * np.cos(2 * np.pi * (x[n] - 1))
-
-    return fval
-
-
-def get_test_function_fast(x, a, b):
-    x, a = np.atleast_1d(x), np.atleast_1d(a)
-    dimension = len(x)
-
-    fval = 0
-    fval += 0.5 * np.sum(a * (x - np.ones(dimension)) ** 2)
-    fval += b * dimension
-    fval -= b * np.sum(np.cos(2 * np.pi * (x - np.ones(dimension))))
 
     return fval
