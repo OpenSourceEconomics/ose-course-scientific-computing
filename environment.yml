@@ -34,6 +34,7 @@ dependencies:
 - seaborn
 - temfpy
 - numdifftools  
+- chaospy
 - pip:
     - black-nb
     - flake8-nb
