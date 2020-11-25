@@ -3,8 +3,8 @@ from itertools import product
 
 import numpy as np
 import pandas as pd
-from integration_algorithms import monte_carlo_naive_two_unit_cube as mc_naive
-from integration_algorithms import monte_carlo_quasi_two_unit_cube as mc_quasi
+from integration_algorithms import monte_carlo_naive_two_dimensions as mc_naive
+from integration_algorithms import monte_carlo_quasi_two_dimensions as mc_quasi
 from integration_algorithms import quadrature_gauss_legendre_one
 from integration_algorithms import quadrature_gauss_legendre_two as gc_legendre_two
 from integration_algorithms import quadrature_newton_simpson_one
@@ -20,7 +20,7 @@ def test_exercise_1():
 
     df_errors = pd.DataFrame(columns=["Trapezoid", "Simpson", "Gauss", "Truth"], index=index)
 
-    df_errors.loc[("Smooth", slice(None)), "Truth"] = 2.3504023872876028
+    df_errors.loc[("Smooth", slice(None)), "Truth"] = np.exp(1) - np.exp(-1)
     df_errors.loc[("Kinked", slice(None)), "Truth"] = 4 / 3
 
     for label, test_function in [("Smooth", problem_smooth), ("Kinked", problem_kinked)]:
@@ -35,17 +35,23 @@ def test_exercise_1():
 
 
 def test_exercise_2():
-    index = pd.Index([100, 1000, 10000], name="Nodes")
+    index = pd.Index(np.linspace(100, 10000, dtype=int), name="Nodes")
 
     df_results = pd.DataFrame(columns=["Naive", "Sobol", "Halton", "Gauss", "Truth"], index=index)
-    df_results["Truth"] = 5.001926847246786
 
-    mc_quasi_halton = partial(mc_quasi, problem_genz_discontinuous, rule="halton")
-    mc_quasi_sobol = partial(mc_quasi, problem_genz_discontinuous, rule="sobol")
+    # Determining the true value of the double integral is straightforward as we can tackle each
+    # dimension separately and than just multiply them.
+    integrand = 1 / 5 * np.exp(5 * 0.5) - 1 / 5 * np.exp(5 * 0)
+    df_results["Truth"] = integrand * integrand
+
+    mc_quasi_halton = partial(mc_quasi, problem_genz_discontinuous, 0, 1, rule="halton")
+    mc_quasi_sobol = partial(mc_quasi, problem_genz_discontinuous, 0, 1, rule="sobol")
     gc_legendre = partial(gc_legendre_two, problem_genz_discontinuous, 0, 1)
 
     for nodes in df_results.index.get_level_values("Nodes"):
-        df_results.loc[nodes, "Naive"] = mc_naive(problem_genz_discontinuous, nodes)
+        df_results.loc[nodes, "Naive"] = mc_naive(problem_genz_discontinuous, 0, 1, nodes)
         df_results.loc[nodes, "Halton"] = mc_quasi_halton(nodes)
         df_results.loc[nodes, "Sobol"] = mc_quasi_sobol(nodes)
         df_results.loc[nodes, "Gauss"] = gc_legendre(nodes)
+
+    df_results.plot()
