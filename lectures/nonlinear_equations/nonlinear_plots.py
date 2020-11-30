@@ -152,7 +152,7 @@ def plot_secant_method():
     xmin, xmax = 1.0, 2.55
     x0, xstar = xmax - 0.05, 3**(1/5)
     x_values = np.linspace(xmin, xmax)
-    y_values, _ = f(x_values)
+    y_values= f(x_values)
     
     # Defining the function 
     # values to illustrate algorithm.
@@ -162,8 +162,8 @@ def plot_secant_method():
     x[:2] = x0, x0 - 0.25
     y = f(x)
     for i in range(2,n):
-    x[i] = x[i-1] - y[i-1]*(x[i-1]-x[i-2]) / (y[i-1]-y[i-2])
-    y[i] = f(x[i])
+        x[i] = x[i - 1] - y[i - 1] * (x[i - 1] - x[i - 2]) / (y[i - 1] - y[i - 2])
+        y[i] = f(x[i])
     
     #Set up figure
     plt.figure(figsize=[10, 6])
@@ -176,12 +176,16 @@ def plot_secant_method():
     ax.set_yticks([])
     
     #Plot function
-    plt.plot(x_values,y_values)
+    plt.plot(x_values,y_values, label="Function $f(x)=x^5 - 3$")
     plt.hlines(0,xmin, xmax, colors='k')
-    demo.text(x0,f(x0+0.03)[0],'f',fs=18,color='b')
-    demo.bullet(xstar,0,spec='r*',ms=18)
-    for xi,xinext,yi in zip(x,x[1:],y):
-    plt.plot([xi,xi],[0,yi],'w--')
-    plt.plot([xi,xinext],[yi, 0],'r-')
-    demo.bullet(xi,yi,spec='r.',ms=18)
-    demo.bullet(xinext,0,spec='g.',ms=18)
+    plt.plot(xstar, 0, "*", color="red", markersize=20, lw=0, label="root")
+    
+    for k, (xi,xinext,yi) in enumerate(zip(x,x[1:],y)):
+        plt.plot([xi,xi],[0,yi],'--', color="grey")
+        plt.plot([xi,xinext],[yi, 0],'r-')
+        plt.plot(xi, yi, "r.", markersize=16, lw=0, label="$x_k$" if k == 0 else "")
+        plt.plot(
+            xinext, 0, ".", color="orange", markersize=16, label="$x_{k+1}$" if k == 0 else "",
+        )
+        plt.legend(fontsize=14)
+        
