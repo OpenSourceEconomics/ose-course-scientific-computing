@@ -1,5 +1,8 @@
+from functools import partial
+
 import matplotlib.pyplot as plt
 import numpy as np
+from approximation_algorithms import get_interpolator_monomial_flexible_nodes
 from approximation_auxiliary import get_chebyshev_nodes
 from approximation_auxiliary import get_uniform_nodes
 from approximation_problems import problem_reciprocal_exponential
@@ -43,7 +46,7 @@ def plot_basis_functions(name="monomial"):
             yvals = T.basis(i)(x)
         elif name == "monomial":
             yvals = x ** i
-        plt.plot(x, yvals, lw=2, label="$T_%d$" % i)
+        ax.plot(x, yvals, lw=2, label="$T_%d$" % i)
 
 
 def plot_reciprocal_exponential(a=-5, b=5):
@@ -66,3 +69,29 @@ def plot_approximation_nodes(num_nodes, strategy="uniform"):
     ax.legend(ncol=5)
     ax.set_yticks([])
     ax.set_ylim(-1, 4)
+
+
+def plot_runge_different_nodes():
+    get_interpolator = partial(get_interpolator_monomial_flexible_nodes, problem_runge, 11)
+    interp_unif = get_interpolator(nodes="uniform")
+    interp_cheby = get_interpolator(nodes="chebychev")
+
+    xvalues = np.linspace(-1, 1, 10000)
+
+    fig, ax = plt.subplots()
+    ax.plot(xvalues, problem_runge(xvalues), label="True")
+    ax.plot(xvalues, interp_unif(xvalues), label="Uniform")
+    ax.plot(xvalues, interp_cheby(xvalues), label="Chebychev")
+    ax.legend()
+    ax.set_title("Runge function")
+
+    fig, ax = plt.subplots()
+
+    ax.plot(
+        xvalues, interp_unif(xvalues) - problem_runge(xvalues), label="Uniform",
+    )
+    ax.plot(
+        xvalues, interp_cheby(xvalues) - problem_runge(xvalues), label="Chebychev",
+    )
+    ax.legend()
+    ax.set_title("Approximation error")
