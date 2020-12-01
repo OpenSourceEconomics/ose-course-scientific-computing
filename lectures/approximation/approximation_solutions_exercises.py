@@ -10,7 +10,7 @@ from numpy.polynomial import Polynomial as P
 
 def test_exercise_1():
 
-    index = product([10, 20, 30, 40, 50], np.linspace(-5, 5, 1000))
+    index = product([10, 20, 30, 40, 50], np.linspace(-1, 1, 1000))
 
     index = pd.MultiIndex.from_tuples(index, names=("Degree", "Point"))
     df = pd.DataFrame(columns=["Value", "Approximation"], index=index)
@@ -19,7 +19,7 @@ def test_exercise_1():
 
     for degree in [10, 20, 30, 40, 50]:
 
-        xnodes = get_uniform_nodes(degree, -5, 5)
+        xnodes = get_uniform_nodes(degree, -1, 1)
         poly = P.fit(xnodes, problem_runge(xnodes), degree)
 
         xvalues = df.index.get_level_values("Point").unique()

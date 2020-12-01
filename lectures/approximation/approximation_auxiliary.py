@@ -2,13 +2,7 @@ import numpy as np
 
 
 def get_uniform_nodes(n, a=-1, b=1):
-
-    nodes = np.tile(np.nan, n)
-
-    for i in range(1, n + 1):
-        nodes[i - 1] = a + (i - 1) / (n - 1) * (b - a)
-
-    return nodes
+    return np.linspace(a, b, num=n)
 
 
 def get_chebyshev_nodes(n, a=-1, b=1):

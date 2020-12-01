@@ -8,6 +8,7 @@ from approximation_auxiliary import get_uniform_nodes
 from approximation_problems import problem_reciprocal_exponential
 from approximation_problems import problem_runge
 from numpy.polynomial import Chebyshev as T
+from numpy.polynomial import Polynomial as P
 
 
 def plot_problem_runge():
@@ -28,8 +29,8 @@ def plot_runge_multiple():
 
     for degree in [5, 9]:
         xnodes = np.linspace(a, b, degree)
-        c = np.polyfit(xnodes, problem_runge(xnodes), degree)
-        yfit = np.polyval(c, xvals)
+        poly = P.fit(xnodes, problem_runge(xnodes), degree)
+        yfit = poly(xvals)
         ax.plot(xvals, yfit, label=" 9th-order")
 
     ax.legend()
@@ -56,11 +57,11 @@ def plot_reciprocal_exponential(a=-5, b=5):
     ax.plot(yvals, problem_reciprocal_exponential(yvals))
 
 
-def plot_approximation_nodes(num_nodes, strategy="uniform"):
+def plot_approximation_nodes(num_nodes, nodes="uniform"):
 
-    if strategy == "uniform":
+    if nodes == "uniform":
         get_nodes = get_uniform_nodes
-    elif strategy == "chebychev":
+    elif nodes == "chebychev":
         get_nodes = get_chebyshev_nodes
 
     fig, ax = plt.subplots()
