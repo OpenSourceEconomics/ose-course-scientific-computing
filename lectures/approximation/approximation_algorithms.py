@@ -17,11 +17,11 @@ def get_interpolator_monomial_uniform(func, degree, a=-1, b=1):
     return poly
 
 
-def get_interpolator_monomial_flexible_nodes(func, degree, strategy="uniform", a=-1, b=1):
+def get_interpolator_monomial_flexible_nodes(func, degree, nodes="uniform", a=-1, b=1):
 
-    if strategy == "uniform":
+    if nodes == "uniform":
         get_nodes = get_uniform_nodes
-    elif strategy == "chebychev":
+    elif nodes == "chebychev":
         get_nodes = get_chebyshev_nodes
 
     xnodes = get_nodes(degree, a, b)
