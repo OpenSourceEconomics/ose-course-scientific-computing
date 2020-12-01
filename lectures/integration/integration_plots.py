@@ -1,7 +1,12 @@
+from functools import partial
+
 import chaospy as cp
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from integration_algorithms import monte_carlo_naive_one
+from integration_algorithms import quadrature_gauss_legendre_one
+from integration_algorithms import quadrature_newton_trapezoid_one
 from integration_problems import problem_kinked
 from integration_problems import problem_smooth
 
@@ -63,16 +68,25 @@ def plot_quasi_monte_carlo(num_points):
 
 def plot_naive_monte_carlo_error(max_nodes):
 
-    grid = np.linspace(5, max_nodes, dtype=int)
-    yvals = list()
-    for nodes in grid:
-        rslt = monte_carlo_naive_one(problem_smooth, a=-1, b=1, n=nodes, seed=123)
-        yvals += [np.abs(rslt - 2.3504023872876028)]
+    index = pd.Index(np.linspace(5, max_nodes, dtype=int), name="Nodes")
+    df_results = pd.DataFrame(columns=["Trapezoid", "Gauss", "Naive", "Truth"], index=index)
+
+    p_trapezoid = partial(quadrature_newton_trapezoid_one, problem_smooth, -1, 1)
+    p_gauss = partial(quadrature_gauss_legendre_one, problem_smooth, -1, 1)
+    p_naive = partial(monte_carlo_naive_one, problem_smooth, -1, 1)
+
+    df_results.loc[:, "Truth"] = np.exp(1) - np.exp(-1)
+    for nodes in df_results.index.get_level_values("Nodes"):
+        df_results.loc[nodes, "Trapezoid"] = np.abs(p_trapezoid(nodes))
+        df_results.loc[nodes, "Gauss"] = np.abs(p_gauss(nodes))
+        df_results.loc[nodes, "Naive"] = np.abs(p_naive(nodes))
 
     fig, ax = plt.subplots()
-    ax.plot(grid, yvals)
+    for column in df_results.columns:
+        ax.plot(df_results.index.get_level_values("Nodes"), df_results[column], label=column)
     ax.set_xlabel("Number of nodes")
     ax.set_ylabel("Error")
+    ax.legend()
 
 
 def plot_naive_monte_carlo_randomness():

@@ -83,23 +83,33 @@ def monte_carlo_naive_one(f, a=0, b=1, n=10, seed=123):
     return scale * np.sum(weights * fvals)
 
 
-def monte_carlo_naive_two_unit_cube(f, n=10, seed=128):
+def monte_carlo_naive_two_dimensions(f, a=0, b=1, n=10, seed=128):
+
+    # Please note in docstring that restricted to same integration domain for both variables.
 
     np.random.seed(seed)
-    xvals = np.random.uniform(size=2 * n).reshape(n, 2)
+    xvals = np.random.uniform(low=a, high=b, size=2 * n).reshape(n, 2)
+    volume = (b - a) ** 2
+
     fvals = np.tile(np.nan, n)
     weights = np.tile(1 / n, n)
 
     for i, xval in enumerate(xvals):
         fvals[i] = f(xval)
 
-    return np.sum(weights * fvals)
+    return volume * np.sum(weights * fvals)
 
 
-def monte_carlo_quasi_two_unit_cube(f, n=10, rule="sobol"):
+def monte_carlo_quasi_two_dimensions(f, a=0, b=1, n=10, rule="random"):
 
-    distribution = cp.J(cp.Uniform(0, 1), cp.Uniform(0, 1))
+    # Please note in docstring that the for the case of rule = random we are back to naive Monte
+    # Carlo.
+
+    # Please note in docstring that restricted to same integration domain for both variables.
+
+    distribution = cp.J(cp.Uniform(a, b), cp.Uniform(a, b))
     samples = distribution.sample(n, rule=rule).T
+    volume = (b - a) ** 2
 
     fvals = np.tile(np.nan, n)
     weights = np.tile(1 / n, n)
@@ -107,4 +117,4 @@ def monte_carlo_quasi_two_unit_cube(f, n=10, rule="sobol"):
     for i, xval in enumerate(samples):
         fvals[i] = f(xval)
 
-    return np.sum(weights * fvals)
+    return volume * np.sum(weights * fvals)
