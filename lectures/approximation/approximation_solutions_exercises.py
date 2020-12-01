@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from approximation_auxiliary import compute_interpolation_error
 from approximation_auxiliary import get_uniform_nodes
-from approximation_problems import runge
+from approximation_problems import problem_runge
 
 
 def test_exercise_1():
@@ -14,12 +14,12 @@ def test_exercise_1():
     index = pd.MultiIndex.from_tuples(index, names=("Degree", "Point"))
     df = pd.DataFrame(columns=["Value", "Approximation"], index=index)
 
-    df["Value"] = runge(df.index.get_level_values("Point"))
+    df["Value"] = problem_runge(df.index.get_level_values("Point"))
 
     for degree in [10, 20, 30, 40, 50]:
 
         xnodes = get_uniform_nodes(degree, -5, 5)
-        poly = np.polyfit(xnodes, runge(xnodes), degree)
+        poly = np.polyfit(xnodes, problem_runge(xnodes), degree)
 
         xvalues = df.index.get_level_values("Point").unique()
         yvalues = np.polyval(poly, xvalues)

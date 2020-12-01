@@ -1,11 +1,14 @@
 """This module contains some auxiliary functions shared across the utility scripts."""
 import argparse
 import difflib
-import glob
 import os
 import subprocess as sp
 
 LECTURES_ROOT = os.environ["PROJECT_ROOT"] + "/lectures"
+
+LECTURES_NAME = list()
+LECTURES_NAME += ["optimization", "integration", "approximation"]
+LECTURES_NAME += ["linear_equations", "nonlinear_equations"]
 
 
 def run_notebook(notebook):
@@ -19,7 +22,7 @@ def run_notebook(notebook):
 def parse_arguments(description):
     """Parse the arguments for the scripts."""
     parser = argparse.ArgumentParser(description=description)
-    task, task_dir = "lecture", LECTURES_ROOT
+    task = "lecture"
 
     parser.add_argument(
         "-n", "--name", type=str, help=f"name of {task}", default="all", dest="name"
@@ -30,22 +33,12 @@ def parse_arguments(description):
     # We can either request a single lecture or just act on all of them. We use string matching
     # to ease workflow.
     if args.name != "all":
-        request = difflib.get_close_matches(args.name, get_list_tasks(task_dir), n=1, cutoff=0.1)
+        request = difflib.get_close_matches(args.name, LECTURES_NAME, n=1, cutoff=0.1)
         if not request:
             raise AssertionError(f"unable to match {task}")
     else:
-        request = get_list_tasks(task_dir)
+        request = LECTURES_NAME
 
     request.sort()
 
     return request
-
-
-def get_list_tasks(task_dir):
-    """Get a list of tasks."""
-    cwd = os.getcwd()
-    os.chdir(task_dir)
-    lectures = glob.glob("*_*") + ["optimization", "integration"]
-    os.chdir(cwd)
-
-    return lectures

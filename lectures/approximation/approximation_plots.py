@@ -11,7 +11,6 @@ def plot_problem_runge():
     fig, ax = plt.subplots()
     xvals = np.linspace(-1, 1, 1000)
     yvals = problem_runge(xvals)
-
     ax.plot(xvals, yvals, label="Function")
 
 
