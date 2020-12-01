@@ -1,57 +1,31 @@
-from functools import partial
 from itertools import product
 
 import numpy as np
 import pandas as pd
-from integration_algorithms import monte_carlo_naive_two_dimensions as mc_naive
-from integration_algorithms import monte_carlo_quasi_two_dimensions as mc_quasi
-from integration_algorithms import quadrature_gauss_legendre_one
-from integration_algorithms import quadrature_gauss_legendre_two as gc_legendre_two
-from integration_algorithms import quadrature_newton_simpson_one
-from integration_algorithms import quadrature_newton_trapezoid_one
-from integration_problems import problem_genz_discontinuous
-from integration_problems import problem_kinked
-from integration_problems import problem_smooth
+from approximation_auxiliary import compute_interpolation_error
+from approximation_auxiliary import get_uniform_nodes
+from approximation_problems import runge
 
 
 def test_exercise_1():
-    index = product(["Smooth", "Kinked"], [5, 11, 21, 31])
-    index = pd.MultiIndex.from_tuples(index, names=("Function", "Nodes"))
 
-    df_errors = pd.DataFrame(columns=["Trapezoid", "Simpson", "Gauss", "Truth"], index=index)
+    index = product([10, 20, 30, 40, 50], np.linspace(-5, 5, 1000))
 
-    df_errors.loc[("Smooth", slice(None)), "Truth"] = np.exp(1) - np.exp(-1)
-    df_errors.loc[("Kinked", slice(None)), "Truth"] = 4 / 3
+    index = pd.MultiIndex.from_tuples(index, names=("Degree", "Point"))
+    df = pd.DataFrame(columns=["Value", "Approximation"], index=index)
 
-    for label, test_function in [("Smooth", problem_smooth), ("Kinked", problem_kinked)]:
-        p_trapezoid = partial(quadrature_newton_trapezoid_one, test_function, -1, 1)
-        p_simpson = partial(quadrature_newton_simpson_one, test_function, -1, 1)
-        p_gauss = partial(quadrature_gauss_legendre_one, test_function, -1, 1)
-        for nodes in df_errors.index.get_level_values("Nodes"):
-            index = (label, nodes)
-            df_errors.loc[index, "Trapezoid"] = np.abs(p_trapezoid(nodes))
-            df_errors.loc[index, "Simpson"] = np.abs(p_simpson(nodes))
-            df_errors.loc[index, "Gauss"] = np.abs(p_gauss(nodes))
+    df["Value"] = runge(df.index.get_level_values("Point"))
 
+    for degree in [10, 20, 30, 40, 50]:
 
-def test_exercise_2():
-    index = pd.Index(np.linspace(100, 10000, dtype=int), name="Nodes")
+        xnodes = get_uniform_nodes(degree, -5, 5)
+        poly = np.polyfit(xnodes, runge(xnodes), degree)
 
-    df_results = pd.DataFrame(columns=["Naive", "Sobol", "Halton", "Gauss", "Truth"], index=index)
+        xvalues = df.index.get_level_values("Point").unique()
+        yvalues = np.polyval(poly, xvalues)
 
-    # Determining the true value of the double integral is straightforward as we can tackle each
-    # dimension separately and than just multiply them.
-    integrand = 1 / 5 * np.exp(5 * 0.5) - 1 / 5 * np.exp(5 * 0)
-    df_results["Truth"] = integrand * integrand
+        df.loc[(degree, slice(None)), "Approximation"] = yvalues
 
-    mc_quasi_halton = partial(mc_quasi, problem_genz_discontinuous, 0, 1, rule="halton")
-    mc_quasi_sobol = partial(mc_quasi, problem_genz_discontinuous, 0, 1, rule="sobol")
-    gc_legendre = partial(gc_legendre_two, problem_genz_discontinuous, 0, 1)
+        df["Error"] = df["Value"] - df["Approximation"]
 
-    for nodes in df_results.index.get_level_values("Nodes"):
-        df_results.loc[nodes, "Naive"] = mc_naive(problem_genz_discontinuous, 0, 1, nodes)
-        df_results.loc[nodes, "Halton"] = mc_quasi_halton(nodes)
-        df_results.loc[nodes, "Sobol"] = mc_quasi_sobol(nodes)
-        df_results.loc[nodes, "Gauss"] = gc_legendre(nodes)
-
-    df_results.plot()
+    df.groupby("Degree").apply(compute_interpolation_error).plot()
