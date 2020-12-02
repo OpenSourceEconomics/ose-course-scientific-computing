@@ -78,3 +78,19 @@ the different approaches under different scenarios.
 
    integration/notebook.ipynb
    integration/algorithms.rst
+
+=============
+Approximation
+=============
+
+We study the function approximation using polynomials. We combine different strategies for the
+interpolation nodes and basis functions to study how they interact to determine the approximation's
+overall quality. We use this as an opportunity to iteratively develop a function that allows to
+combine the different ingredients to set up an interpolator.
+
+
+.. toctree::
+   :maxdepth: 1
+
+   approximation/notebook.ipynb
+   approximation/algorithms.rst
