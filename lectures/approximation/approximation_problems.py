@@ -7,3 +7,7 @@ def problem_runge(x):
 
 def problem_reciprocal_exponential(x):
     return np.exp(-x)
+
+
+def problem_kinked(x):
+    return np.sqrt(np.abs(x))
