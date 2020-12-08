@@ -136,6 +136,9 @@ def plot_two_dimensional_problem():
     fig = plt.figure()
     ax = fig.gca(projection="3d")
     ax.plot_surface(X_fit, Y_fit, Z_fit)
+    ax.set_ylabel("y")
+    ax.set_xlabel("x")
+    ax.set_zlabel("f(x, y)")
 
 
 def plot_runge_function_cubic():
