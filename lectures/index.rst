@@ -86,7 +86,8 @@ Approximation
 We study the function approximation using polynomials. We combine different strategies for the
 interpolation nodes and basis functions to study how they interact to determine the approximation's
 overall quality. We use this as an opportunity to iteratively develop a function that allows to
-combine the different ingredients to set up an interpolator.
+combine the different ingredients to set up an interpolator. Finally, we extend the ideas to the
+case of multivariate interpolation.
 
 
 .. toctree::

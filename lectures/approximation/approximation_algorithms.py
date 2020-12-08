@@ -59,6 +59,6 @@ def get_interpolator(name, degree, func):
         interp = interp1d(xnodes, func(xnodes), name)
     elif name in ["chebychev"]:
         xnodes = get_chebyshev_nodes(*args)
-        interp = C.fit(xnodes, func(xnodes), degree)
+        interp = P.fit(xnodes, func(xnodes), degree)
 
     return interp
