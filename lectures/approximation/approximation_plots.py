@@ -5,10 +5,13 @@ import numpy as np
 from approximation_algorithms import get_interpolator_monomial_flexible_nodes
 from approximation_auxiliary import get_chebyshev_nodes
 from approximation_auxiliary import get_uniform_nodes
+from approximation_auxiliary import spline_basis
 from approximation_problems import problem_reciprocal_exponential
 from approximation_problems import problem_runge
+from approximation_problems import problem_two_dimensions
 from numpy.polynomial import Chebyshev as T
 from numpy.polynomial import Polynomial as P
+from scipy.interpolate import interp1d
 
 
 def plot_problem_runge():
@@ -38,7 +41,7 @@ def plot_runge_multiple():
 
 def plot_basis_functions(name="monomial"):
 
-    x = np.linspace(-1, 1, 100)
+    x = np.linspace(0, 1, 100)
 
     for i in range(6):
         fig, ax = plt.subplots()
@@ -47,6 +50,15 @@ def plot_basis_functions(name="monomial"):
             yvals = T.basis(i)(x)
         elif name == "monomial":
             yvals = x ** i
+
+        elif name == "linear":
+            a, b = 0, 1
+            yvals = np.tile(np.nan, 100)
+            h = (b - a) / 5
+
+            for j, element in enumerate(x):
+                yvals[j] = spline_basis(element, i + 1, h, 0)
+
         ax.plot(x, yvals, lw=2, label="$T_%d$" % i)
 
 
@@ -96,3 +108,47 @@ def plot_runge_different_nodes():
     )
     ax.legend()
     ax.set_title("Approximation error")
+
+
+def plot_two_dimensional_grid(nodes):
+
+    if nodes == "chebychev":
+        x = get_chebyshev_nodes(10)
+        y = get_chebyshev_nodes(10)
+    elif nodes == "uniform":
+        x = get_uniform_nodes(10)
+        y = get_uniform_nodes(10)
+
+    X, Y = np.meshgrid(x, y)  # grid of point
+
+    fig, ax = plt.subplots()
+    for i in range(len(x)):
+        ax.plot(X[i, :], Y[i, :], marker=".", color="k", linestyle="none")
+
+
+def plot_two_dimensional_problem():
+
+    x_fit = get_uniform_nodes(50)
+    y_fit = get_uniform_nodes(50)
+    X_fit, Y_fit = np.meshgrid(x_fit, y_fit)
+    Z_fit = problem_two_dimensions(X_fit, Y_fit)
+
+    fig = plt.figure()
+    ax = fig.gca(projection="3d")
+    ax.plot_surface(X_fit, Y_fit, Z_fit)
+
+
+def plot_runge_function_cubic():
+    xvalues = get_uniform_nodes(10000, -1, 1)
+
+    for degree in [5, 10, 15]:
+        x_fit = get_uniform_nodes(degree, -1, 1)
+
+        interp = interp1d(x_fit, problem_runge(x_fit), kind="cubic")
+        yfit = interp(xvalues)
+
+        fig, ax = plt.subplots()
+        ax.plot(xvalues, problem_runge(xvalues), label="True")
+        ax.plot(xvalues, yfit, label="Approximation")
+        ax.legend()
+        ax.set_title(f"Degree {degree}")

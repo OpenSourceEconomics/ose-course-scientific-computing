@@ -1,8 +1,10 @@
-import numpy as np
-from approximation_auxiliary import get_chebyshev_nodes
-from approximation_auxiliary import get_uniform_nodes
 from numpy.polynomial import Chebyshev as C
 from numpy.polynomial import Polynomial as P
+from scipy.interpolate import interp1d
+import numpy as np
+
+from approximation_auxiliary import get_chebyshev_nodes
+from approximation_auxiliary import get_uniform_nodes
 
 
 def get_interpolator_runge_baseline(func):
@@ -48,3 +50,15 @@ def get_interpolator_flexible_basis_flexible_nodes(
     poly = fit(xnodes, func(xnodes), degree)
 
     return poly
+
+
+def get_interpolator(name, degree, func):
+    args = (degree, -1, 1)
+    if name in ["linear", "cubic"]:
+        xnodes = get_uniform_nodes(*args)
+        interp = interp1d(xnodes, func(xnodes), name)
+    elif name in ["chebychev"]:
+        xnodes = get_chebyshev_nodes(*args)
+        interp = P.fit(xnodes, func(xnodes), degree)
+
+    return interp
