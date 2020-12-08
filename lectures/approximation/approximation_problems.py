@@ -11,3 +11,7 @@ def problem_reciprocal_exponential(x):
 
 def problem_kinked(x):
     return np.sqrt(np.abs(x))
+
+
+def problem_two_dimensions(x, y):
+    return np.cos(x) / np.exp(y)

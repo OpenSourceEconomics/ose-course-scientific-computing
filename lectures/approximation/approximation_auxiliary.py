@@ -1,6 +1,17 @@
 import numpy as np
 
 
+def spline_basis(x, degree, h, a):
+    nu = a + (degree - 1) * h
+
+    if np.abs(x - nu) <= h:
+        return 1 - (np.abs(x - nu)) / h
+    else:
+        return 0.0
+
+    return nu
+
+
 def get_uniform_nodes(n, a=-1, b=1):
     return np.linspace(a, b, num=n)
 
