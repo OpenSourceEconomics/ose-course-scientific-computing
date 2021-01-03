@@ -101,3 +101,162 @@ def plot_naive_monte_carlo_randomness():
     ax.scatter(grid, yvals)
     ax.set_xlabel("Seed")
     ax.set_ylabel("Error")
+ 
+#Integration plots from the lecture
+#bounded interval function
+
+from numpy import cos, pi, linspace, array
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x):
+    return 25 - cos(pi*x)*(2*pi*x - pi + 0.5)**2
+
+x_range = array([0, 1])
+a_b = array([0.25, 0.75])
+n = 401
+
+z = linspace(*a_b, n)
+x = linspace(*x_range, n)
+
+fig, ax = plt.subplots(figsize=[8,4])
+ax.fill_between(z, 0, f(z), alpha=0.35, color='lightgreen')
+ax.hlines(0, *x_range, 'k', linewidth=2)
+ax.vlines(a_b, 0, f(a_b), color='tab:red',linestyle='--',linewidth=2)
+ax.plot(x,f(x), linewidth=3)
+ax.set(xlim=x_range, xticks=a_b,
+       ylim=[-5, f(x).max()+2], yticks=[0])
+       
+ax.set_yticklabels(['0'], size=15)
+ax.set_xticklabels(['$a$', '$b$'], size=15)
+ax.set_facecolor("whitesmoke")
+
+ax.annotate(r'$f(x)$', [x_range[1] - 0.1, f(x_range[1])-5], fontsize=13, color='black', va='top')
+ax.annotate(r'$A = \int_a^bf(x)dx$', [a_b.mean(), 10] ,fontsize=18, ha='center');
+
+# trapezoid rule
+
+from numpy import poly1d, linspace
+import matplotlib.pyplot as plt
+!pip install compecon
+from compecon import qnwtrap, demo
+
+n = 1001
+xmin, xmax = -1, 1
+xwid = xmax-xmin
+x = linspace(xmin, xmax, n)
+
+f = poly1d([2.0, -1.0, 0.5, 5.0])
+
+
+def plot_trap(n):
+    xi, wi = qnwtrap(n+1, xmin, xmax)
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.fill_between(xi, f(xi), alpha=0.35, color='lightgreen')
+    ax.plot(x, f(x), linewidth=3, label=r'$f(x)$')
+    ax.plot(xi, f(xi), color='Tab:red', linestyle='--', label=f'$\\tilde{{f}}_{n+1}(x)$')
+    ax.vlines(xi, 0, f(xi),color='Tab:red', linestyle=':')
+    ax.axhline(0,color='k',linewidth=2)
+    ax.set_facecolor("whitesmoke")
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
+
+
+
+    xtl = [f'$x_{i}$' for i in range(n+1)]
+    xtl[0] += '=a'
+    xtl[n] += '=b'
+    ax.set(
+        xlim=[xmin-0.1, xmax+0.1],
+        xticks=xi, 
+        xticklabels=xtl,
+        yticks=[0],
+        yticklabels=['0'])
+    ax.legend()
+    return fig
+
+figs = [plot_trap(n) for n in [2, 4, 8]]
+
+
+#Simpsons rule
+
+from numpy import poly1d,polyfit, linspace, array
+import matplotlib.pyplot as plt
+!pip install compecon
+from compecon import qnwsimp, demo
+
+
+n = 1001
+xmin, xmax = -1, 1
+xwid = xmax-xmin
+x = linspace(xmin, xmax, n)
+
+f = poly1d([2.0, -1.0, 0.5, 5.0])
+
+def fitquad(xi):
+    newcoef = polyfit(xi, f(xi), 2)
+    return poly1d(newcoef)
+
+def plot_simp(n):
+    xi, wi = qnwsimp(n+1, xmin, xmax)
+    
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.plot(x, f(x), linewidth=3)
+    ax.set_facecolor("whitesmoke")
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
+    
+
+    for k in range(n//2):
+        xii = xi[(2*k):(2*k+3)]
+        xiii = linspace(xii[0], xii[2], 125)
+        p = fitquad(xii)
+        ax.fill_between(xiii, p(xiii), alpha=0.35, color='lightgreen')    
+        ax.plot(xiii, p(xiii),color='Tab:red', linestyle='--')
+        fig, ax = plt.subplots(figsize=(7, 3))
+        ax.set_facecolor("whitesmoke")
+        plt.xticks(fontsize=14)
+        plt.yticks(fontsize=14)
+    
+    plt.vlines(xi, 0, f(xi),'k', linestyle=':')
+    plt.hlines(0,xmin-0.1, xmax+0.1,'k',linewidth=2)
+    plt.xlim(xmin-0.1, xmax+0.1)
+    xtl = ['$x_{%d}$' % i for i in range(n+1)]
+    xtl[0] += '=a'
+    xtl[n] += '=b'
+    plt.xticks(xi, xtl)
+    plt.yticks([0],['0'])
+    plt.legend([r'$f(x)$', f'$\\tilde{{f}}_{n+1}(x)$'])
+    return fig
+
+def plot_simp(n):
+    xi, wi = qnwsimp(n+1, xmin, xmax)
+    
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.plot(x, f(x), linewidth=3)
+    ax.set_facecolor("whitesmoke")
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
+    
+    for k in range(n//2):
+        xii = xi[(2*k):(2*k+3)]
+        xiii = linspace(xii[0], xii[2], 125)
+        p = fitquad(xii)
+        ax.fill_between(xiii, p(xiii), alpha=0.35, color='lightgreen')    
+        ax.plot(xiii, p(xiii), color='Tab:red', linestyle='--')
+    
+    ax.vlines(xi, 0, f(xi), color='Tab:red', linestyle=':')
+    ax.axhline(0,color='k',linewidth=2)
+    
+    xtl = [f'$x_{i}$' for i in range(n+1)]
+    xtl[0] += '=a'
+    xtl[n] += '=b'
+    
+    ax.set(xlim=[xmin-0.1, xmax+0.1], xticks=xi, xticklabels=xtl,
+           yticks=[0], yticklabels=['0'])
+    
+    plt.legend([r'$f(x)$', f'$\\tilde{{f}}_{n+1}(x)$'])
+    return fig
+
+figs = [plot_simp(n) for n in [2, 4, 8]]
