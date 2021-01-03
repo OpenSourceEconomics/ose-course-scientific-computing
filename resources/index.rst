@@ -13,4 +13,4 @@ Additional Resources
 - `STA 663 2020 <http://people.duke.edu/~ccc14/sta-663-2020/index.html>`_: Material from a `course in computational statistics and statistical computing <https://github.com/cliburn/sta-663-2020>`__ at `Duke University <https://duke.edu/>`_.
 
 
-- `Computational Physics <https://physik.uni-graz.at/~pep/CompOriPhys/Python/CoP.pdf>`__: Lecture script for a `course in compuational physics <https://physik.uni-graz.at/~pep/CompOriPhys_WS1516.html>`__ at the University of Graz.
+- `Computational Physics <https://physik.uni-graz.at/~pep/CompOriPhys/Python/CoP.pdf>`__: Lecture script for a `course in computational physics <https://physik.uni-graz.at/~pep/CompOriPhys_WS1516.html>`__ at the University of Graz.
