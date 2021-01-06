@@ -81,15 +81,15 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +============+===========================================================================================================+
 | 12/01/2021 | Guest lecture by Daimler AG                                                                               |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 13/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__                                      |
+| 13/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ (OSE, University of Bonn)            |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 19/01/2021 | Guest lecture by Fraunhofer FIT                                                                           |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__                                          |
+| 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__   (OSE, University of Bonn)              |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 26/01/2021 | Guest lecture by Hasenauer Lab                                                                            |                                         
+| 26/01/2021 | Guest lecture by Hasenauer Lab  (University of Bonn)                                                      |                                         
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 27/01/2021 | Guest lecture by Hasenauer Lab                                                                            |
+| 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)  |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 02/02/2021 | Guest lecture by Fraunhofer FIT                                                                           |
 +------------+-----------------------------------------------------------------------------------------------------------+
