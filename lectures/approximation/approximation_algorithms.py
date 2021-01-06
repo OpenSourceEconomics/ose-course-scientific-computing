@@ -1,10 +1,9 @@
+import numpy as np
+from approximation_auxiliary import get_chebyshev_nodes
+from approximation_auxiliary import get_uniform_nodes
 from numpy.polynomial import Chebyshev as C
 from numpy.polynomial import Polynomial as P
 from scipy.interpolate import interp1d
-import numpy as np
-
-from approximation_auxiliary import get_chebyshev_nodes
-from approximation_auxiliary import get_uniform_nodes
 
 
 def get_interpolator_runge_baseline(func):

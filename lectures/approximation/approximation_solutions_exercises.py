@@ -1,15 +1,13 @@
 from itertools import product
 
-import pandas as pd
 import numpy as np
-
-from approximation_auxiliary import compute_interpolation_error_df
+import pandas as pd
 from approximation_algorithms import get_interpolator
+from approximation_auxiliary import compute_interpolation_error_df
 from approximation_auxiliary import get_uniform_nodes
-from approximation_problems import problem_reciprocal_exponential
 from approximation_problems import problem_kinked
+from approximation_problems import problem_reciprocal_exponential
 from approximation_problems import problem_runge
-
 from numpy.polynomial import Polynomial as P
 
 
