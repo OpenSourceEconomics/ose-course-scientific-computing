@@ -73,11 +73,11 @@ def plot_surf(f):
     
  #Function with strict global maximum, weak local maximum, strict local maximum
 
-def f(t):
+def plot_optima_maxima():
     return np.where((2 < t) & (t < 2.39), -0.15, np.exp(-0.5*t) * np.cos(3*t) * np.cos(t))
 
 x = np.arange(0.0, 5.0, 0.01)
-
+    
 plt.figure()
 plt.plot(0.87, -0.37, ".", color="red", markersize=10, lw=0)
 plt.plot(2.2, -0.16, "_", color="green", markersize=20, mew=5, lw=0, label="root")
@@ -88,41 +88,4 @@ plt.xlabel('x')
 plt.ylabel('f(x)')
 plt.plot(x, f(x))
 
-#true function
-def f(t):
-    return np.cos(4*t) * np.cos(0.7*t) 
 
-x = np.arange(0.0, 5.0, 0.01)
-
-plt.figure()
-plt.plot(0.5, -0.5, ".", color="blue", markersize=12, lw=0)
-plt.plot(1.75, 0.25, ".", color="blue", markersize=12, lw=0)
-plt.plot(1.95, 0.05, ".", color="blue", markersize=12, lw=0)
-plt.plot(2.9, -0.25, ".", color="blue", markersize=12, lw=0)
-plt.plot(3.8, 0.75, ".", color="blue", markersize=12, lw=0)
-plt.plot(4.1, 0.8, ".", color="blue", markersize=12, lw=0)
-plt.xticks([])
-plt.yticks([])
-plt.xlabel('x')
-plt.ylabel('f(x)')
-plt.plot(x, f(x), 'black')
-
-#observed function
-
-def f(t):
-    return np.cos(4*t) * np.cos(0.7*t) 
-
-x = np.arange(0.0, 5.0, 0.01)
-
-plt.figure()
-plt.plot(0.5, -0.5, ".", color="blue", markersize=12, lw=0)
-plt.plot(1.75, 0.25, ".", color="blue", markersize=12, lw=0)
-plt.plot(1.95, 0.05, ".", color="blue", markersize=12, lw=0)
-plt.plot(2.9, -0.25, ".", color="blue", markersize=12, lw=0)
-plt.plot(3.8, 0.75, ".", color="blue", markersize=12, lw=0)
-plt.plot(4.1, 0.8, ".", color="blue", markersize=12, lw=0)
-plt.xticks([])
-plt.yticks([])
-plt.xlabel('x')
-plt.ylabel('f(x)')
-plt.plot(x, f(x), 'black', alpha=0)
