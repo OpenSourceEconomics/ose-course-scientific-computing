@@ -21,11 +21,7 @@ def plot_contour(f, allvecs, legend_path):
     plt.plot(1, 1, "r*", markersize=10, label="minimum")
     plt.plot(4.5, -1.5, "bx", markersize=10, label="initial guess")
     plt.plot(
-        np.array(allvecs)[:, 0],
-        np.array(allvecs)[:, 1],
-        "go",
-        markersize=4,
-        label=legend_path,
+        np.array(allvecs)[:, 0], np.array(allvecs)[:, 1], "go", markersize=4, label=legend_path,
     )
     plt.legend()
     return plt
@@ -69,23 +65,22 @@ def plot_surf(f):
     fig.colorbar(surf)
     plt.title("objective function")
 
-    
-    
- #Function with strict global maximum, weak local maximum, strict local maximum
+
+# Function with strict global maximum, weak local maximum, strict local maximum
+
 
 def plot_optima_maxima():
-    return np.where((2 < t) & (t < 2.39), -0.15, np.exp(-0.5*t) * np.cos(3*t) * np.cos(t))
+    return np.where((2 < t) & (t < 2.39), -0.15, np.exp(-0.5 * t) * np.cos(3 * t) * np.cos(t))
+
 
 x = np.arange(0.0, 5.0, 0.01)
-    
+
 plt.figure()
 plt.plot(0.87, -0.37, ".", color="red", markersize=10, lw=0)
 plt.plot(2.2, -0.16, "_", color="green", markersize=20, mew=5, lw=0, label="root")
 plt.plot(4, -0.08, ".", color="red", markersize=10, lw=0)
 plt.xticks([])
 plt.yticks([])
-plt.xlabel('x')
-plt.ylabel('f(x)')
+plt.xlabel("x")
+plt.ylabel("f(x)")
 plt.plot(x, f(x))
-
-
