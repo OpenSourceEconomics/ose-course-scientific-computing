@@ -1,20 +1,18 @@
+"""Problem solutions for approximation lecture."""
 from itertools import product
 
-import pandas as pd
 import numpy as np
-
-from approximation_auxiliary import compute_interpolation_error_df
+import pandas as pd
 from approximation_algorithms import get_interpolator
+from approximation_auxiliary import compute_interpolation_error_df
 from approximation_auxiliary import get_uniform_nodes
-from approximation_problems import problem_reciprocal_exponential
 from approximation_problems import problem_kinked
+from approximation_problems import problem_reciprocal_exponential
 from approximation_problems import problem_runge
-
-from numpy.polynomial import Polynomial as P
 
 
 def test_exercise_1():
-
+    """Run test exercise 1."""
     index = product([10, 20, 30, 40, 50], np.linspace(-1, 1, 1000))
 
     index = pd.MultiIndex.from_tuples(index, names=("Degree", "Point"))
@@ -25,7 +23,7 @@ def test_exercise_1():
     for degree in [10, 20, 30, 40, 50]:
 
         xnodes = get_uniform_nodes(degree, -1, 1)
-        poly = P.fit(xnodes, problem_runge(xnodes), degree)
+        poly = np.polynomial.Polynomial.fit(xnodes, problem_runge(xnodes), degree)
 
         xvalues = df.index.get_level_values("Point").unique()
         yvalues = poly(xvalues)
@@ -38,7 +36,7 @@ def test_exercise_1():
 
 
 def test_exercise_2():
-
+    """Run test exercise 2."""
     index = product(
         ["runge", "reciprocal_exponential", "kinked"],
         ["linear", "cubic", "chebychev"],
@@ -49,7 +47,7 @@ def test_exercise_2():
     index = pd.MultiIndex.from_tuples(index, names=("Function", "Method", "Degree", "Point"))
     df = pd.DataFrame(columns=["Value", "Approximation"], index=index)
 
-    test_functions = dict()
+    test_functions = {}
     test_functions["runge"] = problem_runge
     test_functions["reciprocal_exponential"] = problem_reciprocal_exponential
     test_functions["kinked"] = problem_kinked

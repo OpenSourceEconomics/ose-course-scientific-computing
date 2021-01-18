@@ -1,3 +1,4 @@
+"""Plotting functions for integration lecture."""
 from functools import partial
 
 import chaospy as cp
@@ -12,6 +13,7 @@ from integration_problems import problem_smooth
 
 
 def plot_gauss_legendre_weights(deg):
+    """Plot Gauss-Legendre weights."""
     xevals, weights = np.polynomial.legendre.leggauss(deg)
 
     fig, ax = plt.subplots()
@@ -24,6 +26,7 @@ def plot_gauss_legendre_weights(deg):
 
 
 def plot_benchmarking_exercise():
+    """Plot benchmarking exercise."""
     xvals = np.linspace(-1, 1, 10000)
 
     fig, (ax1, ax2) = plt.subplots(2)
@@ -35,6 +38,7 @@ def plot_benchmarking_exercise():
 
 
 def plot_naive_monte_carlo(num_nodes):
+    """Plot naive Monte Carlo example."""
     fig, ax = plt.subplots(figsize=(4, 4))
     x, y = np.hsplit(np.random.uniform(size=num_nodes * 2).reshape(num_nodes, 2), 2)
     ax.scatter(x, y)
@@ -44,6 +48,7 @@ def plot_naive_monte_carlo(num_nodes):
 
 
 def plot_quasi_monte_carlo(num_points):
+    """Plot Quasi-Monte Carlo example."""
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 4))
 
     distribution = cp.J(cp.Uniform(0, 1), cp.Uniform(0, 1))
@@ -67,7 +72,7 @@ def plot_quasi_monte_carlo(num_points):
 
 
 def plot_naive_monte_carlo_error(max_nodes):
-
+    """Plot naive Monte Carlo error."""
     index = pd.Index(np.linspace(5, max_nodes, dtype=int), name="Nodes")
     df_results = pd.DataFrame(columns=["Trapezoid", "Gauss", "Naive", "Truth"], index=index)
 
@@ -90,9 +95,9 @@ def plot_naive_monte_carlo_error(max_nodes):
 
 
 def plot_naive_monte_carlo_randomness():
-
+    """Plot naive Monte Carlo randomness."""
     grid = range(10)
-    yvals = list()
+    yvals = []
     for seed in grid:
         rslt = monte_carlo_naive_one(problem_smooth, a=-1, b=1, n=50, seed=seed)
         yvals += [np.abs(rslt - 2.3504023872876028)]

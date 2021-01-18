@@ -1,3 +1,4 @@
+"""Solutions for integration lecture."""
 from functools import partial
 from itertools import product
 
@@ -15,6 +16,7 @@ from integration_problems import problem_smooth
 
 
 def test_exercise_1():
+    """Get solution for exercise 1."""
     index = product(["Smooth", "Kinked"], [5, 11, 21, 31])
     index = pd.MultiIndex.from_tuples(index, names=("Function", "Nodes"))
 
@@ -35,6 +37,7 @@ def test_exercise_1():
 
 
 def test_exercise_2():
+    """Get solution for exercise 2."""
     index = pd.Index(np.linspace(100, 10000, dtype=int), name="Nodes")
 
     df_results = pd.DataFrame(columns=["Naive", "Sobol", "Halton", "Gauss", "Truth"], index=index)
