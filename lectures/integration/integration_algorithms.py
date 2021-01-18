@@ -1,9 +1,10 @@
+"""Algorithms for integration lecture."""
 import chaospy as cp
 import numpy as np
 
 
 def quadrature_newton_trapezoid_one(f, a, b, n):
-
+    """Return quadrature newton trapezoid example."""
     xvals = np.linspace(a, b, n + 1)
     fvals = np.tile(np.nan, n + 1)
     h = xvals[1] - xvals[0]
@@ -18,7 +19,7 @@ def quadrature_newton_trapezoid_one(f, a, b, n):
 
 
 def quadrature_newton_simpson_one(f, a, b, n):
-
+    """Return quadrature newton simpson example."""
     if n % 2 == 0:
         raise Warning("n must be an odd integer. Increasing by 1")
         n += 1
@@ -40,6 +41,7 @@ def quadrature_newton_simpson_one(f, a, b, n):
 
 
 def quadrature_gauss_legendre_one(f, a, b, n):
+    """Return quadrature gauss legendre example."""
     xvals, weights = np.polynomial.legendre.leggauss(n)
     xval_trans = (b - a) * (xvals + 1.0) / 2.0 + a
 
@@ -51,7 +53,7 @@ def quadrature_gauss_legendre_one(f, a, b, n):
 
 
 def quadrature_gauss_legendre_two(f, a=-1, b=1, n=10):
-
+    """Return quadrature gauss legendre example."""
     n_dim = int(np.sqrt(n))
 
     xvals, weight_uni = np.polynomial.legendre.leggauss(n_dim)
@@ -71,6 +73,7 @@ def quadrature_gauss_legendre_two(f, a=-1, b=1, n=10):
 
 
 def monte_carlo_naive_one(f, a=0, b=1, n=10, seed=123):
+    """Return naive monte carlo example."""
     np.random.seed(seed)
     xvals = np.random.uniform(size=n)
     fvals = np.tile(np.nan, n)
@@ -84,9 +87,10 @@ def monte_carlo_naive_one(f, a=0, b=1, n=10, seed=123):
 
 
 def monte_carlo_naive_two_dimensions(f, a=0, b=1, n=10, seed=128):
+    """Return naive monte carlo example (two-dimensional).
 
-    # Please note in docstring that restricted to same integration domain for both variables.
-
+    Restricted to same integration domain for both variables.
+    """
     np.random.seed(seed)
     xvals = np.random.uniform(low=a, high=b, size=2 * n).reshape(n, 2)
     volume = (b - a) ** 2
@@ -101,12 +105,11 @@ def monte_carlo_naive_two_dimensions(f, a=0, b=1, n=10, seed=128):
 
 
 def monte_carlo_quasi_two_dimensions(f, a=0, b=1, n=10, rule="random"):
+    """Return Monte Carlo example (two-dimensional).
 
-    # Please note in docstring that the for the case of rule = random we are back to naive Monte
-    # Carlo.
-
-    # Please note in docstring that restricted to same integration domain for both variables.
-
+    Corresponds to naive Monthe Carlo for `rule='random'`. Restricted to same
+    integration domain for both variables.
+    """
     distribution = cp.J(cp.Uniform(a, b), cp.Uniform(a, b))
     samples = distribution.sample(n, rule=rule).T
     volume = (b - a) ** 2
