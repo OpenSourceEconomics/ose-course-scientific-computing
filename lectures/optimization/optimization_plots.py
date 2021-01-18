@@ -69,58 +69,49 @@ def plot_surf(f):
 # Function with strict global maximum, weak local maximum, strict local maximum
 
 
-def f(t):
-    return np.where((2 < t) & (t < 2.39), -0.15, np.exp(-0.5 * t) * np.cos(3 * t) * np.cos(t))
+def f(x):
+    """Get example for function with local optima."""
+    return np.where((2 < x) & (x < 2.39), -0.15, np.exp(-0.5 * x) * np.cos(3 * x) * np.cos(x))
 
 
 def plot_optima_example():
-
-    x = np.arange(0.0, 5.0, 0.01)
+    """Plot example for multiple local optima in a function."""
+    x = np.arange(0.5, 4.5, 0.01)
 
     plt.figure()
     plt.plot(x, f(x))
-    plt.plot(0.87, -0.37, ".", color="red", markersize=10, lw=0)
-    plt.plot(2.2, -0.16, "_", color="green", markersize=20, mew=5, lw=0, label="root")
-    plt.plot(4, -0.08, ".", color="red", markersize=10, lw=0)
+    plt.plot(0.87, -0.36, "o", color="red", markersize=10, lw=0)
+    plt.plot([2.12, 2.25], [-0.15, -0.15], "_", color="green", markersize=20, mew=5, lw=0, label="root")
+    plt.plot(4, -0.07, "o", color="blue", markersize=10, lw=0)
     plt.xticks([])
     plt.yticks([])
-    plt.xlabel("x")
-    plt.ylabel("f(x)")
+    plt.xlabel("x", fontsize=18)
+    plt.ylabel("f(x)", fontsize=18)
 
 
-def f(x):
+def g(x):
+    """Get smooth example function."""
     return np.cos(4 * x) * np.cos(0.7 * x)
 
 
 def plot_true_observed_example():
-
+    """Plot example of function where only few points are known."""
     x = np.arange(0.0, 5.0, 0.01)
+    x_selection = np.array([0.5, 0.5, 1.75, 1.95, 2.9, 3.8, 4.1])
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
-    ax1.plot(x, f(x), "black")
-    ax1.plot(0.5, -0.5, ".", color="blue", markersize=12, lw=0)
-    ax1.plot(0.5, -0.5, ".", color="blue", markersize=12, lw=0)
-    ax1.plot(1.75, 0.25, ".", color="blue", markersize=12, lw=0)
-    ax1.plot(1.95, 0.05, ".", color="blue", markersize=12, lw=0)
-    ax1.plot(2.9, -0.25, ".", color="blue", markersize=12, lw=0)
-    ax1.plot(3.8, 0.75, ".", color="blue", markersize=12, lw=0)
-    ax1.plot(4.1, 0.8, ".", color="blue", markersize=12, lw=0)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 3))
+    ax1.plot(x, g(x), "black")
+    ax1.plot(x_selection, g(x_selection), "o", color="blue", markersize=8, lw=0)
     ax1.set_xticks([])
     ax1.set_yticks([])
-    ax1.set_xlabel("x")
-    ax1.set_ylabel("f(x)")
-    ax1.set_title("True function")
+    ax1.set_xlabel("x", fontsize=18)
+    ax1.set_ylabel("g(x)", fontsize=18)
+    ax1.set_title("True function", fontsize=20)
 
-    ax2.plot(x, f(x), alpha=0)
-    ax2.plot(0.5, -0.5, ".", color="blue", markersize=12, lw=0)
-    ax2.plot(0.5, -0.5, ".", color="blue", markersize=12, lw=0)
-    ax2.plot(1.75, 0.25, ".", color="blue", markersize=12, lw=0)
-    ax2.plot(1.95, 0.05, ".", color="blue", markersize=12, lw=0)
-    ax2.plot(2.9, -0.25, ".", color="blue", markersize=12, lw=0)
-    ax2.plot(3.8, 0.75, ".", color="blue", markersize=12, lw=0)
-    ax2.plot(4.1, 0.8, ".", color="blue", markersize=12, lw=0)
+    ax2.plot(x, g(x), alpha=0)
+    ax2.plot(x_selection, g(x_selection), "o", color="blue", markersize=8, lw=0)
     ax2.set_xticks([])
     ax2.set_yticks([])
-    ax2.set_xlabel("x")
-    ax2.set_ylabel("f(x)")
-    ax2.set_title("Observed function")
+    ax2.set_xlabel("x", fontsize=18)
+    ax2.set_ylabel("g(x)", fontsize=18)
+    ax2.set_title("Observed function", fontsize=20)
