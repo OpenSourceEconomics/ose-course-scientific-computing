@@ -41,13 +41,13 @@ repos:
     rev: 0.9.0a1
     hooks:
     -   id: doc8
--   repo: local
-    hooks:
-    -   id: restructuredtext-lint
-        entry: rst-lint
-        language: system
-        files: '(README.rst)'
-        name: restructuredtext-lint - Is the README PyPi-compliant?
+#-   repo: local
+#    hooks:
+#    -   id: restructuredtext-lint
+#        entry: rst-lint
+#        language: system
+#        files: '(README.rst)'
+#        name: restructuredtext-lint - Is the README PyPi-compliant?
 #- repo: https://github.com/codespell-project/codespell
 #  rev: v1.16.0
 #  hooks:
