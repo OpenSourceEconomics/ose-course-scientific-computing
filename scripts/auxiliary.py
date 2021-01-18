@@ -6,7 +6,7 @@ import subprocess as sp
 
 LECTURES_ROOT = os.environ["PROJECT_ROOT"] + "/lectures"
 
-LECTURES_NAME = list()
+LECTURES_NAME = []
 LECTURES_NAME += ["optimization", "integration", "approximation"]
 LECTURES_NAME += ["linear_equations", "nonlinear_equations"]
 

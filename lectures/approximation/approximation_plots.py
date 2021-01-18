@@ -1,3 +1,4 @@
+"""Plotting functions for approximation lecture."""
 from functools import partial
 
 import matplotlib.pyplot as plt
@@ -9,12 +10,11 @@ from approximation_auxiliary import spline_basis
 from approximation_problems import problem_reciprocal_exponential
 from approximation_problems import problem_runge
 from approximation_problems import problem_two_dimensions
-from numpy.polynomial import Chebyshev as T
-from numpy.polynomial import Polynomial as P
 from scipy.interpolate import interp1d
 
 
 def plot_problem_runge():
+    """Plot runge function."""
     fig, ax = plt.subplots()
     xvals = np.linspace(-1, 1, 1000)
     yvals = problem_runge(xvals)
@@ -22,6 +22,7 @@ def plot_problem_runge():
 
 
 def plot_runge_multiple():
+    """Plot multiple runge functions."""
     a, b = -1, 1
     xvals = np.linspace(a, b, 1000)
     yvals = problem_runge(xvals)
@@ -32,7 +33,7 @@ def plot_runge_multiple():
 
     for degree in [5, 9]:
         xnodes = np.linspace(a, b, degree)
-        poly = P.fit(xnodes, problem_runge(xnodes), degree)
+        poly = np.polynomial.Polynomial.fit(xnodes, problem_runge(xnodes), degree)
         yfit = poly(xvals)
         ax.plot(xvals, yfit, label=" 9th-order")
 
@@ -40,14 +41,14 @@ def plot_runge_multiple():
 
 
 def plot_basis_functions(name="monomial"):
-
+    """Plot basis functions."""
     x = np.linspace(0, 1, 100)
 
     for i in range(6):
         fig, ax = plt.subplots()
 
         if name == "chebychev":
-            yvals = T.basis(i)(x)
+            yvals = np.polynomial.Chebyshev.basis(i)(x)
         elif name == "monomial":
             yvals = x ** i
 
@@ -63,6 +64,7 @@ def plot_basis_functions(name="monomial"):
 
 
 def plot_reciprocal_exponential(a=-5, b=5):
+    """Plot reciprocal exponential function."""
     fig, ax = plt.subplots()
 
     yvals = np.linspace(a, b)
@@ -70,7 +72,7 @@ def plot_reciprocal_exponential(a=-5, b=5):
 
 
 def plot_approximation_nodes(num_nodes, nodes="uniform"):
-
+    """Plot approximation nodes."""
     if nodes == "uniform":
         get_nodes = get_uniform_nodes
     elif nodes == "chebychev":
@@ -85,6 +87,7 @@ def plot_approximation_nodes(num_nodes, nodes="uniform"):
 
 
 def plot_runge_different_nodes():
+    """Plot runge function at different nodes."""
     get_interpolator = partial(get_interpolator_monomial_flexible_nodes, problem_runge, 11)
     interp_unif = get_interpolator(nodes="uniform")
     interp_cheby = get_interpolator(nodes="chebychev")
@@ -111,7 +114,7 @@ def plot_runge_different_nodes():
 
 
 def plot_two_dimensional_grid(nodes):
-
+    """Plot two-dimensional grid."""
     if nodes == "chebychev":
         x = get_chebyshev_nodes(10)
         y = get_chebyshev_nodes(10)
@@ -127,7 +130,7 @@ def plot_two_dimensional_grid(nodes):
 
 
 def plot_two_dimensional_problem():
-
+    """Plot two-dimensional problem."""
     x_fit = get_uniform_nodes(50)
     y_fit = get_uniform_nodes(50)
     X_fit, Y_fit = np.meshgrid(x_fit, y_fit)
@@ -142,6 +145,7 @@ def plot_two_dimensional_problem():
 
 
 def plot_runge_function_cubic():
+    """Plot cubic runge function."""
     xvalues = get_uniform_nodes(10000, -1, 1)
 
     for degree in [5, 10, 15]:
