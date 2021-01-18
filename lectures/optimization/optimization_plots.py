@@ -21,7 +21,11 @@ def plot_contour(f, allvecs, legend_path):
     plt.plot(1, 1, "r*", markersize=10, label="minimum")
     plt.plot(4.5, -1.5, "bx", markersize=10, label="initial guess")
     plt.plot(
-        np.array(allvecs)[:, 0], np.array(allvecs)[:, 1], "go", markersize=4, label=legend_path,
+        np.array(allvecs)[:, 0],
+        np.array(allvecs)[:, 1],
+        "go",
+        markersize=4,
+        label=legend_path,
     )
     plt.legend()
     return plt
@@ -81,7 +85,9 @@ def plot_optima_example():
     plt.figure()
     plt.plot(x, f(x))
     plt.plot(0.87, -0.36, "o", color="red", markersize=10, lw=0)
-    plt.plot([2.12, 2.25], [-0.15, -0.15], "_", color="green", markersize=20, mew=5, lw=0, label="root")
+    plt.plot(
+        [2.12, 2.25], [-0.15, -0.15], "_", color="green", markersize=20, mew=5, lw=0, label="root"
+    )
     plt.plot(4, -0.07, "o", color="blue", markersize=10, lw=0)
     plt.xticks([])
     plt.yticks([])
