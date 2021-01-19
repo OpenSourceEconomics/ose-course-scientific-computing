@@ -76,27 +76,27 @@ We are now ready to study a dynamic model of human capital accumulation where al
 
 We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
 
-+------------+-----------------------------------------------------------------------------------------------------------+
-| **Date**   | **Topic**                                                                                                 |
-+============+===========================================================================================================+
-| 12/01/2021 | Guest lecture by Daimler AG                                                                               |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 13/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ (OSE, University of Bonn)            |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 19/01/2021 | Guest lecture by Fraunhofer FIT                                                                           |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__   (OSE, University of Bonn)              |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 26/01/2021 | Guest lecture by Hasenauer Lab  (University of Bonn)                                                      |                                         
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)  |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 02/02/2021 | Guest lecture by Fraunhofer FIT                                                                           |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 03/02/2021 | Guest lecture by Fraunhofer SCAI                                                                          |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 31/03/2021 | Project deadline                                                                                          |
-+------------+-----------------------------------------------------------------------------------------------------------+
++------------+---------------------------------------------------------------------------------------------------------------+
+| **Date**   | **Topic**                                                                                                     |
++============+===============================================================================================================+
+| 12/01/2021 | Guest lecture by Daimler AG                                                                                   |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 13/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)|
++------------+---------------------------------------------------------------------------------------------------------------+
+| 19/01/2021 | Guest lecture by Fraunhofer FIT                                                                               |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__  by Gregor Boehl (OSE, University of Bonn)   |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 26/01/2021 | Guest lecture by Hasenauer Lab  (University of Bonn)                                                          |                                     
++------------+---------------------------------------------------------------------------------------------------------------+
+| 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)      |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 02/02/2021 | Guest lecture by Fraunhofer FIT                                                                               |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 03/02/2021 | Guest lecture by Fraunhofer SCAI                                                                              |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 31/03/2021 | Project deadline                                                                                              |
++------------+---------------------------------------------------------------------------------------------------------------+
 
 
 
