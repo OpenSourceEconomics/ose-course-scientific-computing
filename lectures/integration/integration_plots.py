@@ -5,6 +5,7 @@ import chaospy as cp
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from numpy import poly1d,polyfit, linspace, array
 from integration_algorithms import monte_carlo_naive_one
 from integration_algorithms import quadrature_gauss_legendre_one
 from integration_algorithms import quadrature_newton_trapezoid_one
@@ -268,11 +269,6 @@ figs = [plot_simp(n) for n in [2, 4, 8]]
 
 
 
-
-import numpy as np
-import matplotlib.pyplot as plt
-from numpy import poly1d,polyfit, linspace, array
-
 def integration_plot(): 
     f = poly1d([2.0, -1.0, 0.5, 5.0])
     a = -1; b = 1; N = 2
@@ -310,9 +306,6 @@ integration_plot()
 
 
 
-import numpy as np
-import matplotlib.pyplot as plt
-from numpy import poly1d,polyfit, linspace, array
 
 def integration_plot_two(): 
     f = poly1d([2.0, -1.0, 0.5, 5.0])
@@ -350,9 +343,8 @@ def integration_plot_two():
 integration_plot_two()
 
 
-import numpy as np
-import matplotlib.pyplot as plt
-from numpy import poly1d,polyfit, linspace, array
+
+
 
 def integration_plot_three():
     f = poly1d([2.0, -1.0, 0.5, 5.0])
@@ -390,3 +382,4 @@ def integration_plot_three():
 
     plt.title('Trapezoid Rule, N = {}'.format(N))
 integration_plot_three()
+
