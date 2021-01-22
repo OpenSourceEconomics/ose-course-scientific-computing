@@ -390,4 +390,3 @@ def integration_plot_three():
 
     plt.title('Trapezoid Rule, N = {}'.format(N))
 integration_plot_three()
-
