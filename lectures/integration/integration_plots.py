@@ -265,3 +265,129 @@ def plot_simp(n):
     return fig
 
 figs = [plot_simp(n) for n in [2, 4, 8]]
+
+
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from numpy import poly1d,polyfit, linspace, array
+
+def integration_plot(): 
+    f = poly1d([2.0, -1.0, 0.5, 5.0])
+    a = -1; b = 1; N = 2
+
+    # x and y values for the trapezoid rule
+    x = np.linspace(a,b,N+1)
+    y = f(x)
+
+    # X and Y values for plotting y=f(x)
+    X = np.linspace(a,b,100)
+    Y = f(X)
+
+    fig, ax = plt.subplots(figsize=(8,4))
+    ax.fill_between(x, f(x), alpha=0.35, color='lightblue')
+    ax.plot(x, f(x), linewidth=3, label=r'$f(x)$', color='lightblue')
+    ax.plot(x, f(x), color='tab:red', linestyle='--')
+    ax.set_facecolor("whitesmoke")
+    plt.xticks(fontsize=14)
+    plt.yticks(y, " ")
+    ax.axes.yaxis.set_visible(False)
+    plt.plot(X,Y)
+
+    for i in range(N):
+        xs = [x[i],x[i],x[i+1],x[i+1]]
+        ys = [0,f(x[i]),f(x[i+1]),0]
+        plt.fill(xs,ys,'lightblue',edgecolor='r', linestyle='--', alpha=0.2)
+        plt.xticks(np.arange(-1, 2, 1.0))
+        SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+        my_xticks = ['X0=a'.translate(SUB),'X1'.translate(SUB),'X2=b'.translate(SUB)]
+        plt.xticks(x, my_xticks)
+        plt.legend(['f(x)', r'$\tilde{f}3(x)$'.translate(SUB)], fontsize=12)
+
+    plt.title('Trapezoid Rule, N = {}'.format(N))
+integration_plot()
+
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from numpy import poly1d,polyfit, linspace, array
+
+def integration_plot_two(): 
+    f = poly1d([2.0, -1.0, 0.5, 5.0])
+    a = -1; b = 1; N = 4
+
+    # x and y values for the trapezoid rule
+    x = np.linspace(a,b,N+1)
+    y = f(x)
+
+    # X and Y values for plotting y=f(x)
+    X = np.linspace(a,b,100)
+    Y = f(X)
+
+    fig, ax = plt.subplots(figsize=[8,4])
+    ax.fill_between(x, f(x), alpha=0.35, color='lightblue')
+    ax.plot(x, f(x), linewidth=3, label=r'$f(x)$', color='lightblue')
+    ax.plot(x, f(x), color='tab:red', linestyle='--')
+    ax.set_facecolor("whitesmoke")
+    plt.xticks(fontsize=14)
+    plt.yticks(y, " ")
+    ax.axes.yaxis.set_visible(False)
+    plt.plot(X,Y)
+
+    for i in range(N):
+        xs = [x[i],x[i],x[i+1],x[i+1]]
+        ys = [0,f(x[i]),f(x[i+1]),0]
+        plt.fill(xs,ys,'lightblue',edgecolor='r', linestyle='--', alpha=0.2)
+        plt.xticks(np.arange(-1, 2, 1.0))
+        SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+        my_xticks = ['X0=a'.translate(SUB),'X1'.translate(SUB), 'X2'.translate(SUB), 'X3'.translate(SUB), 'X4=b'.translate(SUB)]
+        plt.xticks(x, my_xticks)
+        plt.legend(['f(x)', r'$\tilde{f}3(x)$'.translate(SUB)], fontsize=12)
+
+    plt.title('Trapezoid Rule, N = {}'.format(N))
+integration_plot_two()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from numpy import poly1d,polyfit, linspace, array
+
+def integration_plot_three():
+    f = poly1d([2.0, -1.0, 0.5, 5.0])
+    a = -1; b = 1; N = 8
+
+    # x and y values for the trapezoid rule
+    x = np.linspace(a,b,N+1)
+    y = f(x)
+
+    # X and Y values for plotting y=f(x)
+    X = np.linspace(a,b,100)
+    Y = f(X)
+    fig, ax = plt.subplots(figsize=[8,4])
+    ax.fill_between(x, f(x), alpha=0.35, color='lightblue')
+    ax.plot(x, f(x), linewidth=3, label=r'$f(x)$', color='lightblue')
+    ax.plot(x, f(x), color='tab:red', linestyle='--')
+    ax.set_facecolor("whitesmoke")
+    plt.xticks(fontsize=14)
+    plt.yticks(y, " ")
+    ax.axes.yaxis.set_visible(False)
+    plt.plot(X,Y)
+
+
+    for i in range(N):
+        xs = [x[i],x[i],x[i+1],x[i+1]]
+        ys = [0,f(x[i]),f(x[i+1]),0]
+        plt.fill(xs,ys,'lightblue',edgecolor='red', linestyle='--', alpha=0.2)
+        plt.xticks(np.arange(-1, 2, 1.0))
+        SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+        my_xticks = ['X0=a'.translate(SUB),'X1'.translate(SUB), 'X2'.translate(SUB), 'X3'.translate(SUB), 'X4'.translate(SUB), 
+                     'X5'.translate(SUB), 'X6'.translate(SUB), 'X7'.translate(SUB), 'X8=b'.translate(SUB)]
+        plt.xticks(x, my_xticks)
+        plt.legend(['f(x)', r'$\tilde{f}9(x)$'.translate(SUB)], fontsize=12)
+
+
+    plt.title('Trapezoid Rule, N = {}'.format(N))
+integration_plot_three()
+
