@@ -197,7 +197,6 @@ def plot_trapezoid_rule_illustration():
         ax.axhline(0, color="k", linewidth=2)
         plt.xticks(fontsize=14)
         plt.yticks(fontsize=14)
-
         xtl = [f"$x_{i}$" for i in range(n + 1)]
         xtl[0] += "=a"
         xtl[n] += "=b"
