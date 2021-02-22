@@ -25,4 +25,4 @@ dependencies:
     - black-nb
     - flake8-nb
     - sphinx_rtd_theme
-    - sphinxcontrib-bibtex
+    - sphinxcontrib-bibtex<2.0.0
