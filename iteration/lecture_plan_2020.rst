@@ -76,35 +76,36 @@ We are now ready to study a dynamic model of human capital accumulation where al
 
 We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
 
-+------------+-----------------------------------------------------------------------------------------------------------+
-| **Date**   | **Topic**                                                                                                 |
-+============+===========================================================================================================+
-| 12/01/2021 | Guest lecture by Daimler AG                                                                               |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 13/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ (OSE, University of Bonn)            |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 19/01/2021 | Guest lecture by Fraunhofer FIT                                                                           |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__   (OSE, University of Bonn)              |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 26/01/2021 | Guest lecture by Hasenauer Lab  (University of Bonn)                                                      |                                         
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)  |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 02/02/2021 | Guest lecture by Fraunhofer FIT                                                                           |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 03/02/2021 | Guest lecture by Fraunhofer SCAI                                                                          |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 31/03/2021 | Project deadline                                                                                          |
-+------------+-----------------------------------------------------------------------------------------------------------+
++------------+---------------------------------------------------------------------------------------------------------------+
+| **Date**   | **Topic**                                                                                                     |
++============+===============================================================================================================+
+| 12/01/2021 | Guest lecture by Daimler AG                                                                                   |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 13/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)|
++------------+---------------------------------------------------------------------------------------------------------------+
+| 19/01/2021 | Guest lecture by Fraunhofer FIT                                                                               |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__  by Gregor Boehl (OSE, University of Bonn)   |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 26/01/2021 | Guest lecture by Hasenauer Lab  (University of Bonn)                                                          |                                     
++------------+---------------------------------------------------------------------------------------------------------------+
+| 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)      |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 02/02/2021 | Guest lecture by Fraunhofer FIT                                                                               |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 03/02/2021 | Guest lecture by Fraunhofer SCAI                                                                              |
++------------+---------------------------------------------------------------------------------------------------------------+
+| 31/03/2021 | Project deadline                                                                                              |
++------------+---------------------------------------------------------------------------------------------------------------+
 
 
 
 Projects
 """"""""
 
-Your grade for this class will be based on a scientific computing project due at the end of the semester. The project needs to be coded in Python and available on the `Nuvolos.cloud <https://nuvolos.cloud>`_  for grading.
+**Form of submission:** Your grade for this class will be based on a scientific computing project due at the end of the semester. You should present your project in the form of a Jupyter Notebook. The project needs to be coded in Python. You can work on your project using the `Nuvolos.cloud <https://nuvolos.cloud>`_  and share it with Professor Eisenhauer for grading. Alternatively, you can submit the project in the form of a GitHub repository or pull request on an existing repository (depending on your project). Reproducibility is a cornerstone of sound computational work, so please ensure that we can run your project notebook from beginning to end without any error. Please discuss your project idea with Professor Eisenhauer. We suggest settling on a topic by the end of January 2021 so you have enough time to work on your project.
 
-You are free to select a topic of your choice related to the contents of the class. For instance, you could replicate the core results of a computational publication, run a benchmarking exercise for an algorithm, contribute to one of our group's software packages of your choice, or create a notebook similar to the ones presented in the lectures on a computational topic that interests you. Note that several textbooks explore the implementation of involved computational economic models, porting their implementation to Python can serve as a valuable starting point for your project.
+**Topic:** You are free to select a topic of your choice related to the contents of the class. For instance, you could replicate the core results of a computational publication, run a benchmarking exercise for an algorithm, contribute to one of our group's software packages of your choice, or create a notebook similar to the ones presented in the lectures on a computational topic that interests you. Note that several textbooks explore the implementation of involved computational economic models, porting their implementation to Python can serve as a valuable starting point for your project.
 
-Reproducibility is a cornerstone of sound computational work, so please ensure that we can run your project notebook from beginning to end without any error. Please discuss your project idea with Professor Eisenhauer. We suggest settling on a topic by the end of January 2021 so you have enough time to work on your project.
+**Note for students taking EPP:**
+Participants of the course "Effective Programming Practices for Economists" by Professor Hans-Martin von Gaudecker are welcome to submit their project for grading in both courses. Note that the project still has to fulfill the topic and submission requirements listed above in addition to any requirements stated by the EPP course. Please reach out in the course Zulip chat for any questions about the project.

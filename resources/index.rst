@@ -7,7 +7,7 @@ Throughout the course we will make heavy use of `Python <https://www.python.org>
 Additional Resources
 .....................
 
-- `Mathematical Python <https://www.math.ubc.ca/~pwalls/math-python/>`_: An introduction to mathematical computing by `<Patrick Walls http://www.math.ubc.ca/~pwalls/>`_, associate professor at the University of Columbia.
+- `Mathematical Python <https://www.math.ubc.ca/~pwalls/math-python/>`_: An introduction to mathematical computing by `Patrick Walls <http://www.math.ubc.ca/~pwalls/>`_, associate professor at the University of Columbia.
 
 
 - `STA 663 2020 <http://people.duke.edu/~ccc14/sta-663-2020/index.html>`_: Material from a `course in computational statistics and statistical computing <https://github.com/cliburn/sta-663-2020>`__ at `Duke University <https://duke.edu/>`_.
