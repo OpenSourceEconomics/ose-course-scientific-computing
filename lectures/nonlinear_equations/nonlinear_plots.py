@@ -1,9 +1,9 @@
 """Plots for nonlinear equations lecture."""
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.optimize import broyden1
-from scipy.optimize import fixed_point
-from scipy.optimize import newton
+from nonlinear_algorithms import funcit
+from nonlinear_algorithms import newton_method
+from scipy.optimize import root
 
 
 def plot_bisection_test_function(f):
@@ -41,42 +41,54 @@ def plot_newton_pathological_example(f):
 
 
 def plot_convergence():
-    """Compare convergence of Newton's method, Broyden's method, and function iteration."""
+    """Compare convergence of various methods.
+
+    Methods: Newton's method, Broyden's method, and function iteration.
+
+    References
+    ----------
+    .. [RA20] Randall Romero-Aguilar. A Python version of Miranda and Fackler’s
+    CompEcon toolbox. 2020. URL: https://github.com/randall-romero/CompEcon.
+    """
 
     def f(x):
         fval = np.exp(x) - 1
-        # Log x values in list x_values.
         x_values.append(x)
         return fval
 
-    def get_log_error(x):
-        return np.log10(np.abs(x)).flatten()
+    def f_2(x):
+        fval = np.exp(x) - 1
+        x_values.append(x)
+        return fval, np.exp(x)
 
-    # Newton's Method.
+    get_log_error = lambda z: np.log10(np.abs(z)).flatten()  # noqa
+
+    # Newton
     x_values = []
-    _ = newton(f, 2)
+    _ = newton_method(f_2, 2)
     error_newton = get_log_error(x_values)
 
-    # Broyden's Method.
+    # Broyden
     x_values = []
-    _ = broyden1(f, 2)
+    _ = root(f, 2.0, method="broyden1", options={"jac_options": {"alpha": -1 / np.exp(2)}})
     error_broyden = get_log_error(x_values)
 
-    # Function iteration.
+    # Function iteration
     x_values = []
-    _ = fixed_point(f, 2, xtol=1e-4)
+    _ = funcit(f, x0=2)
+
     error_funcit = get_log_error(x_values)
 
     # Plot results.
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=[10, 6])
     plt.plot(error_newton, label="Newton's Method")
     plt.plot(error_broyden, label="Broyden's Method")
     plt.plot(error_funcit, label="Function Iteration")
     plt.title(r"Convergence rates for $f(x)= exp(x)-1$ with $x_0=2$")
     plt.xlabel("Iteration")
     plt.ylabel("Log10 Error")
-    plt.xlim(0, 50)
-    plt.ylim(-6, 2)
+    plt.xlim(0, 10)
+    plt.ylim(-5, 2)
     plt.legend()
 
 
@@ -129,24 +141,30 @@ def plot_newtons_method():
         plt.plot([xi, xinext], [yi, 0], "r-")
         plt.plot(xi, yi, "r.", markersize=16, lw=0, label="$f(x_k)$" if k == 0 else "")
         plt.plot(
-            xinext, 0, ".", color="orange", markersize=16, label="$x_k$" if k == 0 else "",
+            xinext,
+            0,
+            ".",
+            color="orange",
+            markersize=16,
+            label="$x_k$" if k == 0 else "",
         )
         plt.legend(fontsize=14)
 
-        
-        
+
 def plot_secant_method():
-    """Illustrates the Secant Method which replaces the derivative in Newton’s method with 
-    an estimate.
-    
+    """Illustrates the Secant Method.
+
+    The Secant Method replaces the derivative in Newton’s method with an estimate.
+
     The code for this function is taken from the Python CompEcon toolbox by
     Randall Romero-Aguilar [RA20]_ and has been slightly altered to fit the
     style of these lecture matrials.
-    
+
     References
     ----------
     .. [RA20] Randall Romero-Aguilar. A Python version of Miranda and Fackler’s
     CompEcon toolbox. 2020. URL: https://github.com/randall-romero/CompEcon.
+
     """
     # Define function for illustration.
 
@@ -199,4 +217,3 @@ def plot_secant_method():
         plt.plot([xi, xi], [0.6, yi], "--", color="grey")
         plt.plot(xi, yi, "r.", markersize=16, label="$f(x_{k})$" if k == 0 else "")
     plt.legend(fontsize=14)
-        

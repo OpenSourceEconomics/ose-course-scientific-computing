@@ -105,6 +105,15 @@ def fixpoint(f, x0, tolerance=10e-5):
     return x, np.array(xvals)
 
 
+def funcit(f, x0=2):
+    """Apply function iteration using the fixpoint method."""
+    f_original = f
+    f = lambda z: z - f_original(z)  # noqa
+    x = fixpoint(f, x0)
+    f = f_original
+    return x
+
+
 def newton_method(f, x0, tolerance=1.5e-8):
     """Apply Newton's method to solving nonlinear equation.
 
