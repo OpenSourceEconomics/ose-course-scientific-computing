@@ -6,7 +6,6 @@ channels:
 - opensourceeconomics
 
 dependencies:
-- black==19.10b0
 - chaospy
 - estimagic
 - flake8
@@ -41,3 +40,4 @@ dependencies:
     - flake8-nb
     - sphinx_rtd_theme
     - sphinxcontrib-bibtex
+    - black>=20.8b1

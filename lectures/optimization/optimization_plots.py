@@ -21,7 +21,11 @@ def plot_contour(f, allvecs, legend_path):
     plt.plot(1, 1, "r*", markersize=10, label="minimum")
     plt.plot(4.5, -1.5, "bx", markersize=10, label="initial guess")
     plt.plot(
-        np.array(allvecs)[:, 0], np.array(allvecs)[:, 1], "go", markersize=4, label=legend_path,
+        np.array(allvecs)[:, 0],
+        np.array(allvecs)[:, 1],
+        "go",
+        markersize=4,
+        label=legend_path,
     )
     plt.legend()
     return plt
