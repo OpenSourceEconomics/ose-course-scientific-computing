@@ -104,10 +104,14 @@ def plot_runge_different_nodes():
     fig, ax = plt.subplots()
 
     ax.plot(
-        xvalues, interp_unif(xvalues) - problem_runge(xvalues), label="Uniform",
+        xvalues,
+        interp_unif(xvalues) - problem_runge(xvalues),
+        label="Uniform",
     )
     ax.plot(
-        xvalues, interp_cheby(xvalues) - problem_runge(xvalues), label="Chebychev",
+        xvalues,
+        interp_cheby(xvalues) - problem_runge(xvalues),
+        label="Chebychev",
     )
     ax.legend()
     ax.set_title("Approximation error")
