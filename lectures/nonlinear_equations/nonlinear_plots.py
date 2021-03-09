@@ -141,12 +141,7 @@ def plot_newtons_method():
         plt.plot([xi, xinext], [yi, 0], "r-")
         plt.plot(xi, yi, "r.", markersize=16, lw=0, label="$f(x_k)$" if k == 0 else "")
         plt.plot(
-            xinext,
-            0,
-            ".",
-            color="orange",
-            markersize=16,
-            label="$x_k$" if k == 0 else "",
+            xinext, 0, ".", color="orange", markersize=16, label="$x_k$" if k == 0 else "",
         )
         plt.legend(fontsize=14)
 
@@ -207,12 +202,7 @@ def plot_secant_method():
         plt.legend(fontsize=14)
     for k, (xi, yi) in enumerate(zip(x, y)):
         plt.plot(
-            xi,
-            0,
-            ".",
-            color="orange",
-            markersize=16,
-            label="$x_{k}$" if k == 0 else "",
+            xi, 0, ".", color="orange", markersize=16, label="$x_{k}$" if k == 0 else "",
         )
         plt.plot([xi, xi], [0.6, yi], "--", color="grey")
         plt.plot(xi, yi, "r.", markersize=16, label="$f(x_{k})$" if k == 0 else "")

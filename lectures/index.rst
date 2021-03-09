@@ -61,7 +61,6 @@ maximum likelihood estimation.
    :maxdepth: 1
 
    optimization/notebook.ipynb
-   optimization/algorithms.rst
 
 ===========
 Integration

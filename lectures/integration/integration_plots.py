@@ -139,11 +139,7 @@ def plot_starting_illustration():
     ax.set_xticklabels(["$a$", "$b$"], size=15)
 
     ax.annotate(
-        r"$f(x)$",
-        [x_range[1] - 0.1, f(x_range[1]) - 5],
-        fontsize=16,
-        color="black",
-        va="top",
+        r"$f(x)$", [x_range[1] - 0.1, f(x_range[1]) - 5], fontsize=16, color="black", va="top",
     )
     ax.annotate(r"$A = \int_a^bf(x)dx$", [a_b.mean(), 10], fontsize=18, ha="center")
 

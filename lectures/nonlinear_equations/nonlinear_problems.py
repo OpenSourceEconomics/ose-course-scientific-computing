@@ -38,15 +38,6 @@ def get_cournot_problem(alpha, beta, q):
     return P + (P1 - beta) * q
 
 
-def get_mcp_problem(z):
-    """Create MCP problem."""
-    x, y = z
-    f = [1 + x * y - 2 * x ** 3 - x, 2 * x ** 2 - y]
-    j = [[y - 6 * x ** 2 - 1, x], [4 * x, -1]]
-
-    return np.array(f), np.array(j)
-
-
 def get_spacial_market(x):
     """Create special market example."""
     a = np.array
@@ -63,8 +54,3 @@ def get_spacial_market(x):
     fval = (pd - ps - c).flatten()
 
     return fval, None
-
-
-def get_fischer_problem(x):
-    """Create Fischer problem."""
-    return np.array(1.01 - (x - 1.0) ** 2), None

@@ -3,10 +3,7 @@
 The materials follow Miranda and Fackler (2004, :cite:`miranda2004applied`) (Chapter 3).
 The python code draws on Romero-Aguilar (2020, :cite:`CompEcon`).
 """
-from functools import partial
-
 import numpy as np
-from scipy import optimize
 
 
 def bisect(f, a, b, tolerance=1.5e-8):
@@ -151,40 +148,6 @@ def newton_method(f, x0, tolerance=1.5e-8):
             xn = xn - fxn / gxn
 
 
-def mcp_minmax(f, x0, a, b):
-    """Apply minmax root finding formulation to mixed complementarity problem.
-
-    Function utilizes Broyden's method for solution using the function
-    :func:`scipy.optimize.root`.
-
-    Parameters
-    ----------
-    f : callable
-        Function :math:`f(x)`.
-    x0 : float
-        Initial guess to root finding problem.
-    a : float
-        Lower bound :math:`a`.
-    b : float
-        Upper bound :math:`b`.
-
-    Returns
-    -------
-    rslt : float
-    """
-    # Define minmax formulation.
-    def wrapper(f, a, b, x):
-        fval = f(x)[0]
-        return np.fmin(np.fmax(fval, a - x), b - x)
-
-    # Apply partial function to minmax wrapper to fix all arguments but x0.
-    wrapper_p = partial(wrapper, f, a, b)
-    # Apply scipy function to find root using Broyden's method.
-    rslt = optimize.root(wrapper_p, x0, method="broyden1", options={"maxiter": 500})
-
-    return rslt
-
-
 def fischer(u, v, sign):
     """Define Fischer's function.
 
@@ -205,39 +168,3 @@ def fischer(u, v, sign):
 
     """
     return u + v + sign * np.sqrt(u ** 2 + v ** 2)
-
-
-def mcp_fischer(f, x0, a, b):
-    """Apply Fischer's function :func:`fischer` to mixed complementarity Problem.
-
-    Parameters
-    ----------
-    f : callable
-        Function :math:`f(x)`.
-    x0 : float
-        Initial guess to root finding problem.
-    a : float
-        Lower bound :math:`a`.
-    b : float
-        Upper bound :math:`b`.
-
-    Returns
-    -------
-    rslt : float
-
-    """
-
-    def wrapper(f, a, b, x):
-        b[b == np.inf] = 1000  # fisher solution quite sensitive, maybe good exercise to run in
-        # class.
-
-        u_inner, v_inner, sign_inner = f(x)[0], a - x, +1.0
-        u_outer, v_outer, sign_outer = fischer(u_inner, v_inner, sign_inner), b - x, -1.0
-        return fischer(u_outer, v_outer, sign_outer)
-
-    # Apply partial function to minmax wrapper to fix all arguments but x0.
-    wrapper_p = partial(wrapper, f, a, b)
-    # Apply scipy function to find root using Broyden's method.
-    rslt = optimize.root(wrapper_p, x0, method="broyden1", options={"maxiter": 500})
-
-    return rslt
