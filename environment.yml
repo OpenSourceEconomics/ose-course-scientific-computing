@@ -6,7 +6,7 @@ channels:
 - opensourceeconomics
 
 dependencies:
-- black==19.10b0
+- black
 - chaospy
 - estimagic
 - flake8
