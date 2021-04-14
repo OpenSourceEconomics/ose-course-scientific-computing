@@ -15,7 +15,7 @@ sys.path.insert(0, os.path.abspath("."))
 
 # -- Project information -----------------------------------------------------
 
-project = "OSE Scientific Computing"
+project = "OSE scientific computing"
 copyright = "2020, Open Source Economics"
 author = "Open Source Economics"
 
