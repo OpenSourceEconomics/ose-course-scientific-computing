@@ -5,7 +5,7 @@
 |logo| OSE scientific computing
 ================================
 
-.. image:: https://github.com/OpenSourceEconomics/ose-course-data-science/workflows/Continuous%20Integration/badge.svg
+.. image:: https://github.com/OpenSourceEconomics/ose-course-scientific-computing/actions/workflows/continuous_integration.yml/badge.svg
     :target: https://github.com/OpenSourceEconomics/ose-course-scientific-computing/actions
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
