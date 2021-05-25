@@ -87,7 +87,7 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+---------------------------------------------------------------------------------------------------------------+
 | 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__  by Gregor Boehl (OSE, University of Bonn)   |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 26/01/2021 | Guest lecture by Hasenauer Lab  (University of Bonn)                                                          |                                     
+| 26/01/2021 | Guest lecture by Limes-Institute  (University of Bonn)                                                          |                                     
 +------------+---------------------------------------------------------------------------------------------------------------+
 | 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)      |
 +------------+---------------------------------------------------------------------------------------------------------------+
