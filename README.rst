@@ -62,7 +62,7 @@ We use the book `Applied computational economics and finance <https://mitpress.m
 Powered by
 ----------
 
-|space| |OSE| |space| |Nuvolos| |space| |TRA| |space|
+|space| |OSE| |space| |Nuvolos| |space| |TRA| |space| |GRN|
 
 .. |OSE| image:: _static/images/fig-ose.svg
   :width: 22 %
@@ -75,6 +75,10 @@ Powered by
 .. |TRA| image:: _static/images/fig-tra.png
   :width: 10 %
   :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
+  
+.. |GRN| image:: _static/images/RN_German.png
+  :width: 10 %
+  :target: https://reproducibilitynetwork.de/
 
 .. |space| raw:: html
 
