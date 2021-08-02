@@ -18,6 +18,7 @@
 
 .. image:: https://readthedocs.org/projects/ose-scientific-computing/badge/?version=latest
     :target: https://ose-scientific-computing.readthedocs.io
+
 =============
 
     The purpose of (scientific) computing is insight, not numbers.
