@@ -23,7 +23,7 @@
 
     The purpose of (scientific) computing is insight, not numbers.
 
-    -- Richard Hamming
+    -- Richard Hamming.
 
 The sound analysis of computational economic models requires expertise in economics, statistics,
 numerical methods, and software engineering. We first provide an overview of basic numerical methods
