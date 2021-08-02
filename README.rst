@@ -18,6 +18,11 @@
 
 .. image:: https://readthedocs.org/projects/ose-scientific-computing/badge/?version=latest
     :target: https://ose-scientific-computing.readthedocs.io
+=============
+
+    The purpose of (scientific) computing is insight, not numbers.
+
+    -- Richard Hamming
 
 The sound analysis of computational economic models requires expertise in economics, statistics,
 numerical methods, and software engineering. We first provide an overview of basic numerical methods
