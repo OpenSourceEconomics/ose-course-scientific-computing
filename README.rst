@@ -1,5 +1,4 @@
-
-.. |logo| image:: https://raw.githubusercontent.com/OpenSourceEconomics/ose-corporate-design/master/logos/OSE_logo_no_type_RGB.svg
+.. |logo| image:: https://raw.githubusercontent.com/OpenSourceEconomics/ose-logos/main/OSE_logo_no_type_RGB.svg
   :width: 4 %
 
 |logo| OSE scientific computing
@@ -19,6 +18,12 @@
 
 .. image:: https://readthedocs.org/projects/ose-scientific-computing/badge/?version=latest
     :target: https://ose-scientific-computing.readthedocs.io
+
+=============
+
+    The purpose of (scientific) computing is insight, not numbers.
+
+    -- Richard Hamming
 
 The sound analysis of computational economic models requires expertise in economics, statistics,
 numerical methods, and software engineering. We first provide an overview of basic numerical methods
@@ -75,7 +80,7 @@ Powered by
 .. |TRA| image:: _static/images/fig-tra.png
   :width: 10 %
   :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
-  
+
 .. |GRN| image:: _static/images/RN_German.png
   :width: 10 %
   :target: https://reproducibilitynetwork.de/

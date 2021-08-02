@@ -74,3 +74,6 @@ nbsphinx_prolog = r"""
         Interactive online version: |binder|
 
 """
+
+# Set bib file for sphinxcontrib-bibtex
+bibtex_bibfiles = ["references/references.bib"]
