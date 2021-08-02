@@ -1,4 +1,3 @@
-
 .. |logo| image:: https://raw.githubusercontent.com/OpenSourceEconomics/ose-logos/main/OSE_logo_no_type_RGB.svg
   :width: 4 %
 
@@ -80,7 +79,7 @@ Powered by
 .. |TRA| image:: _static/images/fig-tra.png
   :width: 10 %
   :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
-  
+
 .. |GRN| image:: _static/images/RN_German.png
   :width: 10 %
   :target: https://reproducibilitynetwork.de/
