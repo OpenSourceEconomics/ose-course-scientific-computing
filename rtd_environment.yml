@@ -5,14 +5,13 @@ channels:
 - conda-forge
 
 dependencies:
-- black==19.10b0
+- black
 - flake8
 - ipython
 - ipykernel
 - jupyter
 - jupyter_contrib_nbextensions
 - jupyter_nbextensions_configurator
-- matplotlib
 - nbsphinx
 - nb_black
 - pip
