@@ -18,4 +18,3 @@
 .. include:: README.rst
    :start-line: 45
    :end-line: 96
-   
