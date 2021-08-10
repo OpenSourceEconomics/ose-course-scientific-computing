@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. include:: README.rst
-   :start-line: 1
+   :start-line: 0
    :end-line: 43
 
 .. toctree::
@@ -17,4 +17,4 @@
 
 .. include:: README.rst
    :start-line: 45
-   :end-line: 87
+   :end-line: 96
