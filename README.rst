@@ -64,6 +64,11 @@ Textbooks
 
 We use the book `Applied computational economics and finance <https://mitpress.mit.edu/books/applied-computational-economics-and-finance>`_ by `Mario Miranda <https://aede.osu.edu/our-people/mario-javier-miranda>`_ and `Paul Fackler <https://pfackler.wordpress.ncsu.edu>`_ throughout the course. A special thanks to `Randall Romero Aguilar <https://github.com/randall-romero>`_ who also build a course around this book and maintains a Python implementation of the `CompEcon <https://github.com/randall-romero/CompEcon>`_ toolbox. Many of our code examples are building on his implementation there. In addition, we will also consult `Numerical methods in economics <https://mitpress.mit.edu/books/numerical-methods-economics>`_ by `Ken Judd <https://kenjudd.org/>`_ for some of the more advanced material.
 
+Reviews
+-------
+
+A review of machine learning (ML) literature for economics and econometrics `Machine Learning Methods That Economists Should Know About <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_ by `Susan Athey <https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey>`_  and `Guido W. Imbens <https:www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens>`_ also serves as a useful resource.
+
 Powered by
 ----------
 
