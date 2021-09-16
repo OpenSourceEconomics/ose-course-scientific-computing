@@ -103,9 +103,4 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 Projects
 """"""""
 
-**Form of submission:** Your grade for this class will be based on a scientific computing project due at the end of the semester. You should present your project in the form of a Jupyter Notebook. The project needs to be coded in Python. You can work on your project using the `Nuvolos.cloud <https://nuvolos.cloud>`_  and share it with Professor Eisenhauer for grading. Alternatively, you can submit the project in the form of a GitHub repository or pull request on an existing repository (depending on your project). Reproducibility is a cornerstone of sound computational work, so please ensure that we can run your project notebook from beginning to end without any error. Please discuss your project idea with Professor Eisenhauer. We suggest settling on a topic by the end of January 2021 so you have enough time to work on your project.
-
-**Topic:** You are free to select a topic of your choice related to the contents of the class. For instance, you could replicate the core results of a computational publication, run a benchmarking exercise for an algorithm, contribute to one of our group's software packages of your choice, or create a notebook similar to the ones presented in the lectures on a computational topic that interests you. Note that several textbooks explore the implementation of involved computational economic models, porting their implementation to Python can serve as a valuable starting point for your project.
-
-**Note for students taking EPP:**
-Participants of the course "Effective Programming Practices for Economists" by Professor Hans-Martin von Gaudecker are welcome to submit their project for grading in both courses. Note that the project still has to fulfill the topic and submission requirements listed above in addition to any requirements stated by the EPP course. Please reach out in the course Zulip chat for any questions about the project.
+All information regarding course projects is collected in the `OSE course projects documentation <https://ose-course-projects.readthedocs.io/en/latest/index.html>`_.
