@@ -16,5 +16,5 @@
    references/references
 
 .. include:: README.rst
-   :start-line: 45
+   :start-line: 44
    :end-line: 96
