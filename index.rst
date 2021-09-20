@@ -5,7 +5,7 @@
 
 .. include:: README.rst
    :start-line: 0
-   :end-line: 43
+   :end-line: 42
 
 .. toctree::
    :maxdepth: 1
@@ -16,5 +16,5 @@
    references/references
 
 .. include:: README.rst
-   :start-line: 45
+   :start-line: 43
    :end-line: 96

@@ -68,8 +68,8 @@ Integration
 
 We examine different strategies for the numerical integration of functions. We discuss rules
 based on Newton-Cotes quadrature formulas, Gaussian quadrature, and Monte Carlo methods in the
-uni-dimensional and multi-dimensional case. We conclude by looking comparing the performance of
-the different approaches under different scenarios.
+uni-dimensional and multi-dimensional case. We conclude by comparing the performance of
+each approach under different scenarios.
 
 
 .. toctree::
