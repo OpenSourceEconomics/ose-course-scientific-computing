@@ -67,7 +67,7 @@ We use the book `Applied computational economics and finance <https://mitpress.m
 Reviews
 -------
 
-A review of machine learning (ML) literature for economics and econometrics `Machine Learning Methods That Economists Should Know About <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_ by `Susan Athey <https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey>`_  and `Guido W. Imbens <https:www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens>`_ also serves as a useful resource.
+A review of machine learning (ML) literature for economics and econometrics `Machine Learning Methods That Economists Should Know About <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_ by `Susan Athey <https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey>`_  and `Guido W. Imbens <https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens>`_ also serves as a useful resource.
 
 Powered by
 ----------
