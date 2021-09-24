@@ -74,13 +74,13 @@ Powered by
 
 |space| |UNI| |space| |Nuvolos| |space| |GRN|
 
-.. |Nuvolos| image:: _static/images/fig-novolos.svg
-  :width: 10 %
-  :target: https://nuvolos.cloud
-
 .. |UNI| image:: _static/images/uni5.jpg
   :width: 10 %
   :target: https://www.uni-bonn.de/en
+
+.. |Nuvolos| image:: _static/images/fig-novolos.svg
+  :width: 10 %
+  :target: https://nuvolos.cloud
 
 .. |GRN| image:: _static/images/RN_German.png
   :width: 10 %
