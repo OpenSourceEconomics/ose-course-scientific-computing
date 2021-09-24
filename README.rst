@@ -83,7 +83,7 @@ Powered by
   :target: https://nuvolos.cloud
 
 .. |GRN| image:: _static/images/RN_German.png
-  :width: 10 %
+  :width: 20 %
   :target: https://reproducibilitynetwork.de/
 
 .. |space| raw:: html
