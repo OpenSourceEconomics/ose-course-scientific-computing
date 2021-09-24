@@ -72,11 +72,7 @@ Reviews
 Powered by
 ----------
 
-|space| |UNI| |space| |Nuvolos| |space| |OSE| |space| |GRN|
-
-.. |OSE| image:: _static/images/fig-ose.svg
-  :width: 22 %
-  :target: https://open-econ.org
+|space| |UNI| |space| |Nuvolos| |space| |GRN|
 
 .. |Nuvolos| image:: _static/images/fig-novolos.svg
   :width: 10 %
