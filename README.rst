@@ -72,7 +72,7 @@ Reviews
 Powered by
 ----------
 
-|space| |UNI| |space| |Nuvolos| |space| |GRN|
+|space| |space| |UNI| |space| |Nuvolos| |space| |GRN|
 
 .. |UNI| image:: _static/images/uni5.jpg
   :width: 10 %
