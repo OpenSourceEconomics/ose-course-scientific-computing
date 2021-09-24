@@ -67,12 +67,12 @@ We use the book `Applied computational economics and finance <https://mitpress.m
 Reviews
 -------
 
-A review of machine learning (ML) literature for economics and econometrics--`Machine Learning Methods That Economists Should Know About <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_ by `Susan Athey <https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey>`_  and `Guido W. Imbens <https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens>`_--also serves as a useful resource.
+* **Athey, S., Imbens, G. (2019)**. book `Machine learning methods that economists should know about <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_ , *Annual Review of Economics*, 11(1).
 
 Powered by
 ----------
 
-|space| |OSE| |space| |Nuvolos| |space| |TRA| |space| |GRN|
+|space| |UNI| |space| |Nuvolos| |space| |OSE| |space| |GRN|
 
 .. |OSE| image:: _static/images/fig-ose.svg
   :width: 22 %
@@ -82,9 +82,9 @@ Powered by
   :width: 10 %
   :target: https://nuvolos.cloud
 
-.. |TRA| image:: _static/images/fig-tra.png
+.. |UNI| image:: _static/images/uni5.jpg
   :width: 10 %
-  :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
+  :target: https://www.uni-bonn.de/en
 
 .. |GRN| image:: _static/images/RN_German.png
   :width: 10 %
