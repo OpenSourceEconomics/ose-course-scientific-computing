@@ -67,7 +67,9 @@ We use the book `Applied computational economics and finance <https://mitpress.m
 Reviews
 -------
 
-* **Athey, S., Imbens, G. (2019)**. book `Machine learning methods that economists should know about <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_ , *Annual Review of Economics*, 11(1).
+* **Athey, S., Imbens, G. (2019)**. `Machine learning methods that economists should know about <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_, *Annual Review of Economics*, 11(1).
+
+* **Irving, D., Hertweck, K., Johnston, L., Ostblom, J., Wickham, C., Wilson, G. (2021)**. `Research software engineering with Python: Building software that makes research possible <https://merely-useful.tech/py-rse/>`_, Chapman and Hall/CRC.
 
 Powered by
 ----------
