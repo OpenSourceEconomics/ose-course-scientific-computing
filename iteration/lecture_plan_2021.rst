@@ -2,7 +2,7 @@
 Organization
 ###############
 
-We start on October 27th, 2020, and meet on Tuesdays (2:00-3:30 PM) and Wednesdays (8:30-10:00 AM).
+We start on October ??th, 2021, and meet on ?? (2:00-3:30 PM) and ?? (8:30-10:00 AM).
 
 **Lecturer:** `Philipp Eisenhauer <https://peisenha.github.io>`_
 
@@ -23,9 +23,9 @@ We first meet to discuss the `Open Source Economics initiative <https://open-eco
 +------------+-----------------------------------------------------------------------------------------------------------+
 | **Date**   | **Topic**                                                                                                 |
 +============+===========================================================================================================+
-| 27/10/2020 | Course introduction, Tooling                                                                              |
+| D/M/2021   | Course introduction, Tooling                                                                              |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 28/10/2020 | Tooling                                                                                                   |
+| D/M/2021   | Tooling                                                                                                   |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
 We then acquire the basic numerical skills that are needed in any implementation of computational economic models.
@@ -33,29 +33,29 @@ We then acquire the basic numerical skills that are needed in any implementation
 +------------+-----------------------------------------------------------------------------------------------------------+
 | **Date**   | **Topic**                                                                                                 |
 +============+===========================================================================================================+
-| 03/11/2020 | Linear equations                                                                                          |
+| D/M/2021   | Linear equations                                                                                          |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 04/11/2020 | Linear equations                                                                                          |
+| D/M/2021   | Linear equations                                                                                          |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 10/11/2020 | Nonlinear equations                                                                                       |
+| D/M/2021   | Nonlinear equations                                                                                       |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 11/11/2020 | Nonlinear equations                                                                                       |
+| D/M/2021   | Nonlinear equations                                                                                       |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 16/11/2020 | Deadline for registration with the examination office on BASIS                                            |
+| D/M/2021   | Deadline for registration with the examination office on BASIS                                            |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 17/11/2020 | Finite-dimensional optimization                                                                           |
+| D/M/2021   | Finite-dimensional optimization                                                                           |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 18/11/2020 | Finite-dimensional optimization                                                                           |
+| D/M/2021   | Finite-dimensional optimization                                                                           |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 24/11/2020 | Numerical Integration and differentiation                                                                 |
+| D/M/2021   | Numerical Integration and differentiation                                                                 |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 25/11/2020 | Numerical Integration and differentiation                                                                 |
+| D/M/2021   | Numerical Integration and differentiation                                                                 |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 01/12/2020 | Function approximation                                                                                    |
+| D/M/2021   | Function approximation                                                                                    |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 02/12/2020 | *No Lecture: Dies Academicus*                                                                             |
+| D/M/2021   | *No Lecture: Dies Academicus*                                                                             |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 08/12/2020 | Function approximation                                                                                    |
+| D/M/2021   | Function approximation                                                                                    |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
 We are now ready to study a dynamic model of human capital accumulation where all elements of our numerical toolbox are put together to study the mechanisms that determine individual investment decisions and to assess the impact of alternative human capital policies.
@@ -63,15 +63,15 @@ We are now ready to study a dynamic model of human capital accumulation where al
 +------------+-----------------------------------------------------------------------------------------------------------+
 | **Date**   | **Topic**                                                                                                 |
 +============+===========================================================================================================+
-| 09/12/2020 | `Eckstein-Keane-Wolpin models <https://bit.ly/35hYZuV>`__                                                 |
+| D/M/2021   | `Eckstein-Keane-Wolpin models <https://bit.ly/35hYZuV>`__                                                 |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 15/12/2020 | `Keane & Wolpin (1997) <https://www.jstor.org/stable/10.1086/262080>`__                                   |
+| D/M/2021   | `Keane & Wolpin (1997) <https://www.jstor.org/stable/10.1086/262080>`__                                   |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 16/12/2020 | `respy showcase <https://respy.readthedocs.io/>`__                                                        |
+| D/M/2021   | `respy showcase <https://respy.readthedocs.io/>`__                                                        |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 22/12/2020 | `respy problem set <https://respy.readthedocs.io/>`__                                                     |
+| D/M/2021   | `respy problem set <https://respy.readthedocs.io/>`__                                                     |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 23/12/2020 |  ... to be determined                                                                                     |
+| D/M/2021   |  ... to be determined                                                                                     |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
 We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
@@ -79,23 +79,23 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+---------------------------------------------------------------------------------------------------------------+
 | **Date**   | **Topic**                                                                                                     |
 +============+===============================================================================================================+
-| 12/01/2021 | Guest lecture by Daimler AG                                                                                   |
+| D/M/2021   | Guest lecture by Daimler AG                                                                                   |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 13/01/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)|
+| D/M/2021   | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)|
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 19/01/2021 | Guest lecture by Fraunhofer FIT                                                                               |
+| D/M/2021   | Guest lecture by Fraunhofer FIT                                                                               |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__  by Gregor Boehl (OSE, University of Bonn)   |
+| D/M/2021   | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__  by Gregor Boehl (OSE, University of Bonn)   |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 26/01/2021 | Guest lecture by Limes-Institute  (University of Bonn)                                                        |                                     
+| D/M/2021   | Guest lecture by Limes-Institute  (University of Bonn)                                                        |                                     
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)      |
+| D/M/2021   | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)      |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 02/02/2021 | Guest lecture by Fraunhofer FIT                                                                               |
+| D/M/2021   | Guest lecture by Fraunhofer FIT                                                                               |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 03/02/2021 | Guest lecture by Fraunhofer SCAI                                                                              |
+| D/M/2021   | Guest lecture by Fraunhofer SCAI                                                                              |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 31/03/2021 | Project deadline                                                                                              |
+| D/M/2021   | Project deadline                                                                                              |
 +------------+---------------------------------------------------------------------------------------------------------------+
 
 Projects
