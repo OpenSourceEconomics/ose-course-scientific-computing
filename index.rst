@@ -13,7 +13,7 @@
    lectures/index
    resources/index
    references/references
-   iteration/lecture_plan_2020
+   iteration/lecture_plan_2021
 
 .. include:: README.rst
    :start-line: 43
