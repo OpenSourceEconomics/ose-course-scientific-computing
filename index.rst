@@ -11,7 +11,7 @@
    :maxdepth: 1
 
    lectures/index
-   iteration/lecture_plan_2020
+   iteration/lecture_plan_2021
    resources/index
    references/references
 
