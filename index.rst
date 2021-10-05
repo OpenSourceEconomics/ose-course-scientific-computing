@@ -11,10 +11,10 @@
    :maxdepth: 1
 
    lectures/index
-   iteration/lecture_plan_2021
    resources/index
    references/references
+   iteration/lecture_plan_2020
 
 .. include:: README.rst
    :start-line: 43
-   :end-line: 96
+   :end-line: 101

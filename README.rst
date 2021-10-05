@@ -64,25 +64,28 @@ Textbooks
 
 We use the book `Applied computational economics and finance <https://mitpress.mit.edu/books/applied-computational-economics-and-finance>`_ by `Mario Miranda <https://aede.osu.edu/our-people/mario-javier-miranda>`_ and `Paul Fackler <https://pfackler.wordpress.ncsu.edu>`_ throughout the course. A special thanks to `Randall Romero Aguilar <https://github.com/randall-romero>`_ who has also built a course around this book and maintains a Python implementation of the `CompEcon <https://github.com/randall-romero/CompEcon>`_ toolbox. Many of our code examples are building on his implementation there. In addition, we will also consult `Numerical methods in economics <https://mitpress.mit.edu/books/numerical-methods-economics>`_ by `Ken Judd <https://kenjudd.org/>`_ for some of the more advanced material.
 
+Reviews
+-------
+
+* **Athey, S., Imbens, G. (2019)**. `Machine learning methods that economists should know about <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_, *Annual Review of Economics*, 11(1).
+
+* **Irving, D., Hertweck, K., Johnston, L., Ostblom, J., Wickham, C., Wilson, G. (2021)**. `Research software engineering with Python: Building software that makes research possible <https://merely-useful.tech/py-rse/>`_, Chapman and Hall/CRC.
+
 Powered by
 ----------
 
-|space| |OSE| |space| |Nuvolos| |space| |TRA| |space| |GRN|
+|space| |space| |UNI| |space| |Nuvolos| |space| |GRN|
 
-.. |OSE| image:: _static/images/fig-ose.svg
-  :width: 22 %
-  :target: https://open-econ.org
+.. |UNI| image:: _static/images/uni5.jpg
+  :width: 10 %
+  :target: https://www.uni-bonn.de/en
 
 .. |Nuvolos| image:: _static/images/fig-novolos.svg
   :width: 10 %
   :target: https://nuvolos.cloud
 
-.. |TRA| image:: _static/images/fig-tra.png
-  :width: 10 %
-  :target: https://www.uni-bonn.de/research/research-profile/mathematics-modelling-and-simulation-of-complex-systems-1
-
 .. |GRN| image:: _static/images/RN_German.png
-  :width: 10 %
+  :width: 20 %
   :target: https://reproducibilitynetwork.de/
 
 .. |space| raw:: html
