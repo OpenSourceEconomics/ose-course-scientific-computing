@@ -2,11 +2,11 @@
 Organization
 ###############
 
-We start on October 27th, 2020, and meet on Tuesdays (2:00-3:30 PM) and Wednesdays (8:30-10:00 AM).
+We start on October 12th, 2021, and meet on Tuesdays (2:00-3:30 PM) and Wednesdays (8:30-10:00 AM).
 
 **Lecturer:** `Philipp Eisenhauer <https://peisenha.github.io>`_
 
-**Teaching Assistant:** `Annica Gehlen <https://www.iame.uni-bonn.de/people/annica-gehlen>`_
+**Teaching Assistants:** `Emily Schwab <https://github.com/s6emschw>`_ and `Carolina Alvarez <https://github.com/carolinalvarez>`_
 
 We will conduct all course communications using the bonn-econ-teaching `Zulip <https://zulip.com>`_ chat, so please be sure to join us there. To join the Zulip organization, please click on the button below.
 
@@ -87,7 +87,7 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+---------------------------------------------------------------------------------------------------------------+
 | 20/01/2021 | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__  by Gregor Boehl (OSE, University of Bonn)   |
 +------------+---------------------------------------------------------------------------------------------------------------+
-| 26/01/2021 | Guest lecture by Limes-Institute  (University of Bonn)                                                        |                                     
+| 26/01/2021 | Guest lecture by Limes-Institute  (University of Bonn)                                                        |
 +------------+---------------------------------------------------------------------------------------------------------------+
 | 27/01/2021 | Bayesian estimation using `pyabc  <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)      |
 +------------+---------------------------------------------------------------------------------------------------------------+
