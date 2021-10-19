@@ -5,7 +5,7 @@
 
 .. include:: README.rst
    :start-line: 0
-   :end-line: 42
+   :end-line: 35
 
 .. toctree::
    :maxdepth: 1
@@ -16,5 +16,5 @@
    iteration/lecture_plan_2021
 
 .. include:: README.rst
-   :start-line: 43
-   :end-line: 101
+   :start-line: 36
+   :end-line: 85

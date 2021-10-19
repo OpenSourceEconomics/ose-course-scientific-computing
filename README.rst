@@ -25,27 +25,13 @@
 
     -- Richard Hamming.
 
-The sound analysis of computational economic models requires expertise in economics, statistics,
-numerical methods, and software engineering. We first provide an overview of basic numerical methods
-for optimization, numerical integration, approximation methods, and uncertainty quantification.
-We then deepen our understanding of each of these topics in the context of a dynamic model of human
-capital accumulation using `respy <https://respy.readthedocs.io>`_. We conclude by showcasing basic
-software engineering practices such as the design of a collaborative and reproducible development
-workflow, automated testing, and high-performance computing.
+The sound analysis of computational economic models requires expertise in economics, statistics, numerical methods, and software engineering. We first provide an overview of basic numerical methods for optimization, numerical integration, approximation methods, and uncertainty quantification. We then deepen our understanding of each of these topics in the context of a dynamic model of human capital accumulation using `respy <https://respy.readthedocs.io>`_. We conclude by showcasing basic software engineering practices such as the design of a collaborative and reproducible development workflow, automated testing, and high-performance computing.
 
-Students learn how to use `Python <https://www.python.org>`_ for advanced scientific computing.
-They acquire a toolkit of numerical methods frequently needed for the analysis of computational
-economic models, obtain an overview of basic software engineering tools such as
-`GitHub <https://www.github.com>`_ and `pytest <https://docs.pytest.org>`_, and are exposed to
-high-performance computing using
-`multiprocessing <https://docs.python.org/3/library/multiprocessing.html>`_
-and `mpi4py <https://mpi4py.readthedocs.io>`_.
+Students learn how to use `Python <https://www.python.org>`_ for advanced scientific computing. They acquire a toolkit of numerical methods frequently needed for the analysis of computational economic models, obtain an overview of basic software engineering tools such as `GitHub <https://www.github.com>`_ and `pytest <https://docs.pytest.org>`_, and are exposed to high-performance computing using  `multiprocessing <https://docs.python.org/3/library/multiprocessing.html>`_ and `mpi4py <https://mpi4py.readthedocs.io>`_.
 
-We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integrated research and
-teaching platform. The platform provides a simple, browser-based environment that allows for
-complete control over students’ computational environment and simplifies the dissemination of
-teaching material. It enables students to seamlessly scale up their course projects from a
-prototype to a high-performance computing environment.
+Guest lectures organized by institutions from the public and private sector are an integral part of our curriculum. These events connect students directly with employment opportunities that match their interests and skill set and provide students with insights into scientific computing applications in a variety of settings.
+
+We build the course on the `Nuvolos.cloud <https://nuvolos.cloud>`_ as an integrated research and teaching platform. The platform provides a simple, browser-based environment that allows for  complete control over students’ computational environment and simplifies the dissemination of teaching material. It enables students to seamlessly scale up their course projects from a prototype to a high-performance computing environment.
 
 
 Textbooks
@@ -69,7 +55,7 @@ Reviews
 
 * **Athey, S., Imbens, G. (2019)**. `Machine learning methods that economists should know about <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_, *Annual Review of Economics*, 11(1).
 
-* **Irving, D., Hertweck, K., Johnston, L., Ostblom, J., Wickham, C., Wilson, G. (2021)**. `Research software engineering with Python: Building software that makes research possible <https://merely-useful.tech/py-rse/>`_, Chapman and Hall/CRC.
+* **Judd, K.L. (1997)**. `Computational economics and economic theory: Substitutes or complements? <https://www.sciencedirect.com/science/article/pii/S0165188997000109>`_, *Journal of Economic Dynamics and Control*, 21: 907-942.
 
 Powered by
 ----------
