@@ -35,6 +35,10 @@ def forward_substitution(a, b):
         Solution of the linear equations. Vector of length :math:`n`.
 
     """
+    # Test that only lower-triangular matrix passed in.
+    msg = "... function only intended for use with lower triangular matrix"
+    np.testing.assert_allclose(a, np.tril(a), err_msg=msg)
+
     # Get number of rows
     n = a.shape[0]
 
@@ -71,6 +75,10 @@ def backward_substitution(a, b):
         Solution of the linear equations. Vector of length :math:`n`.
 
     """
+    # Test that only uppper triangular matrix passed in.
+    msg = "... function only intended for use with upper triangular matrix"
+    np.testing.assert_allclose(a, np.triu(a), err_msg=msg)
+
     # Get number of rows.
     n = a.shape[0]
 
