@@ -87,7 +87,7 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Guest lecture by CommaSoft                                                                                       |
 +------------+------------------------------------------------------------------------------------------------------------------+
-|            | Discrete choice modeling using `ruspy <https://pydsge.readthedocs.io/>`__ by Max Blesch (OSE, University of Bonn)|
+|            | Discrete choice modeling using `ruspy <https://ruspy.readthedocs.io/>`__ by Max Blesch (OSE, University of Bonn) |
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Guest lecture by Manuel Huth from Limes-Institute (University of Bonn)                                           |
 +------------+------------------------------------------------------------------------------------------------------------------+
