@@ -1,7 +1,7 @@
 """Algorithms for approximation lecture."""
 import numpy as np
-from approximation_auxiliary import get_chebyshev_nodes
-from approximation_auxiliary import get_uniform_nodes
+from lectures.approximation.approximation_auxiliary import get_chebyshev_nodes
+from lectures.approximation.approximation_auxiliary import get_uniform_nodes
 from scipy.interpolate import interp1d
 
 

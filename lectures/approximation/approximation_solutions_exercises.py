@@ -3,12 +3,12 @@ from itertools import product
 
 import numpy as np
 import pandas as pd
-from approximation_algorithms import get_interpolator
-from approximation_auxiliary import compute_interpolation_error_df
-from approximation_auxiliary import get_uniform_nodes
-from approximation_problems import problem_kinked
-from approximation_problems import problem_reciprocal_exponential
-from approximation_problems import problem_runge
+from lectures.approximation.approximation_algorithms import get_interpolator
+from lectures.approximation.approximation_auxiliary import compute_interpolation_error_df
+from lectures.approximation.approximation_auxiliary import get_uniform_nodes
+from lectures.approximation.approximation_problems import problem_kinked
+from lectures.approximation.approximation_problems import problem_reciprocal_exponential
+from lectures.approximation.approximation_problems import problem_runge
 
 
 def test_exercise_1():
