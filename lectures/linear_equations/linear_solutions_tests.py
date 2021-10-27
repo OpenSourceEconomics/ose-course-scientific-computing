@@ -4,9 +4,9 @@ from itertools import product
 
 import matplotlib.pyplot as plt
 import numpy as np
-from linear_algorithms import backward_substitution
-from linear_algorithms import eps
-from linear_problems import get_random_problem
+from lectures.linear_equations.linear_algorithms import backward_substitution
+from lectures.linear_equations.linear_algorithms import eps
+from lectures.linear_equations.linear_problems import get_random_problem
 
 
 def test_1():

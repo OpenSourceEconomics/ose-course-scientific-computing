@@ -3,13 +3,13 @@ from functools import partial
 
 import chaospy as cp
 import numpy as np
-from integration_algorithms import monte_carlo_naive_one
-from integration_algorithms import monte_carlo_naive_two_dimensions
-from integration_algorithms import monte_carlo_quasi_two_dimensions
-from integration_algorithms import quadrature_gauss_legendre_one
-from integration_algorithms import quadrature_gauss_legendre_two
-from integration_algorithms import quadrature_newton_simpson_one
-from integration_algorithms import quadrature_newton_trapezoid_one
+from lectures.integration.integration_algorithms import monte_carlo_naive_one
+from lectures.integration.integration_algorithms import monte_carlo_naive_two_dimensions
+from lectures.integration.integration_algorithms import monte_carlo_quasi_two_dimensions
+from lectures.integration.integration_algorithms import quadrature_gauss_legendre_one
+from lectures.integration.integration_algorithms import quadrature_gauss_legendre_two
+from lectures.integration.integration_algorithms import quadrature_newton_simpson_one
+from lectures.integration.integration_algorithms import quadrature_newton_trapezoid_one
 from scipy.stats import uniform
 
 

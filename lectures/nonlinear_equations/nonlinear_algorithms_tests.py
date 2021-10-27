@@ -1,8 +1,8 @@
 """Tests for nonlinear equations lecture."""
 import numpy as np
-from nonlinear_algorithms import bisect
-from nonlinear_algorithms import fixpoint
-from nonlinear_algorithms import newton_method
+from lectures.nonlinear_equations.nonlinear_algorithms import bisect
+from lectures.nonlinear_equations.nonlinear_algorithms import fixpoint
+from lectures.nonlinear_equations.nonlinear_algorithms import newton_method
 from scipy.optimize import bisect as sp_bisect
 
 

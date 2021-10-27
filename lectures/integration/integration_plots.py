@@ -5,11 +5,11 @@ import chaospy as cp
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from integration_algorithms import monte_carlo_naive_one
-from integration_algorithms import quadrature_gauss_legendre_one
-from integration_algorithms import quadrature_newton_trapezoid_one
-from integration_problems import problem_kinked
-from integration_problems import problem_smooth
+from lectures.integration.integration_algorithms import monte_carlo_naive_one
+from lectures.integration.integration_algorithms import quadrature_gauss_legendre_one
+from lectures.integration.integration_algorithms import quadrature_newton_trapezoid_one
+from lectures.integration.integration_problems import problem_kinked
+from lectures.integration.integration_problems import problem_smooth
 
 
 def plot_gauss_legendre_weights(deg):

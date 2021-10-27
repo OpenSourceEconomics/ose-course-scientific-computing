@@ -3,12 +3,12 @@ from functools import partial
 
 import matplotlib.pyplot as plt
 import numpy as np
-from nonlinear_algorithms import bisect
-from nonlinear_algorithms import fixpoint
-from nonlinear_algorithms import newton_method
-from nonlinear_problems import bisection_test_function
-from nonlinear_problems import get_cournot_problem
-from nonlinear_problems import newton_pathological_example
+from lectures.nonlinear_equations.nonlinear_algorithms import bisect
+from lectures.nonlinear_equations.nonlinear_algorithms import fixpoint
+from lectures.nonlinear_equations.nonlinear_algorithms import newton_method
+from lectures.nonlinear_equations.nonlinear_problems import bisection_test_function
+from lectures.nonlinear_equations.nonlinear_problems import get_cournot_problem
+from lectures.nonlinear_equations.nonlinear_problems import newton_pathological_example
 from scipy import optimize
 
 

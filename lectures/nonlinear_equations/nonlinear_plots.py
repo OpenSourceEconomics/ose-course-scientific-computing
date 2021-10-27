@@ -1,8 +1,8 @@
 """Plots for nonlinear equations lecture."""
 import matplotlib.pyplot as plt
 import numpy as np
-from nonlinear_algorithms import funcit
-from nonlinear_algorithms import newton_method
+from lectures.nonlinear_equations.nonlinear_algorithms import funcit
+from lectures.nonlinear_equations.nonlinear_algorithms import newton_method
 from scipy.optimize import root
 
 
