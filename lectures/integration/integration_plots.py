@@ -5,6 +5,7 @@ import chaospy as cp
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+
 from lectures.integration.integration_algorithms import monte_carlo_naive_one
 from lectures.integration.integration_algorithms import quadrature_gauss_legendre_one
 from lectures.integration.integration_algorithms import quadrature_newton_trapezoid_one
