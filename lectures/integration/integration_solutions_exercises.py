@@ -47,6 +47,8 @@ def test_exercise_2():
     integrand = 1 / 5 * np.exp(5 * 0.5) - 1 / 5 * np.exp(5 * 0)
     df_results["Truth"] = integrand * integrand
 
+    discontinuous = partial(discontinuous, u=(0.5, 0.5), a=(5, 5))
+
     mc_quasi_halton = partial(mc_quasi, discontinuous, 0, 1, rule="halton")
     mc_quasi_sobol = partial(mc_quasi, discontinuous, 0, 1, rule="sobol")
     gc_legendre = partial(gc_legendre_two, discontinuous, 0, 1)
