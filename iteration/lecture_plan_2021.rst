@@ -8,6 +8,7 @@ We start on October 12th, 2021, and meet on Tuesdays (2:00-3:30 PM) and Wednesda
 
 **Teaching Assistants:** `Emily Schwab <https://github.com/s6emschw>`_ and `Carolina Alvarez <https://github.com/carolinalvarez>`_
 
+
 We will conduct all course communications using the bonn-econ-teaching `Zulip <https://zulip.com>`_ chat, so please be sure to join us there. To join the Zulip organization, please click on the button below.
 
 .. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg

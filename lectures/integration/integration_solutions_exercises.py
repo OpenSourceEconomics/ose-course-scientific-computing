@@ -10,9 +10,9 @@ from integration_algorithms import quadrature_gauss_legendre_one
 from integration_algorithms import quadrature_gauss_legendre_two as gc_legendre_two
 from integration_algorithms import quadrature_newton_simpson_one
 from integration_algorithms import quadrature_newton_trapezoid_one
-from integration_problems import problem_genz_discontinuous
 from integration_problems import problem_kinked
 from integration_problems import problem_smooth
+from temfpy.integration import discontinuous
 
 
 def test_exercise_1():
@@ -47,12 +47,14 @@ def test_exercise_2():
     integrand = 1 / 5 * np.exp(5 * 0.5) - 1 / 5 * np.exp(5 * 0)
     df_results["Truth"] = integrand * integrand
 
-    mc_quasi_halton = partial(mc_quasi, problem_genz_discontinuous, 0, 1, rule="halton")
-    mc_quasi_sobol = partial(mc_quasi, problem_genz_discontinuous, 0, 1, rule="sobol")
-    gc_legendre = partial(gc_legendre_two, problem_genz_discontinuous, 0, 1)
+    p_discontinuous = partial(discontinuous, u=(0.5, 0.5), a=(5, 5))
+
+    mc_quasi_halton = partial(mc_quasi, p_discontinuous, 0, 1, rule="halton")
+    mc_quasi_sobol = partial(mc_quasi, p_discontinuous, 0, 1, rule="sobol")
+    gc_legendre = partial(gc_legendre_two, p_discontinuous, 0, 1)
 
     for nodes in df_results.index.get_level_values("Nodes"):
-        df_results.loc[nodes, "Naive"] = mc_naive(problem_genz_discontinuous, 0, 1, nodes)
+        df_results.loc[nodes, "Naive"] = mc_naive(p_discontinuous, 0, 1, nodes)
         df_results.loc[nodes, "Halton"] = mc_quasi_halton(nodes)
         df_results.loc[nodes, "Sobol"] = mc_quasi_sobol(nodes)
         df_results.loc[nodes, "Gauss"] = gc_legendre(nodes)

@@ -32,7 +32,7 @@ dependencies:
 - scipy
 - scikit-learn
 - seaborn
-- temfpy
+- temfpy>=1.2.0
 - numdifftools  
 - chaospy
 - scikit-learn

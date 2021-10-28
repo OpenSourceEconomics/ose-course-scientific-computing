@@ -2,13 +2,8 @@
 import numpy as np
 
 
-def problem_runge(x):
-    """Return runge function."""
-    return 1 / (1 + 25 * x ** 2)
-
-
 def problem_reciprocal_exponential(x):
-    """Return recrprocal exponential function."""
+    """Return reciprocal exponential function."""
     return np.exp(-x)
 
 
