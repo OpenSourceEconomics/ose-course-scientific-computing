@@ -3,39 +3,25 @@ name: ose-course-scientific-computing
 channels:
 - defaults
 - conda-forge
-- opensourceeconomics
 
 dependencies:
-- chaospy
-- estimagic
+- black
 - flake8
 - ipython
 - ipykernel
-- jupyterlab
 - jupyter
 - jupyter_contrib_nbextensions
 - jupyter_nbextensions_configurator
-- matplotlib
-- black>=20.8b1
 - nbsphinx
+- nb_black
 - numpy
-- pandoc
-- pandas>=1.1.0
-- pip
-- pre-commit
-- pytest
-- pytest-black
-- pytest-flake8
-- pytest-repeat
-- respy
-- restructuredtext_lint
 - scipy
-- scikit-learn
-- seaborn
-- temfpy
-- numdifftools  
+- pandas
 - chaospy
-- scikit-learn
+- matplotlib
+- pytest
+- pip
+- restructuredtext_lint
 - pip:
     - black-nb
     - flake8-nb
