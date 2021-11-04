@@ -1,4 +1,4 @@
-"""This module contains the algorithms for the lab in linear equations.
+"""This module contains the algorithms for the linear equations lab.
 
 The materials follow Miranda and Fackler (2004, :cite:`miranda2004applied`) (Chapter 2).
 The python code heavily draws on Romero-Aguilar (2020, :cite:`CompEcon`) and

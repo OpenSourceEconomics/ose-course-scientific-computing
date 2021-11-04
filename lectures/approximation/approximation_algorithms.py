@@ -1,4 +1,4 @@
-"""Algorithms for approximation lab."""
+"""This module contains the algorithms for the approximation lab."""
 import numpy as np
 from scipy.interpolate import interp1d
 

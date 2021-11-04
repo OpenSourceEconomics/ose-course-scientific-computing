@@ -1,4 +1,4 @@
-"""Algorithms for integration lab."""
+"""This module contains the algorithms for the integration lab."""
 import chaospy as cp
 import numpy as np
 
