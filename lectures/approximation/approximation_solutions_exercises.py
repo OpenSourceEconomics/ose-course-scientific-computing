@@ -1,4 +1,4 @@
-"""Problem solutions for approximation lecture."""
+"""Problem solutions for approximation lab."""
 from itertools import product
 
 import numpy as np

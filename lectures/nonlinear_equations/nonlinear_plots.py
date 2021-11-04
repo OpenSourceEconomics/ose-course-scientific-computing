@@ -1,4 +1,4 @@
-"""Plots for nonlinear equations lecture."""
+"""Plots for nonlinear equations lab."""
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import root
@@ -98,7 +98,7 @@ def plot_newtons_method():
 
     The code for this function is taken from the Python CompEcon toolbox by
     Randall Romero-Aguilar [RA20]_ and has been slightly altered to fit the
-    style of these lecture matrials.
+    style of these lab materials.
 
     References
     ----------
@@ -159,7 +159,7 @@ def plot_secant_method():
 
     The code for this function is taken from the Python CompEcon toolbox by
     Randall Romero-Aguilar [RA20]_ and has been slightly altered to fit the
-    style of these lecture matrials.
+    style of these lab materials.
 
     References
     ----------

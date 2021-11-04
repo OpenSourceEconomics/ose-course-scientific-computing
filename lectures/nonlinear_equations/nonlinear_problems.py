@@ -1,4 +1,4 @@
-"""Problems for nonlinear equations lecture."""
+"""Problems for nonlinear equations lab."""
 import numpy as np
 from scipy import optimize
 

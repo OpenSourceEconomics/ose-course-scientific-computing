@@ -1,4 +1,4 @@
-"""Auxiliary functions for optimization lecture."""
+"""Auxiliary functions for optimization lab."""
 import numpy as np
 
 

@@ -1,4 +1,4 @@
-"""Solutions for integration lecture."""
+"""Solutions for integration lab."""
 from functools import partial
 from itertools import product
 

@@ -1,4 +1,4 @@
-"""Algorithms for integration lecture."""
+"""Algorithms for integration lab."""
 import chaospy as cp
 import numpy as np
 

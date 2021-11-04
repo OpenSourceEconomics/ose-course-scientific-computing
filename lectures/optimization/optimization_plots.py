@@ -1,4 +1,4 @@
-"""Plots for optimization lecture."""
+"""Plots for optimization lab."""
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import cm

@@ -1,4 +1,4 @@
-"""Tests for integration lecture."""
+"""Tests for integration lab."""
 from functools import partial
 
 import chaospy as cp

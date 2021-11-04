@@ -1,4 +1,4 @@
-"""Algorithms for approximation lecture."""
+"""Algorithms for approximation lab."""
 import numpy as np
 from scipy.interpolate import interp1d
 

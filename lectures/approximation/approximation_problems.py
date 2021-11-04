@@ -1,4 +1,4 @@
-"""Example problems for approximation lecture."""
+"""Example problems for approximation lab."""
 import numpy as np
 
 

@@ -1,4 +1,4 @@
-"""Solutions to exercises in optimization lecture."""
+"""Solutions to exercises in optimization lab."""
 import os
 
 import matplotlib.pyplot as plt

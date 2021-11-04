@@ -1,4 +1,4 @@
-"""Tests for nonlinear equations lecture."""
+"""Tests for nonlinear equations lab."""
 import numpy as np
 from scipy.optimize import bisect as sp_bisect
 

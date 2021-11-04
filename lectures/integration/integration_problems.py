@@ -1,4 +1,4 @@
-"""Problems for integration lecture."""
+"""Problems for integration lab."""
 import numpy as np
 
 

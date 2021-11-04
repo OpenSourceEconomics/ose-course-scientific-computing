@@ -1,4 +1,4 @@
-"""Exemplary problems for lecture on linear equations."""
+"""Exemplary problems for lab on linear equations."""
 import numpy as np
 
 

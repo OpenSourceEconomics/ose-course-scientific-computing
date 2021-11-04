@@ -1,1 +1,1 @@
-"""Tests for approximation lecture."""
+"""Tests for approximation lab."""

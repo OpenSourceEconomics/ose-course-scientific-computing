@@ -1,4 +1,4 @@
-"""Algorithms for lecture on nonlinear equations.
+"""Algorithms for lab on nonlinear equations.
 
 The materials follow Miranda and Fackler (2004, :cite:`miranda2004applied`) (Chapter 3).
 The python code draws on Romero-Aguilar (2020, :cite:`CompEcon`).

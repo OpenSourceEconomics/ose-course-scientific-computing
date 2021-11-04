@@ -1,4 +1,4 @@
-"""Plotting functions for lecture on linear equations."""
+"""Plotting functions for lab on linear equations."""
 import matplotlib.pyplot as plt
 import numpy as np
 

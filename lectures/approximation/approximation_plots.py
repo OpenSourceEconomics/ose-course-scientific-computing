@@ -1,4 +1,4 @@
-"""Plotting functions for approximation lecture."""
+"""Plotting functions for approximation lab."""
 from functools import partial
 
 import matplotlib.pyplot as plt

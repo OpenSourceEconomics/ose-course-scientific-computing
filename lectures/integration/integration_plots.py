@@ -1,4 +1,4 @@
-"""Plotting functions for integration lecture."""
+"""Plotting functions for integration lab."""
 from functools import partial
 
 import chaospy as cp

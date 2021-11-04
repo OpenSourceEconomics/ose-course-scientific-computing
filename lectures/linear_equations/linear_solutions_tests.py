@@ -1,4 +1,4 @@
-"""Solutions to exercises from linear equations lecture."""
+"""Solutions to exercises from linear equations lab."""
 import time
 from itertools import product
 
