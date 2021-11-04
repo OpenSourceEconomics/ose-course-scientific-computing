@@ -3,12 +3,13 @@ from itertools import product
 
 import numpy as np
 import pandas as pd
+from temfpy.interpolation import runge
+
 from lectures.approximation.approximation_algorithms import get_interpolator
 from lectures.approximation.approximation_auxiliary import compute_interpolation_error_df
 from lectures.approximation.approximation_auxiliary import get_uniform_nodes
 from lectures.approximation.approximation_problems import problem_kinked
 from lectures.approximation.approximation_problems import problem_reciprocal_exponential
-from temfpy.interpolation import runge
 
 
 def test_exercise_1():
