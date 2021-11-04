@@ -38,3 +38,15 @@ def test_3():
     for method in [gauss_seidel, gauss_jacobi]:
         x_solve = method(a, b)
         np.testing.assert_almost_equal(x_solve, x_true)
+
+
+@pytest.mark.repeat(5)
+def test_4():
+    """Check guard of interface."""
+    a, b, _ = get_random_problem(is_diag=False)
+
+    with pytest.raises(AssertionError):
+        backward_substitution(a, b)
+
+    with pytest.raises(AssertionError):
+        backward_substitution(a, b)

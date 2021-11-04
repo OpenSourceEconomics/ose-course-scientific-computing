@@ -53,9 +53,9 @@ We use the book `Applied computational economics and finance <https://mitpress.m
 Reviews
 -------
 
-* **Athey, S., Imbens, G. (2019)**. `Machine learning methods that economists should know about <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_, *Annual Review of Economics*, 11(1).
+* **Athey, S., Imbens, G. (2019)**. `Machine learning methods that economists should know about <https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080217-053433>`_, *Annual Review of Economics*, 11(1): 685-725.
 
-* **Judd, K.L. (1997)**. `Computational economics and economic theory: Substitutes or complements? <https://www.sciencedirect.com/science/article/pii/S0165188997000109>`_, *Journal of Economic Dynamics and Control*, 21: 907-942.
+* **Judd, K.L. (1997)**. `Computational economics and economic theory: Substitutes or complements? <https://www.sciencedirect.com/science/article/pii/S0165188997000109>`_, *Journal of Economic Dynamics and Control*, 21(6): 907-942.
 
 Powered by
 ----------

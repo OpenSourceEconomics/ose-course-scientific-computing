@@ -3,22 +3,21 @@ from functools import partial
 
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.interpolate import interp1d
-
 from lectures.approximation.approximation_algorithms import get_interpolator_monomial_flexible_nodes
 from lectures.approximation.approximation_auxiliary import get_chebyshev_nodes
 from lectures.approximation.approximation_auxiliary import get_uniform_nodes
 from lectures.approximation.approximation_auxiliary import spline_basis
 from lectures.approximation.approximation_problems import problem_reciprocal_exponential
-from lectures.approximation.approximation_problems import problem_runge
 from lectures.approximation.approximation_problems import problem_two_dimensions
+from scipy.interpolate import interp1d
+from temfpy.interpolation import runge
 
 
-def plot_problem_runge():
+def plot_runge():
     """Plot runge function."""
     fig, ax = plt.subplots()
     xvals = np.linspace(-1, 1, 1000)
-    yvals = problem_runge(xvals)
+    yvals = runge(xvals)
     ax.plot(xvals, yvals, label="Function")
 
 
@@ -26,7 +25,7 @@ def plot_runge_multiple():
     """Plot multiple runge functions."""
     a, b = -1, 1
     xvals = np.linspace(a, b, 1000)
-    yvals = problem_runge(xvals)
+    yvals = runge(xvals)
 
     fig, ax = plt.subplots()
 
@@ -34,7 +33,7 @@ def plot_runge_multiple():
 
     for degree in [5, 9]:
         xnodes = np.linspace(a, b, degree)
-        poly = np.polynomial.Polynomial.fit(xnodes, problem_runge(xnodes), degree)
+        poly = np.polynomial.Polynomial.fit(xnodes, runge(xnodes), degree)
         yfit = poly(xvals)
         ax.plot(xvals, yfit, label=" 9th-order")
 
@@ -89,14 +88,14 @@ def plot_approximation_nodes(num_nodes, nodes="uniform"):
 
 def plot_runge_different_nodes():
     """Plot runge function at different nodes."""
-    get_interpolator = partial(get_interpolator_monomial_flexible_nodes, problem_runge, 11)
+    get_interpolator = partial(get_interpolator_monomial_flexible_nodes, runge, 11)
     interp_unif = get_interpolator(nodes="uniform")
     interp_cheby = get_interpolator(nodes="chebychev")
 
     xvalues = np.linspace(-1, 1, 10000)
 
     fig, ax = plt.subplots()
-    ax.plot(xvalues, problem_runge(xvalues), label="True")
+    ax.plot(xvalues, runge(xvalues), label="True")
     ax.plot(xvalues, interp_unif(xvalues), label="Uniform")
     ax.plot(xvalues, interp_cheby(xvalues), label="Chebychev")
     ax.legend()
@@ -106,12 +105,12 @@ def plot_runge_different_nodes():
 
     ax.plot(
         xvalues,
-        interp_unif(xvalues) - problem_runge(xvalues),
+        interp_unif(xvalues) - runge(xvalues),
         label="Uniform",
     )
     ax.plot(
         xvalues,
-        interp_cheby(xvalues) - problem_runge(xvalues),
+        interp_cheby(xvalues) - runge(xvalues),
         label="Chebychev",
     )
     ax.legend()
@@ -156,11 +155,11 @@ def plot_runge_function_cubic():
     for degree in [5, 10, 15]:
         x_fit = get_uniform_nodes(degree, -1, 1)
 
-        interp = interp1d(x_fit, problem_runge(x_fit), kind="cubic")
+        interp = interp1d(x_fit, runge(x_fit), kind="cubic")
         yfit = interp(xvalues)
 
         fig, ax = plt.subplots()
-        ax.plot(xvalues, problem_runge(xvalues), label="True")
+        ax.plot(xvalues, runge(xvalues), label="True")
         ax.plot(xvalues, yfit, label="Approximation")
         ax.legend()
         ax.set_title(f"Degree {degree}")

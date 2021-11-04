@@ -8,6 +8,7 @@ We start on October 12th, 2021, and meet on Tuesdays (2:00-3:30 PM) and Wednesda
 
 **Teaching Assistants:** `Emily Schwab <https://github.com/s6emschw>`_ and `Carolina Alvarez <https://github.com/carolinalvarez>`_
 
+
 We will conduct all course communications using the bonn-econ-teaching `Zulip <https://zulip.com>`_ chat, so please be sure to join us there. To join the Zulip organization, please click on the button below.
 
 .. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
@@ -53,7 +54,7 @@ We then acquire the basic numerical skills that are needed in any implementation
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 16/11/2021 | `German Reproducibility Day <https://reproducibilitynetwork.de/germanreproday/>`__                        |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 17/11/2021 | CI tutorial                                                                                               |
+| 17/11/2021 | Guest lecture by Nuvolos and CI tutorial                                                                  |
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 23/11/2021 | Function approximation                                                                                    |
 +------------+-----------------------------------------------------------------------------------------------------------+
@@ -78,29 +79,33 @@ We are now ready to study a dynamic model of human capital accumulation where al
 
 We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
 
-+------------+---------------------------------------------------------------------------------------------------------------+
-| **Date**   | **Topic**                                                                                                     |
-+============+===============================================================================================================+
-| TBA        | Guest lecture by Fraunhofer FIT                                                                               |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| TBA        | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)|
-+------------+---------------------------------------------------------------------------------------------------------------+
-| TBA        | Guest lecture by CommaSoft                                                                                    |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| TBA        | Macroeconomics using `pydsge <https://pydsge.readthedocs.io/>`__  by Gregor Boehl (OSE, University of Bonn)   |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| TBA        | Guest lecture by Manuel Huth from Limes-Institute (University of Bonn)                                        |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| TBA        | Bayesian estimation using `pyabc <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)       |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| TBA        | Guest lecture by Limes-Institute (University of Bonn)                                                         |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| 28/01/2022 | **Project deadline**                                                                                          |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| 01/02/2022 |                                                                                                               |
-+------------+---------------------------------------------------------------------------------------------------------------+
-| 02/02/2022 | Demo-Day                                                                                                      |
-+------------+---------------------------------------------------------------------------------------------------------------+
++------------+------------------------------------------------------------------------------------------------------------------+
+| **Date**   | **Topic**                                                                                                        |
++============+==================================================================================================================+
+|            | Guest lecture by Fraunhofer FIT                                                                                  |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)   |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Guest lecture by CommaSoft                                                                                       |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Discrete choice modeling using `ruspy <https://ruspy.readthedocs.io/>`__ by Max Blesch (OSE, University of Bonn) |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Guest lecture by Manuel Huth from Limes-Institute (University of Bonn)                                           |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Bayesian estimation using `pyabc <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)          |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Guest lecture by Limes-Institute (University of Bonn)                                                            |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Guest lecture by Fraunhofer SCAI                                                                                 |
++------------+------------------------------------------------------------------------------------------------------------------+
+|            | Guest lecture by Deutsche Bank                                                                                   | 
++------------+------------------------------------------------------------------------------------------------------------------+
+| 28/01/2022 | **Project deadline**                                                                                             |
++------------+------------------------------------------------------------------------------------------------------------------+
+| 01/02/2022 | Guest lecture by Allianz                                                                                         |
++------------+------------------------------------------------------------------------------------------------------------------+
+| 02/02/2022 | Demo-Day                                                                                                         |
++------------+------------------------------------------------------------------------------------------------------------------+
 
 
 Projects
