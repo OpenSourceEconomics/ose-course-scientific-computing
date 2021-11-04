@@ -2,12 +2,12 @@
 import numpy as np
 import pytest
 
-from lectures.linear_equations.linear_algorithms import backward_substitution
-from lectures.linear_equations.linear_algorithms import forward_substitution
-from lectures.linear_equations.linear_algorithms import gauss_seidel
-from lectures.linear_equations.linear_algorithms import solve
-from lectures.linear_equations.linear_problems import get_random_problem
-from lectures.linear_equations.linear_solutions_tests import gauss_jacobi
+from labs.linear_equations.linear_algorithms import backward_substitution
+from labs.linear_equations.linear_algorithms import forward_substitution
+from labs.linear_equations.linear_algorithms import gauss_seidel
+from labs.linear_equations.linear_algorithms import solve
+from labs.linear_equations.linear_problems import get_random_problem
+from labs.linear_equations.linear_solutions_tests import gauss_jacobi
 
 
 @pytest.mark.repeat(5)

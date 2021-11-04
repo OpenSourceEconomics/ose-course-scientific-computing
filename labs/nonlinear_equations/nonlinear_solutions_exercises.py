@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import optimize
 
-from lectures.nonlinear_equations.nonlinear_algorithms import bisect
-from lectures.nonlinear_equations.nonlinear_algorithms import fixpoint
-from lectures.nonlinear_equations.nonlinear_algorithms import newton_method
-from lectures.nonlinear_equations.nonlinear_problems import bisection_test_function
-from lectures.nonlinear_equations.nonlinear_problems import get_cournot_problem
-from lectures.nonlinear_equations.nonlinear_problems import newton_pathological_example
+from labs.nonlinear_equations.nonlinear_algorithms import bisect
+from labs.nonlinear_equations.nonlinear_algorithms import fixpoint
+from labs.nonlinear_equations.nonlinear_algorithms import newton_method
+from labs.nonlinear_equations.nonlinear_problems import bisection_test_function
+from labs.nonlinear_equations.nonlinear_problems import get_cournot_problem
+from labs.nonlinear_equations.nonlinear_problems import newton_pathological_example
 
 
 def test_exercise_1():

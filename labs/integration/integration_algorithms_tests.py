@@ -5,13 +5,13 @@ import chaospy as cp
 import numpy as np
 from scipy.stats import uniform
 
-from lectures.integration.integration_algorithms import monte_carlo_naive_one
-from lectures.integration.integration_algorithms import monte_carlo_naive_two_dimensions
-from lectures.integration.integration_algorithms import monte_carlo_quasi_two_dimensions
-from lectures.integration.integration_algorithms import quadrature_gauss_legendre_one
-from lectures.integration.integration_algorithms import quadrature_gauss_legendre_two
-from lectures.integration.integration_algorithms import quadrature_newton_simpson_one
-from lectures.integration.integration_algorithms import quadrature_newton_trapezoid_one
+from labs.integration.integration_algorithms import monte_carlo_naive_one
+from labs.integration.integration_algorithms import monte_carlo_naive_two_dimensions
+from labs.integration.integration_algorithms import monte_carlo_quasi_two_dimensions
+from labs.integration.integration_algorithms import quadrature_gauss_legendre_one
+from labs.integration.integration_algorithms import quadrature_gauss_legendre_two
+from labs.integration.integration_algorithms import quadrature_newton_simpson_one
+from labs.integration.integration_algorithms import quadrature_newton_trapezoid_one
 
 
 def test_1():

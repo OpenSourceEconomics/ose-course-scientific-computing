@@ -2,9 +2,9 @@
 import numpy as np
 from scipy.optimize import bisect as sp_bisect
 
-from lectures.nonlinear_equations.nonlinear_algorithms import bisect
-from lectures.nonlinear_equations.nonlinear_algorithms import fixpoint
-from lectures.nonlinear_equations.nonlinear_algorithms import newton_method
+from labs.nonlinear_equations.nonlinear_algorithms import bisect
+from labs.nonlinear_equations.nonlinear_algorithms import fixpoint
+from labs.nonlinear_equations.nonlinear_algorithms import newton_method
 
 
 def test_1():
