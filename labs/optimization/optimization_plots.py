@@ -4,7 +4,7 @@ import numpy as np
 from matplotlib import cm
 
 
-def plot_contour(f, allvecs, legend_path):
+def plot_contour(f, allvecs, legend_path, starting_points):
     """Plot contour graph for function f."""
     # Create array from values with at least two dimensions.
     allvecs = np.atleast_2d(allvecs)
@@ -19,7 +19,7 @@ def plot_contour(f, allvecs, legend_path):
     plt.rc("text", usetex=False)
     plt.rc("font", family="serif")
     plt.plot(1, 1, "r*", markersize=10, label="minimum")
-    plt.plot(4.5, -1.5, "bx", markersize=10, label="initial guess")
+    plt.plot(starting_points[0], starting_points[1], "bx", markersize=10, label="initial guess")
     plt.plot(
         np.array(allvecs)[:, 0],
         np.array(allvecs)[:, 1],
