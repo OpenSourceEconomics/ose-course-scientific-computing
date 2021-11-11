@@ -4,6 +4,7 @@ from itertools import product
 
 import matplotlib.pyplot as plt
 import numpy as np
+
 from labs.linear_equations.linear_algorithms import backward_substitution
 from labs.linear_equations.linear_algorithms import eps
 from labs.linear_equations.linear_problems import get_random_problem

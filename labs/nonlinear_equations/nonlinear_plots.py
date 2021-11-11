@@ -1,9 +1,10 @@
 """Plots for nonlinear equations lab."""
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.optimize import root
+
 from labs.nonlinear_equations.nonlinear_algorithms import funcit
 from labs.nonlinear_equations.nonlinear_algorithms import newton_method
-from scipy.optimize import root
 
 
 def plot_bisection_test_function(f):
