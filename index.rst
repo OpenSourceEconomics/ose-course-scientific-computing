@@ -10,7 +10,7 @@
 .. toctree::
    :maxdepth: 1
 
-   lectures/index
+   labs/index
    resources/index
    references/references
    iteration/lecture_plan_2021

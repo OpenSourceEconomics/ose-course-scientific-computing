@@ -22,7 +22,7 @@ jobs:
         export PATH="$PATH:/usr/share/miniconda/bin"
         source .envrc
         py.test
-        run-lecture
+        run-lab
         
     - name: check notebook formatting
       shell: bash -l {0}
