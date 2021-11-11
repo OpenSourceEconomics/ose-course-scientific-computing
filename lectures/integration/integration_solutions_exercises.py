@@ -4,8 +4,6 @@ from itertools import product
 
 import numpy as np
 import pandas as pd
-from temfpy.integration import discontinuous
-
 from labs.integration.integration_algorithms import monte_carlo_naive_two_dimensions as mc_naive
 from labs.integration.integration_algorithms import monte_carlo_quasi_two_dimensions as mc_quasi
 from labs.integration.integration_algorithms import quadrature_gauss_legendre_one
@@ -16,6 +14,7 @@ from labs.integration.integration_algorithms import quadrature_newton_simpson_on
 from labs.integration.integration_algorithms import quadrature_newton_trapezoid_one
 from labs.integration.integration_problems import problem_kinked
 from labs.integration.integration_problems import problem_smooth
+from temfpy.integration import discontinuous
 
 
 def test_exercise_1():

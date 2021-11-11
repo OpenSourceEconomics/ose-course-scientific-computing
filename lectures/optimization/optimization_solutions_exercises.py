@@ -4,11 +4,10 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from labs.optimization.optimization_problems import get_test_function
 from scipy.optimize import minimize
 from scipy.stats import logistic
 from scipy.stats import norm
-
-from labs.optimization.optimization_problems import get_test_function
 
 
 def test_exercise_1():

@@ -1,10 +1,9 @@
 """Tests for nonlinear equations lab."""
 import numpy as np
-from scipy.optimize import bisect as sp_bisect
-
 from labs.nonlinear_equations.nonlinear_algorithms import bisect
 from labs.nonlinear_equations.nonlinear_algorithms import fixpoint
 from labs.nonlinear_equations.nonlinear_algorithms import newton_method
+from scipy.optimize import bisect as sp_bisect
 
 
 def test_1():

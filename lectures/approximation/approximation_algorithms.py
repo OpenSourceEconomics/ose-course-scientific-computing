@@ -1,9 +1,8 @@
 """This module contains the algorithms for the approximation lab."""
 import numpy as np
-from scipy.interpolate import interp1d
-
 from labs.approximation.approximation_auxiliary import get_chebyshev_nodes
 from labs.approximation.approximation_auxiliary import get_uniform_nodes
+from scipy.interpolate import interp1d
 
 
 def get_interpolator_runge_baseline(func):

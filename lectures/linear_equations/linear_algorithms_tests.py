@@ -1,7 +1,6 @@
 """This module contains some tests for our functions."""
 import numpy as np
 import pytest
-
 from labs.linear_equations.linear_algorithms import backward_substitution
 from labs.linear_equations.linear_algorithms import forward_substitution
 from labs.linear_equations.linear_algorithms import gauss_seidel

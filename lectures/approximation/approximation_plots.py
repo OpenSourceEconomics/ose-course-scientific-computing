@@ -3,15 +3,14 @@ from functools import partial
 
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.interpolate import interp1d
-from temfpy.interpolation import runge
-
 from labs.approximation.approximation_algorithms import get_interpolator_monomial_flexible_nodes
 from labs.approximation.approximation_auxiliary import get_chebyshev_nodes
 from labs.approximation.approximation_auxiliary import get_uniform_nodes
 from labs.approximation.approximation_auxiliary import spline_basis
 from labs.approximation.approximation_problems import problem_reciprocal_exponential
 from labs.approximation.approximation_problems import problem_two_dimensions
+from scipy.interpolate import interp1d
+from temfpy.interpolation import runge
 
 
 def plot_runge():
