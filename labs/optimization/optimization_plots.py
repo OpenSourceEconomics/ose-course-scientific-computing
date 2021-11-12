@@ -19,7 +19,7 @@ def plot_contour(f, allvecs, legend_path, initial_guess):
     plt.rc("text", usetex=False)
     plt.rc("font", family="serif")
     plt.plot(1, 1, "r*", markersize=10, label="minimum")
-    plt.plot(initial_guess[0], initial_guess[1], "bx", markersize=10, label="initial guess")
+    plt.plot(*initial_guess, "bx", markersize=10, label="initial guess")
     plt.plot(
         np.array(allvecs)[:, 0],
         np.array(allvecs)[:, 1],
