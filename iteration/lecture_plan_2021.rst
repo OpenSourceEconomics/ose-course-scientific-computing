@@ -70,11 +70,13 @@ We are now ready to study a dynamic model of human capital accumulation where al
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 01/12/2021 | *Dies Akademicus (no classes)*                                                                            |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 07/12/2021 | `Keane & Wolpin (1997) <https://www.jstor.org/stable/10.1086/262080>`__                                   |
+| 07/12/2021 | Guest lecture by `Ken Judd <https://kenjudd.org/>`__                                                      |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 08/12/2021 | `respy showcase <https://respy.readthedocs.io/>`__                                                        |
+| 08/12/2021 | `Keane & Wolpin (1997) <https://www.jstor.org/stable/10.1086/262080>`__                                   |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 14/12/2021 | `respy problem set <https://respy.readthedocs.io/>`__                                                     |
+| 14/12/2021 | `respy showcase <https://respy.readthedocs.io/>`__                                                        |
++------------+-----------------------------------------------------------------------------------------------------------+
+| 15/12/2021 | `respy problem set <https://respy.readthedocs.io/>`__                                                     |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
 We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
@@ -100,11 +102,11 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Guest lecture by Deutsche Bank                                                                                   | 
 +------------+------------------------------------------------------------------------------------------------------------------+
-| 28/01/2022 | **Project deadline**                                                                                             |
+| 21/01/2022 | **Project deadline**                                                                                             |
 +------------+------------------------------------------------------------------------------------------------------------------+
-| 01/02/2022 | Guest lecture by Allianz                                                                                         |
+| 25/01/2022 |                                                                                                                  |
 +------------+------------------------------------------------------------------------------------------------------------------+
-| 02/02/2022 | Demo-Day                                                                                                         |
+| 26/01/2022 | Demo-Day                                                                                                         |
 +------------+------------------------------------------------------------------------------------------------------------------+
 
 
