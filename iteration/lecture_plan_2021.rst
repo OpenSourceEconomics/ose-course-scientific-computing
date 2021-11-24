@@ -88,11 +88,11 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)   |
 +------------+------------------------------------------------------------------------------------------------------------------+
-|            | Guest lecture by CommaSoft                                                                                       |
+|            | Guest lecture by Manuel Huth from Limes-Institute (University of Bonn)                                           |
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Discrete choice modeling using `ruspy <https://ruspy.readthedocs.io/>`__ by Max Blesch (OSE, University of Bonn) |
 +------------+------------------------------------------------------------------------------------------------------------------+
-|            | Guest lecture by Manuel Huth from Limes-Institute (University of Bonn)                                           |
+| 18/01/2022 | Guest lecture by CommaSoft                                                                                       |
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Bayesian estimation using `pyabc <https://pyabc.readthedocs.io/>`__ (Hasenauer Lab, University of Bonn)          |
 +------------+------------------------------------------------------------------------------------------------------------------+
