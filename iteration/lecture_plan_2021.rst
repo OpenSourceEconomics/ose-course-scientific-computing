@@ -76,7 +76,11 @@ We are now ready to study a dynamic model of human capital accumulation where al
 +------------+-----------------------------------------------------------------------------------------------------------+
 | 14/12/2021 | `respy showcase <https://respy.readthedocs.io/>`__                                                        |
 +------------+-----------------------------------------------------------------------------------------------------------+
-| 15/12/2021 | `respy problem set <https://respy.readthedocs.io/>`__                                                     |
+| 15/12/2021 | Research presentation: `Uncertainty quantification <https://arxiv.org/abs/2103.01115>`__                  |
++------------+-----------------------------------------------------------------------------------------------------------+
+| 21/12/2021 | Project clinic                                                                                            |
++------------+-----------------------------------------------------------------------------------------------------------+
+| 22/12/2021 | Project clinic                                                                                            |
 +------------+-----------------------------------------------------------------------------------------------------------+
 
 We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
@@ -104,7 +108,7 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+------------------------------------------------------------------------------------------------------------------+
 | 21/01/2022 | **Project deadline**                                                                                             |
 +------------+------------------------------------------------------------------------------------------------------------------+
-| 25/01/2022 |                                                                                                                  |
+| 25/01/2022 | Research presentation: `Robust decision-making <https://arxiv.org/abs/2104.12573>`__                             |
 +------------+------------------------------------------------------------------------------------------------------------------+
 | 26/01/2022 | Demo-Day                                                                                                         |
 +------------+------------------------------------------------------------------------------------------------------------------+
