@@ -63,25 +63,25 @@ We then acquire the basic numerical skills that are needed in any implementation
 
 We are now ready to study a dynamic model of human capital accumulation where all elements of our numerical toolbox are put together to study the mechanisms that determine individual investment decisions and to assess the impact of alternative human capital policies.
 
-+------------+-----------------------------------------------------------------------------------------------------------+
-| **Date**   | **Topic**                                                                                                 |
-+============+===========================================================================================================+
-| 30/11/2021 | `Eckstein-Keane-Wolpin models <https://bit.ly/35hYZuV>`__                                                 |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 01/12/2021 | *Dies Akademicus (no classes)*                                                                            |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 07/12/2021 | Guest lecture by `Ken Judd <https://kenjudd.org/>`__                                                      |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 08/12/2021 | `Keane & Wolpin (1997) <https://www.jstor.org/stable/10.1086/262080>`__                                   |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 14/12/2021 | `respy showcase <https://respy.readthedocs.io/>`__                                                        |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 15/12/2021 | Research presentation: `Uncertainty quantification <https://arxiv.org/abs/2103.01115>`__                  |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 21/12/2021 | Project clinic                                                                                            |
-+------------+-----------------------------------------------------------------------------------------------------------+
-| 22/12/2021 | Project clinic                                                                                            |
-+------------+-----------------------------------------------------------------------------------------------------------+
++------------+----------------------------------------------------------------------------------------------------------------+
+| **Date**   | **Topic**                                                                                                      |
++============+================================================================================================================+
+| 30/11/2021 | `Eckstein-Keane-Wolpin models <https://bit.ly/35hYZuV>`__                                                      |
++------------+----------------------------------------------------------------------------------------------------------------+
+| 01/12/2021 | *Dies Akademicus (no classes)*                                                                                 |
++------------+----------------------------------------------------------------------------------------------------------------+
+| 07/12/2021 | Guest lecture by `Ken Judd <https://kenjudd.org/>`__                                                           |
++------------+----------------------------------------------------------------------------------------------------------------+
+| 08/12/2021 | `Keane & Wolpin (1997) <https://www.jstor.org/stable/10.1086/262080>`__                                        |
++------------+----------------------------------------------------------------------------------------------------------------+
+| 14/12/2021 | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn) |
++------------+----------------------------------------------------------------------------------------------------------------+
+| 15/12/2021 | `respy showcase <https://respy.readthedocs.io/>`__                                                             |
++------------+----------------------------------------------------------------------------------------------------------------+
+| 21/12/2021 | Project clinic                                                                                                 |
++------------+----------------------------------------------------------------------------------------------------------------+
+| 22/12/2021 | Project clinic                                                                                                 |
++------------+----------------------------------------------------------------------------------------------------------------+
 
 We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
 
@@ -89,8 +89,6 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 | **Date**   | **Topic**                                                                                                        |
 +============+==================================================================================================================+
 |            | Guest lecture by Fraunhofer FIT                                                                                  |
-+------------+------------------------------------------------------------------------------------------------------------------+
-|            | Optimization using `estimagic <https://estimagic.readthedocs.io/>`__ by Janos Gabler (OSE, University of Bonn)   |
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Guest lecture by Manuel Huth from Limes-Institute (University of Bonn)                                           |
 +------------+------------------------------------------------------------------------------------------------------------------+
@@ -104,11 +102,9 @@ We then reconvene at the beginning of the new year to discuss some selected issu
 +------------+------------------------------------------------------------------------------------------------------------------+
 |            | Guest lecture by Fraunhofer SCAI                                                                                 |
 +------------+------------------------------------------------------------------------------------------------------------------+
-|            | Guest lecture by Deutsche Bank                                                                                   | 
-+------------+------------------------------------------------------------------------------------------------------------------+
 | 21/01/2022 | **Project deadline**                                                                                             |
 +------------+------------------------------------------------------------------------------------------------------------------+
-| 25/01/2022 | Research presentation: `Robust decision-making <https://arxiv.org/abs/2104.12573>`__                             |
+| 25/01/2022 | Guest lecture by Deutsche Bank                                                                                   |
 +------------+------------------------------------------------------------------------------------------------------------------+
 | 26/01/2022 | Demo-Day                                                                                                         |
 +------------+------------------------------------------------------------------------------------------------------------------+
