@@ -83,25 +83,25 @@ We are now ready to study a dynamic model of human capital accumulation where al
 | 22/12/2021 | Project clinic                                                                                                 |
 +------------+----------------------------------------------------------------------------------------------------------------+
 
-We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation,  the `Fraunhofer Institute for Algorithms and Scientific Computing (SCAI) <https://www.scai.fraunhofer.de/en.html>`__ who present their work in computational finance, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, and the data science team from the `Daimler AG <https://www.daimler.com>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
+We then reconvene at the beginning of the new year to discuss some selected issues in more detail. We are fortunate to host guest lectures from the `Hasenauer Lab <https://www.mathematics-and-life-sciences.uni-bonn.de>`__ on Bayesian parameter estimation, the `Fraunhofer Institute for Applied Information Technology (FIT) <https://www.fit.fraunhofer.de/en.html>`__ who report on their use of microsimulation models in policy consulting, as well as the data science teams from `Deutsche Bank <https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut>`__, `CommaSoft <https://comma-soft.com/en/>`__, and the `AXA Data Innovation Lab <https://www.axa.de/presse/daten-kompetenz-axa-oeffnet-data-innovation-lab-in-koeln>`__. The goal of these lectures is to emphasize the transdisciplinary nature of research using computational models across domains and areas of expertise.
 
-+------------+------------------------------------------------------------------------------------------------------------------+
-| **Date**   | **Topic**                                                                                                        |
-+============+==================================================================================================================+
-| 11/01/2022 | Guest lecture by AXA Data Innovation Lab                                                                         |
-+------------+------------------------------------------------------------------------------------------------------------------+
-| 12/01/2022 |                                                                                                                  |
-+------------+------------------------------------------------------------------------------------------------------------------+
-| 18/01/2022 | Guest lecture by CommaSoft                                                                                       |
-+------------+------------------------------------------------------------------------------------------------------------------+
-| 19/01/2022 |                                                                                                                  |
-+------------+------------------------------------------------------------------------------------------------------------------+
-| 21/01/2022 | **Project deadline**                                                                                             |
-+------------+------------------------------------------------------------------------------------------------------------------+
-| 25/01/2022 | Guest lecture by Deutsche Bank                                                                                   |
-+------------+------------------------------------------------------------------------------------------------------------------+
-| 26/01/2022 | Demo-Day                                                                                                         |
-+------------+------------------------------------------------------------------------------------------------------------------+
++------------+------------------------------------------------------------------------------------------------------------------------------------+
+| **Date**   | **Topic**                                                                                                                          |
++============+====================================================================================================================================+
+| 11/01/2022 | Guest lecture by `AXA Data Innovation Lab <https://www.axa.de/presse/daten-kompetenz-axa-oeffnet-data-innovation-lab-in-koeln>`__  |
++------------+------------------------------------------------------------------------------------------------------------------------------------+
+| 12/01/2022 | Guest lecture by `Fraunhofer FIT <https://www.fit.fraunhofer.de/en.html>`__                                                        |
++------------+------------------------------------------------------------------------------------------------------------------------------------+
+| 18/01/2022 | Guest lecture by 'CommaSoft <https://comma-soft.com/en/>`__                                                                        |
++------------+------------------------------------------------------------------------------------------------------------------------------------+
+| 19/01/2022 |                                                                                                                                    |
++------------+------------------------------------------------------------------------------------------------------------------------------------+
+| 21/01/2022 | **Project deadline**                                                                                                               |
++------------+------------------------------------------------------------------------------------------------------------------------------------+
+| 25/01/2022 | Guest lecture by `Deutsche Bank <https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut>`__                            |
++------------+------------------------------------------------------------------------------------------------------------------------------------+
+| 26/01/2022 | Demo-Day                                                                                                                           |
++------------+------------------------------------------------------------------------------------------------------------------------------------+
 
 
 Projects
