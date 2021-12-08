@@ -11,6 +11,7 @@
    :maxdepth: 1
 
    labs/index
+   projects/index
    iteration/lecture_plan_2021
    references/references
 
