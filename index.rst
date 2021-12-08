@@ -12,6 +12,7 @@
 
    labs/index
    projects/index
+   partners/index
    iteration/lecture_plan_2021
    references/references
 
