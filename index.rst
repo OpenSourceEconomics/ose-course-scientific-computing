@@ -11,9 +11,8 @@
    :maxdepth: 1
 
    labs/index
-   resources/index
-   references/references
    iteration/lecture_plan_2021
+   references/references
 
 .. include:: README.rst
    :start-line: 36

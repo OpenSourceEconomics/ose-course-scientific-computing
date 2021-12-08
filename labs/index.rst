@@ -2,7 +2,7 @@
 Labs
 ####
 
-We provide a set of learning labs as `Jupyter Notebooks <https://jupyter.org>`_.
+Throughout the course we will make heavy use of `Python <https://www.python.org>`_ and its `SciPy ecosystem <https://www.scipy.org>`_. We provide a set of learning labs as `Jupyter Notebooks <https://jupyter.org>`_.
 
 
 =======
