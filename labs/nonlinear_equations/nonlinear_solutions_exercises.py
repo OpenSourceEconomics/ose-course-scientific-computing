@@ -43,7 +43,7 @@ def test_exercise_3():
     """Test for exercise 3."""
 
     def func(x):
-        return x ** 4 - 2
+        return x**4 - 2
 
     fig, ax = plt.subplots()
     grid = np.linspace(1.1, 1.2)
@@ -53,7 +53,7 @@ def test_exercise_3():
     x = 2.3
     for it in range(50):
         print(it, x)
-        step = -(x ** 4 - 2) / (4 * x ** 3)
+        step = -(x**4 - 2) / (4 * x**3)
         x += step
         if abs(step) < 1e-10:
             break

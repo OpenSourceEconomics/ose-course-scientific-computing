@@ -10,7 +10,7 @@ def function_iteration_test_function(x):
 
 def bisection_test_function(x):
     """Get test function for bisection."""
-    return x ** 3 - 2
+    return x**3 - 2
 
 
 def newton_pathological_example_fjac(x, f):
@@ -20,7 +20,7 @@ def newton_pathological_example_fjac(x, f):
 
 def newton_pathological_example_fval(x):
     """Get Newton Pathological example function value."""
-    return np.cbrt(x) * np.exp(-(x ** 2))
+    return np.cbrt(x) * np.exp(-(x**2))
 
 
 def newton_pathological_example(x):

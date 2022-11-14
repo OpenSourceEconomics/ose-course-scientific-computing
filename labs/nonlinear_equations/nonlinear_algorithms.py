@@ -167,4 +167,4 @@ def fischer(u, v, sign):
     callable
 
     """
-    return u + v + sign * np.sqrt(u ** 2 + v ** 2)
+    return u + v + sign * np.sqrt(u**2 + v**2)

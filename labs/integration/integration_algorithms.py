@@ -59,8 +59,8 @@ def quadrature_gauss_legendre_two(f, a=-1, b=1, n=10):
     xvals, weight_uni = np.polynomial.legendre.leggauss(n_dim)
     xvals_transformed = (b - a) * (xvals + 1.0) / 2.0 + a
 
-    weights = np.tile(np.nan, n_dim ** 2)
-    fvals = np.tile(np.nan, n_dim ** 2)
+    weights = np.tile(np.nan, n_dim**2)
+    fvals = np.tile(np.nan, n_dim**2)
 
     counter = 0
     for i, x in enumerate(xvals_transformed):
