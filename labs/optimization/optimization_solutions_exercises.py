@@ -27,7 +27,7 @@ def test_exercise_2():
     df = pd.read_pickle(f"{dirname}/material/data-consumption-function.pkl")
 
     def construct_predicted_values(income, alpha, beta, gamma):
-        return alpha + beta * income ** gamma
+        return alpha + beta * income**gamma
 
     mock_rslt = [-91.1933, 0.5691, 1.0204]
     income = df["realgdp"].values

@@ -107,7 +107,7 @@ def plot_newtons_method():
     """
     # Define function for illustration.
     def f(x):
-        return x ** 5 - 3, 5 * x ** 4
+        return x**5 - 3, 5 * x**4
 
     # Set axis limits and get function values.
     xmin, xmax = 1.0, 2.55
@@ -170,7 +170,7 @@ def plot_secant_method():
     # Define function for illustration.
 
     def f(x):
-        return x ** 5 - 3
+        return x**5 - 3
 
     # Set axis limits and get function values.
     xmin, xmax = 1.0, 2.55

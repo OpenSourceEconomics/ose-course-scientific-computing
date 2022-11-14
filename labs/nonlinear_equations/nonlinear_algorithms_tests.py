@@ -11,7 +11,7 @@ def test_1():
     """Bisection method is working."""
 
     def example(x):
-        return x ** 3 - 2
+        return x**3 - 2
 
     y = bisect(example, 1, 2)[0]
 
@@ -33,10 +33,10 @@ def test_3():
     """Newton method is working."""
 
     def _jacobian(x):
-        return 3 * x ** 2
+        return 3 * x**2
 
     def _value(x):
-        return x ** 3 - 2
+        return x**3 - 2
 
     def f(x):
         return _value(x), _jacobian(x)

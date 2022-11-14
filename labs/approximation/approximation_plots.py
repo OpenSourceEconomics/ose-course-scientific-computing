@@ -51,7 +51,7 @@ def plot_basis_functions(name="monomial"):
         if name == "chebychev":
             yvals = np.polynomial.Chebyshev.basis(i)(x)
         elif name == "monomial":
-            yvals = x ** i
+            yvals = x**i
 
         elif name == "linear":
             a, b = 0, 1
